@@ -15,7 +15,7 @@ collections:
     fields:
       - { label: "Name", name: "name", widget: "string" }
       - { label: "List Title", name: "list_title", widget: "string" }
-      - { label: "List Sub Title", name: "list_sub_title", widget: "string" }
+      - { label: "List Sub Title", name: "list_sub_title", widget: "string", required: false }
       - { label: "Image", name: "image", widget: "image" }
       - { label: "Logo Small", name: "logo_small", widget: "image" }
       - { label: "Logo Large", name: "logo_large", widget: "image" }
