@@ -15,13 +15,13 @@ collections:
     fields:
       - { label: "Name", name: "name", widget: "string" }
       - { label: "List Title", name: "list_title", widget: "string" }
-      - { label: "List Sub Title", name: "list_sub_title", widget: "string", required: false }
+      - { label: "List Sub Title", name: "list_sub_title", widget: "string"}
       - { label: "Image", name: "image", widget: "image" }
       - { label: "Logo Small", name: "logo_small", widget: "image" }
       - { label: "Logo Large", name: "logo_large", widget: "image" }
       - { label: "Order", name: "order", widget: "number" }
       - { label: "View Title", name: "view_title", widget: "string" }
-      - { label: "View Sub Title", name: "view_sub_title", widget: "string" }
+      - { label: "View Sub Title", name: "view_sub_title", widget: "string", required: false }
       - { label: "URL", name: "url", widget: "string" }
       - { label: "Custom Action Name", name: "custom_action_name", widget: "string", required: false }
       - { label: "Custom Action URL", name: "custom_action_url", widget: "string", required: false }
