@@ -1,0 +1,1793 @@
+---
+import { getCollection, getEntry, getEntries } from "astro:content";
+import SolutionCard from "@/components/SolutionCard.astro"
+
+
+const year = new Date().getFullYear();
+
+const featuredSolutions = await getCollection("solutions");
+---
+
+<html class="no-js" lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <title>IntegrityNet · Solutions & Services</title>
+    <meta name="description" content="Passion for Excellence and Dedication to Rendering Quality Service.">
+    <meta name="author" content="IntegrityNet Group of Companies">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/main.css?v=1.1">
+    <link rel="stylesheet" href="css/custom.css?v=1.1">
+
+    <script is:inline src="js/modernizr.js"></script>
+    <script is:inline src="js/pace.min.js"></script>
+
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+</head>
+
+<body id="top" class="inet-home">
+
+    <div class="cursor-dot-outline"></div>
+    <div class="cursor-dot"></div>
+
+    <div hidden id="preloader">
+        <div id="loader">
+            <img src="assets/img/solutions/solution-logo/integritynet-animated-logo.gif" alt="Preloader">
+        </div>
+    </div>
+
+    <header class="s-header">
+        <div class="row">
+            <div class="header-logo">
+                <a class="site-logo" href="index.html">
+                    <img src="assets/img/solutions/solution-logo/integritynet-logo-red.png" alt="Homepage" class="image-logo">
+                </a>
+            </div>
+
+            <nav class="header-nav-wrap">
+                <ul class="header-nav">
+                    <li class="current active"><a href="index.html">Home</a></li>
+                    <li><a href="solutions.html">Solutions</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+
+            <a class="header-menu-toggle" href="#0">
+                <span class="header-menu-icon"></span>
+            </a>
+        </div>
+    </header>
+
+    <section id="home" class="s-home page-hero target-section" data-parallax="scroll" data-image-src="assets/img/workspace/buildings/CTV_4783-min.jpg" data-natural-width=3000 data-natural-height=2000 data-position-y=center>
+
+        <div class="shadow-overlay"></div>
+
+        <div class="home-content">
+            <div class="row home-content__main">
+                <h6 class="inet-light-text">We are</h6>
+                <h1 class="inet-name">INTEGRITYNET</h1>
+                <!-- <p class="inet-light-text">Passion for Excellence and Dedication to Rendering Quality Service. </p> -->
+
+                <p class="inet-light-text txt-type" data-wait="3000" data-words='["Passion for Excellence and Dedication to Rendering Quality Service.", "IntegrityNet is a wide-ranged solutions company based in Batangas, Philippines.", "Building great business solutions for industry-leading brands."]'></p>
+
+                <div class="home-content__button">
+                    <a href="#solutions" class="btn btn-animatedbg smoothscroll">
+                        Get To Know Us
+                    </a>
+                </div>
+
+                <div class="home-content__video">
+                    <a class="video-link" href="https://assets.mixkit.co/videos/245/245-720.mp4" data-lity>
+                        <span class="video-icon"></span>
+                        <span class="video-text">Play Video</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="home-content__scroll">
+                <a href="#solutions" class="scroll-link smoothscroll">
+                    Scroll
+                </a>
+            </div>
+
+        </div>
+
+        <ul class="home-social">
+            <li>
+                <a href="https://www.facebook.com/integritynet.biz" target="_blank"><i class="fab fa-facebook-f" aria-hidden="true"></i><span>Facebook</span></a>
+            </li>
+            <li>
+                <a href="https://twitter.com/integritynetbpo" target="_blank"><i class="fab fa-twitter" aria-hidden="true"></i><span>Twitter</span></a>
+            </li>
+            <li>
+                <a href="#" target="_blank"><i class="fab fa-instagram" aria-hidden="true"></i><span>Instagram</span></a>
+            </li>
+            <!-- <li>
+                <a href="#0"><i class="fab fa-behance" aria-hidden="true"></i><span>Behance</span></a>
+            </li>
+            <li>
+                <a href="#0"><i class="fab fa-dribbble" aria-hidden="true"></i><span>Dribbble</span></a>
+            </li> -->
+        </ul>
+
+    </section>
+
+    <section id="solutions" class="s-works target-section">
+        <div class="row section-header" data-aos="fade-up">
+            <div class="col-full">
+                <h3 data-num="01" class="subhead">Featured Solutions</h3>
+                <h1 class="display-1">
+                    Explore some of our latest solutions.
+                </h1>
+            </div>
+        </div>
+
+        <div class="row section-header">
+					{
+						featuredSolutions.map(solution => (
+							<SolutionCard slug={solution.slug} />
+						))
+					}
+        </div>
+
+        <div class="more-cta-btn block-1-4 block-m-1-3 block-tab-1-2" data-aos="fade-up">
+            <a href="solutions.html" class="btn inet-btn-stroke-red  btn--large btn-raised">More Solutions <i class="fa fa-chevron-right"></i></a>
+        </div>
+
+    </section>
+
+    <section id="about" class="s-about-parallax target-section">
+        <div class="row section-header" data-aos="fade-up">
+            <div class="col-full">
+                <h3 data-num="02" class="subhead">Who We Are</h3>
+                <h1 class="display-1">
+                    IntegrityNet is a wide-ranged solutions company based in Batangas, Philippines.
+                </h1>
+                <p class="lead">
+                    Integritynet Solutions and Services is one of the fastest growing customer services, and phone systems provider catering to both national and international companies. The company’s leadership in the Business Process Outsourcing and Telecommunications industry combined with a strong management team and an impressive track record of growing client businesses are the pillars of its operations.
+                </p>
+                <p class="lead">
+                    <a href="about.html" class="btn inet-btn-stroke-dark  btn--large btn-raised">More About Us <i class="fa fa-chevron-right"></i></a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="s-services target-section">
+        <div class="row section-header" data-aos="fade-up">
+            <div class="col-full">
+                <h3 data-num="03" class="subhead">What We Do</h3>
+                <h1 class="display-1 display-1--light">
+                    Our services are tailored to make your business grow and stand out.
+                </h1>
+                <p class="lead lead-light">
+                    Technology is continually evolving but storytelling remains at the heart of how people communicate. We craft our products and solutions with love and care that enable our clients to engage on a larger platform and help their businesses grow periodically.
+                </p>
+                <p class="lead lead-light">
+                    <a href="services.html" class="btn inet-btn-stroke-light  btn--large">View Our Services <i class="fa fa-chevron-right"></i></a>
+                </p>
+            </div>
+        </div>
+
+        <div hidden class="row services-list block-1-3 block-m-1-2 block-tab-full">
+            <div class="col-block item-service" data-aos="fade-up">
+                <h4>Discover</h4>
+                <p>
+                    Our goal is to fully understand each client's business and the environment in which it operates. We look to completely understand the target audience and how they will interact with the digital products we deliver.
+                </p>
+            </div>
+
+            <div class="col-block item-service" data-aos="fade-up">
+                <h4>Strategize</h4>
+                <p>
+                    Our planning process turns research into a clear set of action items to meet business goals. We take this
+                    information to build the blueprint to drive more traffic and convert web visitors into web leads.
+                </p>
+            </div>
+
+            <div class="col-block item-service" data-aos="fade-up">
+                <h4>Execute</h4>
+                <p>
+                    Our dedicated team of designers use their gained knowledge of your company to create visually-engaging designs with the overall user experience in mind. We're proud of every project we ship and are confident that you and your team will be as well.
+                </p>
+            </div>
+
+            <div class="col-block item-service" data-aos="fade-up">
+                <h4>Launch</h4>
+                <p>
+                    During the Implementation, our job is to translate creative into a full program that goes live. Implementation
+                    often includes an array of services, which can include design, development and search marketing.
+                </p>
+            </div>
+
+            <div class="col-block item-service" data-aos="fade-up">
+                <h4>Evolve</h4>
+                <p>
+                    Last but not least, our task is to use scientific metrics to track and analyze campaign performance. This helps us
+                    easily identify what worked and what did not, we then initiate new strategies to maximize your business goals.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section hidden id="clients" class="s-clients target-section">
+        <div class="row section-header" data-aos="fade-up">
+            <div class="col-full">
+                <h3 data-num="04" class="subhead">Selected Clients</h3>
+                <h1 class="display-1 display-1--light">Here are some of the brands we have had the priviledge to work
+                    with.</h1>
+            </div>
+        </div>
+
+        <div class="row clients-list block-1-4 block-tab-1-3 block-mob-1-2" data-aos="fade-up">
+
+            <div class="col-block item-client">
+                <a href="#0">
+                    <img src="images/clients/icon-atom.svg" alt="">
+                </a>
+            </div>
+            <div class="col-block item-client">
+                <a href="#0">
+                    <img src="images/clients/icon-dropbox.svg" alt="">
+                </a>
+            </div>
+            <div class="col-block item-client">
+                <a href="#0">
+                    <img src="images/clients/icon-firefox.svg" alt="">
+                </a>
+            </div>
+            <div class="col-block item-client">
+                <a href="#0">
+                    <img src="images/clients/icon-github.svg" alt="">
+                </a>
+            </div>
+            <div class="col-block item-client">
+                <a href="#0">
+                    <img src="images/clients/icon-mozilla.svg" alt="">
+                </a>
+            </div>
+            <div class="col-block item-client">
+                <a href="#0">
+                    <img src="images/clients/icon-linux.svg" alt="">
+                </a>
+            </div>
+            <div class="col-block item-client">
+                <a href="#0">
+                    <img src="images/clients/icon-ubuntu.svg" alt="">
+                </a>
+            </div>
+            <div class="col-block item-client">
+                <a href="#0">
+                    <img src="images/clients/icon-sass.svg" alt="">
+                </a>
+            </div>
+
+        </div> <!-- clients-list -->
+
+    </section>
+
+    <section id="stats" class="s-stats">
+        <div class="row stats-block block-1-4 block-m-1-2 block-mob-full" data-aos="fade-up">
+
+            <div class="col-block item-stats ">
+                <div class="item-stats__count">10</div>
+                <h5>Years of Experience</h5>
+            </div>
+            <div class="col-block item-stats">
+                <div class="item-stats__count">140</div>
+                <h5>Clients Worldwide</h5>
+            </div>
+            <div class="col-block item-stats">
+                <div class="item-stats__count">7</div>
+                <h5>Location Sites <br> Nationwide</h5>
+            </div>
+            <div class="col-block item-stats">
+                <div class="item-stats__count">2319</div>
+                <h5>Cups of Coffee</h5>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="contact" class="s-contact target-section">
+        <div class="row section-header" data-aos="fade-up">
+            <div class="col-full">
+                <h3 data-num="04" class="subhead">Get In Touch</h3>
+                <h1 class="display-1 display-1--light">Let’s work together and start something great. Drop us a line at
+                    <a href="mailto:sales@integritynet.biz">sales@integritynet.biz</a></h1>
+            </div>
+        </div>
+
+        <div class="row contact-infos">
+            <div class="col-five md-six tab-1-2 mob-full contact-logo" data-aos="fade-up">
+                <img src="assets/img/solutions/solution-icons/integritynet-icon-default.png" alt="inet-logo" class="inet-logo-contact">
+                <h1>INTEGRITYNET</h1>
+                <p>Passion for Excellence and <br> Dedication to Rendering Quality Service.</p>
+            </div>
+
+            <div class="col-two md-six tab-1-2 mob-full contact-pages" data-aos="fade-up">
+                <h4>Menu</h4>
+
+                <ul class="contact-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="solutions.html">Solutions</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="col-two md-six tab-1-2 mob-full contact-company" data-aos="fade-up">
+                <h4>Company</h4>
+                
+                <ul class="contact-list">
+                    <li><a href="careers.html">Careers</a></li>
+                    <li><a href="insights.html">Insights</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="case-studies.html">Case Studies</a></li>
+                </ul>
+            </div>
+
+            <div class="col-three md-six tab-1-2 mob-full contact-details" data-aos="fade-up">
+                <h4>Contact Us</h4>
+
+                <ul class="contact-list">
+                    <li><a href="mailto:sales@integritynet.biz">sales@integritynet.biz</a></li>
+                    <li><a href="tel:63 917 548 6519">+63 917 548 6519</a></li>
+                    <li><a href="tel:63 932 846 5554">+63 998 590 8178</a></li>
+                    <li><a href="tel:1 877 876 9992">+1 877 876 9992</a></li>
+                    <li><a href="tel:1 713 583 5557">+1 713 583 5557</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="row contact-mid">
+            <div class="col-five md-five tab-1-2 mob-full contact-social" data-aos="fade-up">
+                <ul class="contact-social-list">
+                    <li>
+                        <a href="https://www.facebook.com/integritynet.biz" target="_blank">
+                            <div class="link">
+                                <svg width="9" height="17">
+                                    <path d="M6 6V4a.942.942 0 0 1 1-1h1L7.88.012H5.63C3.76.012 2 1.242 2 3v3H0v3h2v8h4V9h2l1.01-3.153z" fill="#ffffff" fill-rule="evenodd"></path>
+                                </svg>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://twitter.com/integritynetbpo" target="_blank">
+                            <div class="link">
+                                <svg width="18" height="15">
+                                    <path d="M17.5.277a7.241 7.241 0 0 1-2.34.92 3.664 3.664 0 0 0-2.7-1.2 3.739 3.739 0 0 0-3.69 3.787 4.082 4.082 0 0 0 .09.863A10.427 10.427 0 0 1 1.25.689a3.921 3.921 0 0 0-.5 1.9A3.819 3.819 0 0 0 2.4 5.741a3.642 3.642 0 0 1-1.68-.475v.048a3.776 3.776 0 0 0 2.97 3.714 3.71 3.71 0 0 1-.98.133 3.587 3.587 0 0 1-.69-.069 3.71 3.71 0 0 0 3.45 2.631 7.32 7.32 0 0 1-4.59 1.62 7.732 7.732 0 0 1-.88-.051 10.252 10.252 0 0 0 5.66 1.7c6.79 0 10.51-5.772 10.51-10.777l-.02-.49A7.384 7.384 0 0 0 18 1.767a7.178 7.178 0 0 1-2.12.6A3.769 3.769 0 0 0 17.5.277z" fill="#ffffff" fill-rule="evenodd"></path>
+                                </svg>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <div class="link">
+                                <svg width="19" height="19">
+                                    <path d="M13.76-.007H5.24A5.258 5.258 0 0 0-.01 5.24v8.52a5.258 5.258 0 0 0 5.25 5.247h8.52a5.258 5.258 0 0 0 5.25-5.247V5.24a5.258 5.258 0 0 0-5.25-5.247zM17 14a2.683 2.683 0 0 1-3 3H5a2.683 2.683 0 0 1-3-3V5a2.683 2.683 0 0 1 3-3h9a2.683 2.683 0 0 1 3 3v9zM9.5 4.6a4.9 4.9 0 1 0 4.9 4.9 4.906 4.906 0 0 0-4.9-4.9zm0 8.111a3.212 3.212 0 1 1 3.21-3.212 3.215 3.215 0 0 1-3.21 3.213zm5.1-9.542a1.233 1.233 0 1 0 .88.362 1.245 1.245 0 0 0-.88-.361z" fill="#ffffff" fill-rule="evenodd"></path>
+                                </svg>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-six md-six tab-1-2 mob-full contact-location" data-aos="fade-up">
+                <a href="https://www.google.com/maps/place/IntegrityNet+Solutions+And+Services/@13.754081,121.0665043,17z/data=!3m1!4b1!4m5!3m4!1s0x33bd05480c5c76d1:0x12cf85ba959acf9c!8m2!3d13.754081!4d121.068693" target="_blank">
+                    <p><i class="fas fa-map-marker-alt"></i> Joseling Road, Batangas City, Batangas 4200 Philippines</p>
+                </a>
+            </div>
+        </div>
+
+        <div class="row contact-bottom">
+            <div class="col-five tab-full contact-button" data-aos="fade-up">
+                <a href="contact.html" class="btn btn-animatedbg">
+                    Let's Talk
+                </a>
+            </div>
+
+            <div class="col-six tab-full contact-subscribe" data-aos="fade-up">
+                <h4>Subscribe</h4>
+
+                <form id="mc-form" class="group mc-form" novalidate="true">
+                    <input type="email" value="" name="EMAIL" class="email" id="mc-email" placeholder="Email Address"
+                        required="">
+                    <input type="submit" name="subscribe" value="Subscribe">
+                    <label for="mc-email" class="subscribe-message"></label>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="row">
+            <div class="col-full cl-copyright">
+                <span>
+                    Copyright &copy; 2009 – {year}
+                    IntegrityNet Solutions & Services. All Rights Reserved | <a href="https://colorlib.com" target="_blank"><i class="fas fa-copyright"></i></a>
+                </span>
+            </div>
+        </div>
+
+        <div class="cl-go-top">
+            <a class="smoothscroll" title="Back to Top" href="#top"></a>
+        </div>
+    </footer>
+
+    <div aria-hidden="true" class="pswp" role="dialog" tabindex="-1">
+
+        <div class="pswp__bg"></div>
+        <div class="pswp__scroll-wrap">
+
+            <div class="pswp__container">
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+            </div>
+
+            <div class="pswp__ui pswp__ui--hidden">
+                <div class="pswp__top-bar">
+                    <div class="pswp__counter"></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                    <button class="pswp__button pswp__button--share" title="Share"></button> <button class="pswp__button pswp__button--fs"
+                        title="Toggle fullscreen"></button> <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                    <div class="pswp__preloader">
+                        <div class="pswp__preloader__icn">
+                            <div class="pswp__preloader__cut">
+                                <div class="pswp__preloader__donut"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                    <div class="pswp__share-tooltip"></div>
+                </div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+                <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+                <div class="pswp__caption">
+                    <div class="pswp__caption__center"></div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="seo-section">
+        <h1>
+            <a href="https://lukslofts.com/bookonline">Hotel And Resorts Gateway Website</a>
+            <a href="http://a-g-o-d-a.info">a-g-o-d-a</a>
+            <a href="http://air-asia-go.info">air-asia-go</a>
+            <a href="http://all-inclusive-holidays.info">all-inclusive-holidays</a>
+            <a href="http://all-inclusive-hotel.info">all-inclusive-hotel</a>
+            <a href="http://baha-mar.info">baha-mar</a>
+            <a href="http://banyan-tree.info">banyan-tree</a>
+            <a href="http://best-all-inclusive-resorts.info">best-all-inclusive-resorts</a>
+            <a href="http://bluemountain-resort.info">bluemountain-resort</a>
+            <a href="http://book-i-ng.info">book-i-ng</a>
+            <a href="http://bookingritzcarlton.info">bookingritzcarlton</a>
+            <a href="http://coral-reefs.info">coral-reefs</a>
+            <a href="http://crown-plaza.info">crown-plaza</a>
+            <a href="http://crowne-plaza.info">crowne-plaza</a>
+            <a href="http://days-inn.info">days-inn</a>
+            <a href="http://econo-lodge.info">econo-lodge</a>
+            <a href="http://extended-stay-america.info">extended-stay-america</a>
+            <a href="http://extended-stay.info">extended-stay</a>
+            <a href="http://grand-palace.info">grand-palace</a>
+            <a href="http://holidayatinn.info">holidayatinn</a>
+            <a href="http://holidayinn-near-me.info">holidayinn-near-me</a>
+            <a href="http://home-stay.info">home-stay</a>
+            <a href="http://hote-ls.info">hote-ls</a>
+            <a href="http://hotel-s-com.info">hotel-s-com</a>
+            <a href="http://hotel4seasons.info">hotel4seasons</a>
+            <a href="http://hotelmanorhouse.info">hotelmanorhouse</a>
+            <a href="http://hotels-ibis.info">hotels-ibis</a>
+            <a href="http://hotels-near-lax.info">hotels-near-lax</a>
+            <a href="http://ice-hotel.info">ice-hotel</a>
+            <a href="http://imperial-hotels.info">imperial-hotels</a>
+            <a href="http://last-resort-hotel.info">last-resort-hotel</a>
+            <a href="http://lukslofts.ph">lukslofts</a>
+            <a href="http://not-pet-friendly-hotels.info">not-pet-friendly-hotels</a>
+            <a href="http://not-pet-hotel.info">not-pet-hotel</a>
+            <a href="http://nyc-hotels.info">nyc-hotels</a>
+            <a href="http://p-l-a-z-a.info">p-l-a-z-a</a>
+            <a href="http://palaceshotel.info">palaceshotel</a>
+            <a href="http://placevalue.info">placevalue</a>
+            <a href="http://quality-inn.info">quality-inn</a>
+            <a href="http://renaissance-hotel.info">renaissance-hotel</a>
+            <a href="http://res-ort.info">res-ort</a>
+            <a href="http://residence-inn.info">residence-inn</a>
+            <a href="http://resorts-near-me.info">resorts-near-me</a>
+            <a href="http://royal-caribbean.info">royal-caribbean</a>
+            <a href="http://sleep-inn-hotel.info">sleep-inn-hotel</a>
+            <a href="http://southbeach-hotels.info">southbeach-hotels</a>
+            <a href="http://the-lodge-hotel.info">the-lodge-hotel</a>
+            <a href="http://travel-okahotel.info">travel-okahotel</a>
+            <a href="http://travelandlodge.info">travelandlodge</a>
+            <a href="http://tri-va-go-hotels.info">tri-va-go-hotels</a>
+            <a href="http://turtleinbay.info">turtleinbay</a>
+            <a href="http://very-grand-hotel.info">very-grand-hotel</a>
+            <a href="https://www.lukslofts.com/reviews/">TOP HOTEL REVIEWS</a>
+            <a href="http://www.hotelreviewsasia.com/">Hotel Reviews Asia</a>
+
+
+            <a href="http://www.self-service-kiosk.net">self-service-kiosk</a>
+            <a href="http://www.pos-kiosk.net">pos-kiosk</a>
+            <a href="http://www.digitalordering.net">digitalordering</a>
+            <a href="http://www.pos-for-restaurants.net">pos-for-restaurants</a>
+            <a href="http://www.kiosk-systems.net">kiosk-systems.net</a>
+            <a href="http://www.touch-screen-ordering.com">touch-screen-ordering</a>
+            <a href="http://www.touchtoorder.net">touchtoorder</a>
+            <a href="http://www.food-ordering.net">food-ordering</a>
+
+
+            <a href="http://www.android-food-ordering.info/android.html">android-food-ordering</a>
+            <a href="http://www.android-foodcart.info/android.html">android-foodcart</a>
+            <a href="http://www.android-menu-2018.info/android.html">android-menu-2018</a>
+            <a href="http://www.android-menu.info/android.html">android-menu</a>
+            <a href="http://www.android-point-of-sale-2018.info/android.html">android-point-of-sale-2018</a>
+            <a href="http://www.android-point-of-sale.info/android.html">android-point-of-sale</a>
+            <a href="http://www.android-pos-2018.info/android.html">android-pos-2018</a>
+            <a href="http://www.android-pos.info/android.html">android-pos</a>
+            <a href="http://www.android-restaurant.info/android.html">android-restaurant</a>
+            <a href="http://www.android-touch-menu.info/android.html">android-touch-menu</a>
+            <a href="http://www.menu-on-android.info/android.html">menu-on-android</a>
+
+
+            <a href="http://www.digital-food.info/food.html">digital-food</a>
+            <a href="http://www.electronic-foodcart.info/food.html">electronic-foodcart</a>
+            <a href="http://www.fastfood-digital-menu.info/food.html">fastfood-digital-menu</a>
+            <a href="http://www.fastfood-manager-provider.info/food.html">fastfood-manager-provider</a>
+            <a href="http://www.fastfood-manager.info/.html">fastfood-manager</a>
+            <a href="http://www.fastfood-point-of-sale-2018.info/food.html">fastfood-point-of-sale-2018</a>
+            <a href="http://www.fastfood-point-of-sale-provider.info/food.html">fastfood-point-of-sale-provider</a>
+            <a href="http://www.fastfood-point-of-sale.info/food.html">fastfood-point-of-sale</a>
+            <a href="http://www.fastfood-pos-2018.info/food.html">fastfood-pos-2018</a>
+            <a href="http://www.fastfood-pos-provider.info/food.html">fastfood-pos-provider</a>
+            <a href="http://www.fastfood-pos.info/.html">fastfood-pos</a>
+            <a href="http://www.fastfood-solutions-provider.info/food.html">fastfood-solutions-provider</a>
+            <a href="http://www.fastfood-solutions.info/food.html">fastfood-solutions</a>
+            <a href="http://www.fastfood-touch-menu.info/food.html">fastfood-touch-menu</a>
+            <a href="http://www.food-manager.info/food.html">food-manager</a>
+            <a href="http://www.food-ordering-system.info/food.html">food-ordering-system</a>
+            <a href="http://www.foodbytouch.info/food.html">foodbytouch</a>
+            <a href="http://www.foodcart-2018.info/food.html">foodcart-2018</a>
+            <a href="http://www.foodcart-digital-menu.info/food.html">foodcart-digital-menu</a>
+            <a href="http://www.foodcart-manager.info/food.html">foodcart-manager</a>
+            <a href="http://www.foodcart-monitoring.info/food.html">foodcart-monitoring</a>
+            <a href="http://www.foodcart-ordering-provider.info/food.html">foodcart-ordering-provider</a>
+            <a href="http://www.foodcart-touch-menu.info/food.html">foodcart-touch-menu</a>
+
+
+            <a href="http://www.affordable-digital-menu.info/inventory.html">affordable-digital-menu</a>
+            <a href="http://www.designmymenu.info/inventory.html">designmymenu</a>
+            <a href="http://www.digi-menu.info/inventory.html">digi-menu</a>
+            <a href="http://www.digital-menu.info/inventory.html">digital-menu</a>
+            <a href="http://www.dynamic-menu.info/inventory.html">dynamic-menu</a>
+            <a href="http://www.electronic-menu.info/inventory.html">electronic-menu</a>
+            <a href="http://www.interactive-menu.info/inventory.html">interactive-menu</a>
+            <a href="http://www.menu-by-touch.info/inventory.html">menu-by-touch</a>
+            <a href="http://www.menu-on-tablet.info/inventory.html">menu-on-tablet</a>
+            <a href="http://www.menu-upsell.info/inventory.html">menu-upsell</a>
+            <a href="http://www.menus-system.info/inventory.html">menus-system</a>
+            <a href="http://www.modern-menu.info/inventory.html">modern-menu</a>
+            <a href="http://www.multilingual-menu.info/inventory.html">multilingual-menu</a>
+            <a href="http://www.paperless-menu.info/inventory.html">paperless-menu</a>
+            <a href="http://www.quick-serve-touch-menu.info/inventory.html">quick-serve-touch-menu</a>
+            <a href="http://www.smart-menu.info/inventory.html">smart-menu</a>
+            <a href="http://www.tablet-menu.info/inventory.html">tablet-menu</a>
+            <a href="http://www.touch-menu-system.info/inventory.html">touch-menu-system</a>
+            <a href="http://www.upsell-menu.info/inventory.html">upsell-menu</a>
+            <a href="http://www.xn--caf-digital-menu-dqb.info/inventory.html">xn--caf-digital-menu-dqb</a>
+
+
+            <a href="http://www.affordable-kiosk-system.info/kiosk.html">affordable-kiosk-system</a>
+            <a href="http://www.all-kiosk-systems.info/kiosk.html">all-kiosk-systems</a>
+            <a href="http://www.all-kiosks.info/kiosk.html">all-kiosks</a>
+            <a href="http://www.android-kiosk.info/kiosk.html">android-kiosk</a>
+            <a href="http://www.android-touch-kiosk.info/kiosk.html">android-touch-kiosk</a>
+            <a href="http://www.best-kiosk.info/kiosk.html">best-kiosk</a>
+            <a href="http://www.budgetkiosks.info/kiosk.html">budgetkiosks</a>
+            <a href="http://www.customizedkiosks.info/kiosk.html">customizedkiosks</a>
+            <a href="http://www.dynamic-kiosks.info/kiosk.html">dynamic-kiosks</a>
+            <a href="http://www.efficient-kiosk-system.info/kiosk.html">efficient-kiosk-system</a>
+            <a href="http://www.electronic-kiosk.info/kiosk.html">electronic-kiosk</a>
+            <a href="http://www.everythingkiosk.info/kiosk.html">everythingkiosk</a>
+            <a href="http://www.fastfood-kiosk-provider.info/kiosk.html">fastfood-kiosk-provider</a>
+            <a href="http://www.fastfood-kiosk.info/kiosk.html">fastfood-kiosk</a>
+            <a href="http://www.inter-active-kiosk.info/kiosk.html">inter-active-kiosk</a>
+            <a href="http://www.intuitive-kiosk.info/kiosk.html">intuitive-kiosk</a>
+            <a href="http://www.kiosk-2018.info/kiosk.html">kiosk-2018</a>
+            <a href="http://www.kiosk-distributor.info/kiosk.html">kiosk-distributor</a>
+            <a href="http://www.kiosk-international.info/kiosk.html">kiosk-international</a>
+            <a href="http://www.kiosk-manager-provider.info/kiosk.html">kiosk-manager-provider</a>
+            <a href="http://www.kiosk-manager.info/kiosk.html">kiosk-manager</a>
+            <a href="http://www.kiosk-manufacturer.info/kiosk.html">kiosk-manufacturer</a>
+            <a href="http://www.kiosk-point-of-sale-2018.info/kiosk.html">kiosk-point-of-sale-2018</a>
+            <a href="http://www.kiosk-point-of-sale.info/kiosk.html">kiosk-point-of-sale</a>
+            <a href="http://www.kiosk-pos-2018.info/kiosk.html">kiosk-pos-2018</a>
+            <a href="http://www.kiosk-pos-provider.info/kiosk.html">kiosk-pos-provider</a>
+            <a href="http://www.kiosk-pos.info/kiosk.html">kiosk-pos</a>
+            <a href="http://www.kiosk-provider.info/kiosk.html">kiosk-provider</a>
+            <a href="http://www.kiosk-supplier.info/kiosk.html">kiosk-supplier</a>
+            <a href="http://www.kiosk-system-provider.info/kiosk.html">kiosk-system-provider</a>
+            <a href="http://www.kiosk-system.info/kiosk.html">kiosk-system</a>
+            <a href="http://www.kiosk-touch-screen.info/kiosk.html">kiosk-touch-screen</a>
+            <a href="http://www.kiosk-worldwide.info/kiosk.html">kiosk-worldwide</a>
+            <a href="http://www.kioskalternative.info/kiosk.html">kioskalternative</a>
+            <a href="http://www.kioskbydesign.info/kiosk.html">kioskbydesign</a>
+            <a href="http://www.latest-kiosk-2018.info/kiosk.html">latest-kiosk-2018</a>
+            <a href="http://www.latest-kiosk.info/kiosk.html">latest-kiosk</a>
+            <a href="http://www.on-premise-kiosk.info/kiosk.html">on-premise-kiosk</a>
+            <a href="http://www.order-kiosk.info/kiosk.html">order-kiosk</a>
+            <a href="http://www.orderbykiosk.info/kiosk.html">orderbykiosk</a>
+            <a href="http://www.passionforkiosks.info/kiosk.html">passionforkiosks</a>
+            <a href="http://www.profitbykiosk.info/kiosk.html">profitbykiosk</a>
+            <a href="http://www.quick-serve-kiosk.info/kiosk.html">quick-serve-kiosk</a>
+            <a href="http://www.rapid-roi-kiosk.info/kiosk.html">rapid-roi-kiosk</a>
+            <a href="http://www.self-ordering-kiosk.info/kiosk.html">self-ordering-kiosk</a>
+            <a href="http://www.self-serve-kiosk.info/kiosk.html">self-serve-kiosk</a>
+            <a href="http://www.simplified-kiosk.info/kiosk.html">simplified-kiosk</a>
+            <a href="http://www.smart-kiosk.info/kiosk.html">smart-kiosk</a>
+            <a href="http://www.standalonekiosk.info/kiosk.html">standalonekiosk</a>
+            <a href="http://www.top-kiosk.info/kiosk.html">top-kiosk</a>
+            <a href="http://www.touch-kiosk.info/kiosk.html">touch-kiosk</a>
+            <a href="http://www.universalkiosks.info/kiosk.html">universalkiosks</a>
+            <a href="http://www.xn--caf-kiosk-d4a.info/kiosk.html">xn--caf-kiosk-d4a</a>
+
+
+            <a href="http://www.affordable-ordering-system.info/ordering.html">affordable-ordering-system</a>
+            <a href="http://www.automated-ordering.info/ordering.html">automated-ordering</a>
+            <a href="http://www.convinient-ordering.info/ordering.html">convinient-ordering</a>
+            <a href="http://www.digital-ordering.info/ordering.html">digital-ordering</a>
+            <a href="http://www.efficient-ordering-management.info/ordering.html">efficient-ordering-management</a>
+            <a href="http://www.interactive-ordering.info/ordering.html">interactive-ordering</a>
+            <a href="http://www.intuitive-ordering.info/ordering.html">intuitive-ordering</a>
+            <a href="http://www.on-premise-digital-ordering.info/ordering.html">on-premise-digital-ordering</a>
+            <a href="http://www.on-premise-ordering-system.info/ordering.html">on-premise-ordering-system</a>
+            <a href="http://www.ordering-app-provider.info/ordering.html">ordering-app-provider</a>
+            <a href="http://www.ordering-app.info/ordering.html">ordering-app</a>
+            <a href="http://www.ordering-system-provider.info/ordering.html">ordering-system-provider</a>
+            <a href="http://www.ordering-systems.info/ordering.html">ordering-systems</a>
+            <a href="http://www.paperless-ordering.info/ordering.html">paperless-ordering</a>
+            <a href="http://www.secure-ordering.info/ordering.html">secure-ordering</a>
+            <a href="http://www.simplified-ordering.info/ordering.html">simplified-ordering</a>
+            <a href="http://www.smart-ordering-system-2018.info/ordering.html">smart-ordering-system-2018</a>
+            <a href="http://www.smart-ordering-system.info/ordering.html">smart-ordering-system</a>
+            <a href="http://www.table-ordering-system.info/ordering.html">table-ordering-system</a>
+            <a href="http://www.tablet-ordering-system.info/ordering.html">tablet-ordering-system</a>
+            <a href="http://www.touch-ordering.info/ordering.html">touch-ordering</a>
+            <a href="http://www.xn--caf-ordering-system-dzb.info/ordering.html">xn--caf-ordering-system-dzb</a>
+
+
+            <a href="http://www.affordable-pos-2018.info/pos.html">affordable-pos-2018</a>
+            <a href="http://www.affordable-pos.info/pos.html">affordable-pos</a>
+            <a href="http://www.bestpos.info/pos.html">bestpos</a>
+            <a href="http://www.budget-pos.info/pos.html">budget-pos</a>
+            <a href="http://www.latest-pos-2018.info/pos.html">latest-pos-2018</a>
+            <a href="http://www.latest-pos.info/pos.html">latest-pos</a>
+            <a href="http://www.modern-pos.info/pos.html">modern-pos</a>
+            <a href="http://www.on-premise-pos-2018.info/pos.html">on-premise-pos-2018</a>
+            <a href="http://www.on-premise-pos.info/pos.html">on-premise-pos</a>
+            <a href="http://www.pos-distributor.info/pos.html">pos-distributor</a>
+            <a href="http://www.pos-manufacturer.info/pos.html">pos-manufacturer</a>
+            <a href="http://www.pos-provider.info/pos.html">pos-provider</a>
+            <a href="http://www.pos-solution-s.info/pos.html">pos-solution-s</a>
+            <a href="http://www.pos-solutions-2018.info/pos.html">pos-solutions-2018</a>
+            <a href="http://www.pos-supplier.info/pos.html">pos-supplier</a>
+            <a href="http://www.pos-with-inventory.info/.html">pos-with-inventory</a>
+            <a href="http://www.posalternative.info/pos.html">posalternative</a>
+            <a href="http://www.quick-serve-pos-2018.info/pos.html">quick-serve-pos-2018</a>
+            <a href="http://www.quick-serve-pos.info/pos.html">quick-serve-pos</a>
+            <a href="http://www.secure-pos.info/pos.html">secure-pos</a>
+            <a href="http://www.smart-pos-2018.info/pos.html">smart-pos-2018</a>
+            <a href="http://www.smart-pos.info/pos.html">smart-pos</a>
+            <a href="http://www.standalonepos.info/pos.html">standalonepos</a>
+            <a href="http://www.touch-pos.info/pos.html">touch-pos</a>
+            <a href="http://www.xn--caf-pos-dya.info/pos.html">xn--caf-pos-dya</a>
+            <a href="http://www.affordable-point-of-sale-2018.info/pos.html">affordable-point-of-sale-2018</a>
+            <a href="http://www.affordable-point-of-sale.info/pos.html">affordable-point-of-sale</a>
+            <a href="http://www.latest-point-of-sale-2018.info/pos.html">latest-point-of-sale-2018</a>
+            <a href="http://www.latest-point-of-sale.info/pos.html">latest-point-of-sale</a>
+            <a href="http://www.modern-point-of-sale.info/pos.html">modern-point-of-sale</a>
+            <a href="http://www.on-premise-point-of-sale-2018.info/pos.html">on-premise-point-of-sale-2018</a>
+            <a href="http://www.on-premise-point-of-sale.info/pos.html">on-premise-point-of-sale</a>
+            <a href="http://www.point-of-sale-s.info/pos.html">point-of-sale-s</a>
+            <a href="http://www.point-of-sale-solutions-2018.info/pos.html">point-of-sale-solutions-2018</a>
+            <a href="http://www.quick-serve-point-of-sale-2018.info/pos.html">quick-serve-point-of-sale-2018</a>
+            <a href="http://www.quick-serve-point-of-sale.info/pos.html">quick-serve-point-of-sale</a>
+            <a href="http://www.smart-point-of-sale-2018.info/pos.html">smart-point-of-sale-2018</a>
+            <a href="http://www.smart-point-of-sale.info/pos.html">smart-point-of-sale</a>
+            <a href="http://www.standalonepoint-of-sale.info/pos.html">standalonepoint-of-sale</a>
+            <a href="http://www.touch-point-of-sale.info/pos.html">touch-point-of-sale</a>
+            <a href="http://www.xn--caf-point-of-sale-dtb.info/pos.html">xn--caf-point-of-sale-dtb</a>
+
+
+            <a href="http://www.digital-restaurant.info/restaurant.html">digital-restaurant</a>
+            <a href="http://www.electronic-restaurant.info/restaurant.html">electronic-restaurant</a>
+            <a href="http://www.on-premise-restaurant-system.info/restaurant.html">on-premise-restaurant-system</a>
+            <a href="http://www.paperless-restaurant.info/restaurant.html">paperless-restaurant</a>
+            <a href="http://www.restaurant-assistant.info/restaurant.html">restaurant-assistant</a>
+            <a href="http://www.restaurant-manager-provider.info/restaurant.html">restaurant-manager-provider</a>
+            <a href="http://www.restaurant-manager.info/restaurant.html">restaurant-manager</a>
+            <a href="http://www.restaurant-menu-provider.info/restaurant.html">restaurant-menu-provider</a>
+            <a href="http://www.restaurant-menu.info/restaurant.html">restaurant-menu</a>
+            <a href="http://www.restaurant-solutions-provider.info/restaurant.html">restaurant-solutions-provider</a>
+            <a href="http://www.restaurant-solutions.info/restaurant.html">restaurant-solutions</a>
+            <a href="http://www.smart-restaurant-system-2018.info/restaurant.html">smart-restaurant-system-2018</a>
+            <a href="http://www.smart-restaurant-system.info/restaurant.html">smart-restaurant-system</a>
+
+
+            <a href="http://www.all-touch-systems.info/touch.html">all-touch-systems</a>
+            <a href="http://www.bestpointofsale.info/touch.html">bestpointofsale</a>
+            <a href="http://www.budgetpointofsale.info/touch.html">budgetpointofsale</a>
+            <a href="http://www.click-to-order.info/touch.html">click-to-order</a>
+            <a href="http://www.digital-interface.info/touch.html">digital-interface</a>
+            <a href="http://www.digital-kitchen.info/touch.html">digital-kitchen</a>
+            <a href="http://www.digital-waiter.info/touch.html">digital-waiter</a>
+            <a href="http://www.easy-orders.info/touch.html">easy-orders</a>
+            <a href="http://www.ki-osk.info/touch.html">ki-osk</a>
+            <a href="http://www.kitchen-display-system.info/touch.html">kitchen-display-system</a>
+            <a href="http://www.kitchen-flow-system.info/touch.html">kitchen-flow-system</a>
+            <a href="http://www.kitchen-management.info/touch.html">kitchen-management</a>
+            <a href="http://www.lukslofts.ph/touch.html">lukslofts</a>
+            <a href="http://www.multilingual-display.info/touch.html">multilingual-display</a>
+            <a href="http://www.order-queue-manager.info/touch.html">order-queue-manager</a>
+            <a href="http://www.order-queue-system.info/touch.html">order-queue-system</a>
+            <a href="http://www.order-taking-system.info/touch.html">order-taking-system</a>
+            <a href="http://www.orderbytablet.info/touch.html">orderbytablet</a>
+            <a href="http://www.orderbytouch.info/touch.html">orderbytouch</a>
+            <a href="http://www.ordertaker.info/touch.html">ordertaker</a>
+            <a href="http://www.paperless-kitchen.info/touch.html">paperless-kitchen</a>
+            <a href="http://www.quick-serve-solution.info/touch.html">quick-serve-solution</a>
+            <a href="http://www.smart-tou-ch.info/touch.html">smart-tou-ch</a>
+            <a href="http://www.smart-waiter.info/touch.html">smart-waiter</a>
+            <a href="http://www.sure-roi-systems.info/touch.html">sure-roi-systems</a>
+            <a href="http://www.takemyorder.info/touch.html">takemyorder</a>
+            <a href="http://www.taptoorder.info/touch.html">taptoorder</a>
+            <a href="http://www.touchtoorder.info/touch.html">touchtoorder</a>
+            <a href="http://www.waiter-application.info/touch.html">waiter-application</a>
+
+
+            <a href='https://egrub.net/features/advanced-flexible-system.html'>advanced-flexible-system</a>
+            <a href='https://egrub.net/features/advanced-food-advertisement.html'>advanced-food-advertisement</a>
+            <a href='https://egrub.net/features/advanced-food-app.html'>advanced-food-app</a>
+            <a href='https://egrub.net/features/advanced-food-app-industry.html'>advanced-food-app-industry</a>
+            <a href='https://egrub.net/features/advanced-foodcart-advertisement.html'>advanced-foodcart-advertisement</a>
+            <a href='https://egrub.net/features/advanced-foodcart-app-ergub.html'>advanced-foodcart-app-ergub</a>
+            <a href='https://egrub.net/features/advanced-foodcart-app.html'>advanced-foodcart-app</a>
+            <a href='https://egrub.net/features/advanced-foodcart-digitize.html'>advanced-foodcart-digitize</a>
+            <a href='https://egrub.net/features/advanced-foodcart-digitize-ordering.html'>advanced-foodcart-digitize-ordering</a>
+            <a href='https://egrub.net/features/advanced-foodcart-ergub-app.html'>advanced-foodcart-ergub-app</a>
+            <a href='https://egrub.net/features/advanced-foodcart-ergub.html'>advanced-foodcart-ergub</a>
+            <a href='https://egrub.net/features/advanced-foodcart.html'>advanced-foodcart</a>
+            <a href='https://egrub.net/features/advanced-foodcart-order.html'>advanced-foodcart-order</a>
+            <a href='https://egrub.net/features/advanced-foodcart-ordering-digitize.html'>advanced-foodcart-ordering-digitize</a>
+            <a href='https://egrub.net/features/advanced-foodcart-ordering.html'>advanced-foodcart-ordering</a>
+            <a href='https://egrub.net/features/advanced-foodcart-system.html'>advanced-foodcart-system</a>
+            <a href='https://egrub.net/features/advanced-food.html'>advanced-food</a>
+            <a href='https://egrub.net/features/advanced-food-industry-app.html'>advanced-food-industry-app</a>
+            <a href='https://egrub.net/features/advanced-food-industry.html'>advanced-food-industry</a>
+            <a href='https://egrub.net/features/advanced-food-industry-return-of-investment.html'>advanced-food-industry-return-of-investment</a>
+            <a href='https://egrub.net/features/advanced-food-industry-solution.html'>advanced-food-industry-solution</a>
+            <a href='https://egrub.net/features/advanced-food-industry-standout.html'>advanced-food-industry-standout</a>
+            <a href='https://egrub.net/features/advanced-food-industry-system.html'>advanced-food-industry-system</a>
+            <a href='https://egrub.net/features/advanced-food-return-of-investment.html'>advanced-food-return-of-investment</a>
+            <a href='https://egrub.net/features/advanced-food-return-of-investment-industry.html'>advanced-food-return-of-investment-industry</a>
+            <a href='https://egrub.net/features/advanced-food-solution.html'>advanced-food-solution</a>
+            <a href='https://egrub.net/features/advanced-food-solution-industry.html'>advanced-food-solution-industry</a>
+            <a href='https://egrub.net/features/advanced-food-system.html'>advanced-food-system</a>
+            <a href='https://egrub.net/features/advanced-food-system-industry.html'>advanced-food-system-industry</a>
+            <a href='https://egrub.net/features/advanced-forallrestaurants.html'>advanced-forallrestaurants</a>
+            <a href='https://egrub.net/features/advanced-forallrestaurants-suitable.html'>advanced-forallrestaurants-suitable</a>
+            <a href='https://egrub.net/features/advanced-for-service-call.html'>advanced-for-service-call</a>
+            <a href='https://egrub.net/features/advanced-for-service.html'>advanced-for-service</a>
+            <a href='https://egrub.net/features/advanced-free.html'>advanced-free</a>
+            <a href='https://egrub.net/features/advanced-free-system.html'>advanced-free-system</a>
+            <a href='https://egrub.net/features/advanced-free-system-updates.html'>advanced-free-system-updates</a>
+            <a href='https://egrub.net/features/advanced-free-updates.html'>advanced-free-updates</a>
+            <a href='https://egrub.net/features/advanced-free-updates-system.html'>advanced-free-updates-system</a>
+            <a href='https://egrub.net/features/advanced-french.html'>advanced-french</a>
+            <a href='https://egrub.net/features/advanced-french-menu.html'>advanced-french-menu</a>
+            <a href='https://egrub.net/features/advanced-french-menu-ordering.html'>advanced-french-menu-ordering</a>
+            <a href='https://egrub.net/features/advanced-french-ordering.html'>advanced-french-ordering</a>
+            <a href='https://egrub.net/features/advanced-french-ordering-menu.html'>advanced-french-ordering-menu</a>
+            <a href='https://egrub.net/features/advanced-full-detailed.html'>advanced-full-detailed</a>
+            <a href='https://egrub.net/features/advanced-full-detailed-orders.html'>advanced-full-detailed-orders</a>
+            <a href='https://egrub.net/features/advanced-full.html'>advanced-full</a>
+            <a href='https://egrub.net/features/advanced-full-orders-detailed.html'>advanced-full-orders-detailed</a>
+            <a href='https://egrub.net/features/advanced-full-orders.html'>advanced-full-orders</a>
+            <a href='https://egrub.net/features/advanced-full-restaurant.html'>advanced-full-restaurant</a>
+            <a href='https://egrub.net/features/advanced-full-restaurant-scope.html'>advanced-full-restaurant-scope</a>
+            <a href='https://egrub.net/features/advanced-full-restaurant-scope-system.html'>advanced-full-restaurant-scope-system</a>
+            <a href='https://egrub.net/features/advanced-full-restaurant-system.html'>advanced-full-restaurant-system</a>
+            <a href='https://egrub.net/features/advanced-full-restaurant-system-scope.html'>advanced-full-restaurant-system-scope</a>
+            <a href='https://egrub.net/features/advanced-full-scope.html'>advanced-full-scope</a>
+            <a href='https://egrub.net/features/advanced-full-scope-restaurant.html'>advanced-full-scope-restaurant</a>
+            <a href='https://egrub.net/features/advanced-full-scope-restaurant-system.html'>advanced-full-scope-restaurant-system</a>
+            <a href='https://egrub.net/features/advanced-full-scope-system.html'>advanced-full-scope-system</a>
+            <a href='https://egrub.net/features/advanced-full-scope-system-restaurant.html'>advanced-full-scope-system-restaurant</a>
+            <a href='https://egrub.net/features/advanced-full-system.html'>advanced-full-system</a>
+            <a href='https://egrub.net/features/advanced-full-system-restaurant.html'>advanced-full-system-restaurant</a>
+            <a href='https://egrub.net/features/advanced-full-system-restaurant-scope.html'>advanced-full-system-restaurant-scope</a>
+            <a href='https://egrub.net/features/advanced-full-system-scope.html'>advanced-full-system-scope</a>
+            <a href='https://egrub.net/features/advanced-full-system-scope-restaurant.html'>advanced-full-system-scope-restaurant</a>
+            <a href='https://egrub.net/features/advanced-function-bill-out.html'>advanced-function-bill-out</a>
+            <a href='https://egrub.net/features/advanced-function.html'>advanced-function</a>
+            <a href='https://egrub.net/features/advanced-functions.html'>advanced-functions</a>
+            <a href='https://egrub.net/features/advanced-functions-incorporate.html'>advanced-functions-incorporate</a>
+            <a href='https://egrub.net/features/advanced-futuristic.html'>advanced-futuristic</a>
+            <a href='https://egrub.net/features/advanced-futuristic-touch.html'>advanced-futuristic-touch</a>
+            <a href='https://egrub.net/features/advanced-grow-restaurant-business.html'>advanced-grow-restaurant-business</a>
+            <a href='https://egrub.net/features/advanced-grow-restaurant.html'>advanced-grow-restaurant</a>
+            <a href='https://egrub.net/features/advanced-high-volume.html'>advanced-high-volume</a>
+            <a href='https://egrub.net/features/advanced-high-volume-restaurants.html'>advanced-high-volume-restaurants</a>
+            <a href='https://egrub.net/features/advanced-hotel-app.html'>advanced-hotel-app</a>
+            <a href='https://egrub.net/features/advanced-hotel-app-in.html'>advanced-hotel-app-in</a>
+            <a href='https://egrub.net/features/advanced-hotel-app-in-ordering.html'>advanced-hotel-app-in-ordering</a>
+            <a href='https://egrub.net/features/advanced-hotel-app-ordering.html'>advanced-hotel-app-ordering</a>
+            <a href='https://egrub.net/features/advanced-hotel-app-ordering-in.html'>advanced-hotel-app-ordering-in</a>
+            <a href='https://egrub.net/features/advanced-hotel.html'>advanced-hotel</a>
+            <a href='https://egrub.net/features/advanced-hotel-in-app.html'>advanced-hotel-in-app</a>
+            <a href='https://egrub.net/features/advanced-hotel-in-app-ordering.html'>advanced-hotel-in-app-ordering</a>
+            <a href='https://egrub.net/features/advanced-hotel-in.html'>advanced-hotel-in</a>
+            <a href='https://egrub.net/features/advanced-hotel-in-management.html'>advanced-hotel-in-management</a>
+            <a href='https://egrub.net/features/advanced-hotel-in-ordering-app.html'>advanced-hotel-in-ordering-app</a>
+            <a href='https://egrub.net/features/advanced-hotel-in-ordering.html'>advanced-hotel-in-ordering</a>
+            <a href='https://egrub.net/features/advanced-hotel-in-ordering-system.html'>advanced-hotel-in-ordering-system</a>
+            <a href='https://egrub.net/features/advanced-hotel-in-system.html'>advanced-hotel-in-system</a>
+            <a href='https://egrub.net/features/advanced-hotel-in-system-ordering.html'>advanced-hotel-in-system-ordering</a>
+            <a href='https://egrub.net/features/advanced-hotel-management.html'>advanced-hotel-management</a>
+            <a href='https://egrub.net/features/advanced-hotel-management-in.html'>advanced-hotel-management-in</a>
+            <a href='https://egrub.net/features/advanced-hotel-ordering-app.html'>advanced-hotel-ordering-app</a>
+            <a href='https://egrub.net/features/advanced-hotel-ordering-app-in.html'>advanced-hotel-ordering-app-in</a>
+            <a href='https://egrub.net/features/advanced-hotel-ordering.html'>advanced-hotel-ordering</a>
+            <a href='https://egrub.net/features/advanced-hotel-ordering-in-app.html'>advanced-hotel-ordering-in-app</a>
+            <a href='https://egrub.net/features/advanced-hotel-ordering-in.html'>advanced-hotel-ordering-in</a>
+            <a href='https://egrub.net/features/advanced-hotel-ordering-in-system.html'>advanced-hotel-ordering-in-system</a>
+            <a href='https://egrub.net/features/advanced-hotel-ordering-system.html'>advanced-hotel-ordering-system</a>
+            <a href='https://egrub.net/features/advanced-hotel-ordering-system-in.html'>advanced-hotel-ordering-system-in</a>
+            <a href='https://egrub.net/features/advanced-hotel-system.html'>advanced-hotel-system</a>
+            <a href='https://egrub.net/features/advanced-hotel-system-in.html'>advanced-hotel-system-in</a>
+            <a href='https://egrub.net/features/advanced-hotel-system-in-ordering.html'>advanced-hotel-system-in-ordering</a>
+            <a href='https://egrub.net/features/advanced-hotel-system-ordering.html'>advanced-hotel-system-ordering</a>
+            <a href='https://egrub.net/features/advanced-hotel-system-ordering-in.html'>advanced-hotel-system-ordering-in</a>
+            <a href='https://egrub.net/features/advanced-hourly-ticket-sales.html'>advanced-hourly-ticket-sales</a>
+            <a href='https://egrub.net/features/advanced-how-to-attract-more-customers.html'>advanced-how-to-attract-more-customers</a>
+            <a href='https://egrub.net/features/advanced-icons.html'>advanced-icons</a>
+            <a href='https://egrub.net/features/advanced-icons-incorporate.html'>advanced-icons-incorporate</a>
+            <a href='https://egrub.net/features/advanced-icons-incorporate-prompts.html'>advanced-icons-incorporate-prompts</a>
+            <a href='https://egrub.net/features/advanced-icons-prompts.html'>advanced-icons-prompts</a>
+            <a href='https://egrub.net/features/advanced-icons-prompts-incorporate.html'>advanced-icons-prompts-incorporate</a>
+            <a href='https://egrub.net/features/advanced-improved-effeciency.html'>advanced-improved-effeciency</a>
+            <a href='https://egrub.net/features/advanced-improved-effeciency-ordering.html'>advanced-improved-effeciency-ordering</a>
+            <a href='https://egrub.net/features/advanced-improved.html'>advanced-improved</a>
+            <a href='https://egrub.net/features/advanced-improved-ordering-effeciency.html'>advanced-improved-ordering-effeciency</a>
+            <a href='https://egrub.net/features/advanced-improved-ordering.html'>advanced-improved-ordering</a>
+            <a href='https://egrub.net/features/advanced-improve.html'>advanced-improve</a>
+            <a href='https://egrub.net/features/advanced-improvements.html'>advanced-improvements</a>
+            <a href='https://egrub.net/features/advanced-improvements-restaurant.html'>advanced-improvements-restaurant</a>
+            <a href='https://egrub.net/features/advanced-improvements-restaurant-use-savings.html'>advanced-improvements-restaurant-use-savings</a>
+            <a href='https://egrub.net/features/advanced-improvements-use-savings.html'>advanced-improvements-use-savings</a>
+            <a href='https://egrub.net/features/advanced-improvements-use-savings-restaurant.html'>advanced-improvements-use-savings-restaurant</a>
+            <a href='https://egrub.net/features/advanced-improve-restaurant-operations.html'>advanced-improve-restaurant-operations</a>
+            <a href='https://egrub.net/features/advanced-in-app-hotel.html'>advanced-in-app-hotel</a>
+            <a href='https://egrub.net/features/advanced-in-app-hotel-ordering.html'>advanced-in-app-hotel-ordering</a>
+            <a href='https://egrub.net/features/advanced-in-app.html'>advanced-in-app</a>
+            <a href='https://egrub.net/features/advanced-in-app-ordering-hotel.html'>advanced-in-app-ordering-hotel</a>
+            <a href='https://egrub.net/features/advanced-in-app-ordering.html'>advanced-in-app-ordering</a>
+            <a href='https://egrub.net/features/advanced-incorporate-functions.html'>advanced-incorporate-functions</a>
+            <a href='https://egrub.net/features/advanced-incorporate.html'>advanced-incorporate</a>
+            <a href='https://egrub.net/features/advanced-incorporate-icons.html'>advanced-incorporate-icons</a>
+            <a href='https://egrub.net/features/advanced-incorporate-icons-prompts.html'>advanced-incorporate-icons-prompts</a>
+            <a href='https://egrub.net/features/advanced-incorporate-prompts.html'>advanced-incorporate-prompts</a>
+            <a href='https://egrub.net/features/advanced-incorporate-prompts-icons.html'>advanced-incorporate-prompts-icons</a>
+            <a href='https://egrub.net/features/advanced-increase-customer.html'>advanced-increase-customer</a>
+            <a href='https://egrub.net/features/advanced-increase-customer-satisfaction.html'>advanced-increase-customer-satisfaction</a>
+            <a href='https://egrub.net/features/advanced-increase.html'>advanced-increase</a>
+            <a href='https://egrub.net/features/advanced-increase-revenue.html'>advanced-increase-revenue</a>
+            <a href='https://egrub.net/features/advanced-increase-sales.html'>advanced-increase-sales</a>
+            <a href='https://egrub.net/features/advanced-increase-satisfaction-customer.html'>advanced-increase-satisfaction-customer</a>
+            <a href='https://egrub.net/features/advanced-increase-satisfaction.html'>advanced-increase-satisfaction</a>
+            <a href='https://egrub.net/features/advanced-industry-app-food.html'>advanced-industry-app-food</a>
+            <a href='https://egrub.net/features/advanced-industry-app.html'>advanced-industry-app</a>
+            <a href='https://egrub.net/features/advanced-industry-food-app.html'>advanced-industry-food-app</a>
+            <a href='https://egrub.net/features/advanced-industry-food.html'>advanced-industry-food</a>
+            <a href='https://egrub.net/features/advanced-industry-food-return-of-investment.html'>advanced-industry-food-return-of-investment</a>
+            <a href='https://egrub.net/features/advanced-industry-food-solution.html'>advanced-industry-food-solution</a>
+            <a href='https://egrub.net/features/advanced-industry-food-system.html'>advanced-industry-food-system</a>
+            <a href='https://egrub.net/features/advanced-industry.html'>advanced-industry</a>
+            <a href='https://egrub.net/features/advanced-industry-return-of-investment-food.html'>advanced-industry-return-of-investment-food</a>
+            <a href='https://egrub.net/features/advanced-industry-return-of-investment.html'>advanced-industry-return-of-investment</a>
+            <a href='https://egrub.net/features/advanced-industry-solution-food.html'>advanced-industry-solution-food</a>
+            <a href='https://egrub.net/features/advanced-industry-solution.html'>advanced-industry-solution</a>
+            <a href='https://egrub.net/features/advanced-industry-system-food.html'>advanced-industry-system-food</a>
+            <a href='https://egrub.net/features/advanced-industry-system.html'>advanced-industry-system</a>
+            <a href='https://egrub.net/features/advanced-informative-expediter.html'>advanced-informative-expediter</a>
+            <a href='https://egrub.net/features/advanced-informative.html'>advanced-informative</a>
+            <a href='https://egrub.net/features/advanced-informative-menu.html'>advanced-informative-menu</a>
+            <a href='https://egrub.net/features/advanced-informative-menu-more.html'>advanced-informative-menu-more</a>
+            <a href='https://egrub.net/features/advanced-informative-more.html'>advanced-informative-more</a>
+            <a href='https://egrub.net/features/advanced-informative-more-menu.html'>advanced-informative-more-menu</a>
+            <a href='https://egrub.net/features/advanced-ingredient.html'>advanced-ingredient</a>
+            <a href='https://egrub.net/features/advanced-ingredient-inventory.html'>advanced-ingredient-inventory</a>
+            <a href='https://egrub.net/features/advanced-ingredient-management.html'>advanced-ingredient-management</a>
+            <a href='https://egrub.net/features/advanced-ingredients-available.html'>advanced-ingredients-available</a>
+            <a href='https://egrub.net/features/advanced-ingredients-available-monitor.html'>advanced-ingredients-available-monitor</a>
+            <a href='https://egrub.net/features/advanced-ingredients.html'>advanced-ingredients</a>
+            <a href='https://egrub.net/features/advanced-ingredients-monitor-available.html'>advanced-ingredients-monitor-available</a>
+            <a href='https://egrub.net/features/advanced-ingredients-monitor.html'>advanced-ingredients-monitor</a>
+            <a href='https://egrub.net/features/advanced-in-hotel-app.html'>advanced-in-hotel-app</a>
+            <a href='https://egrub.net/features/advanced-in-hotel-app-ordering.html'>advanced-in-hotel-app-ordering</a>
+            <a href='https://egrub.net/features/advanced-in-hotel.html'>advanced-in-hotel</a>
+            <a href='https://egrub.net/features/advanced-in-hotel-inventory.html'>advanced-in-hotel-inventory</a>
+            <a href='https://egrub.net/features/advanced-in-hotel-inventory-system.html'>advanced-in-hotel-inventory-system</a>
+            <a href='https://egrub.net/features/advanced-in-hotel-management.html'>advanced-in-hotel-management</a>
+            <a href='https://egrub.net/features/advanced-in-hotel-ordering-app.html'>advanced-in-hotel-ordering-app</a>
+            <a href='https://egrub.net/features/advanced-in-hotel-ordering.html'>advanced-in-hotel-ordering</a>
+            <a href='https://egrub.net/features/advanced-in-hotel-ordering-system.html'>advanced-in-hotel-ordering-system</a>
+            <a href='https://egrub.net/features/advanced-in-hotel-system.html'>advanced-in-hotel-system</a>
+            <a href='https://egrub.net/features/advanced-in-hotel-system-inventory.html'>advanced-in-hotel-system-inventory</a>
+            <a href='https://egrub.net/features/advanced-in-hotel-system-ordering.html'>advanced-in-hotel-system-ordering</a>
+            <a href='https://egrub.net/features/advanced-in.html'>advanced-in</a>
+            <a href='https://egrub.net/features/advanced-in-management-hotel.html'>advanced-in-management-hotel</a>
+            <a href='https://egrub.net/features/advanced-in-management.html'>advanced-in-management</a>
+            <a href='https://egrub.net/features/advanced-in-ordering-app-hotel.html'>advanced-in-ordering-app-hotel</a>
+            <a href='https://egrub.net/features/advanced-in-ordering-app.html'>advanced-in-ordering-app</a>
+            <a href='https://egrub.net/features/advanced-in-ordering-hotel-app.html'>advanced-in-ordering-hotel-app</a>
+            <a href='https://egrub.net/features/advanced-in-ordering-hotel.html'>advanced-in-ordering-hotel</a>
+            <a href='https://egrub.net/features/advanced-in-ordering-hotel-system.html'>advanced-in-ordering-hotel-system</a>
+            <a href='https://egrub.net/features/advanced-in-ordering.html'>advanced-in-ordering</a>
+            <a href='https://egrub.net/features/advanced-in-ordering-system-hotel.html'>advanced-in-ordering-system-hotel</a>
+            <a href='https://egrub.net/features/advanced-in-ordering-system.html'>advanced-in-ordering-system</a>
+            <a href='https://egrub.net/features/advanced-in-resort.html'>advanced-in-resort</a>
+            <a href='https://egrub.net/features/advanced-in-resort-ordering.html'>advanced-in-resort-ordering</a>
+            <a href='https://egrub.net/features/advanced-in-resort-ordering-system.html'>advanced-in-resort-ordering-system</a>
+            <a href='https://egrub.net/features/advanced-in-resort-system.html'>advanced-in-resort-system</a>
+            <a href='https://egrub.net/features/advanced-in-resort-system-ordering.html'>advanced-in-resort-system-ordering</a>
+            <a href='https://egrub.net/features/advanced-instant.html'>advanced-instant</a>
+            <a href='https://egrub.net/features/advanced-instant-restaurant.html'>advanced-instant-restaurant</a>
+            <a href='https://egrub.net/features/advanced-instant-restaurant-survey.html'>advanced-instant-restaurant-survey</a>
+            <a href='https://egrub.net/features/advanced-instant-survey.html'>advanced-instant-survey</a>
+            <a href='https://egrub.net/features/advanced-instant-survey-restaurant.html'>advanced-instant-survey-restaurant</a>
+            <a href='https://egrub.net/features/advanced-in-system-hotel.html'>advanced-in-system-hotel</a>
+            <a href='https://egrub.net/features/advanced-in-system-hotel-ordering.html'>advanced-in-system-hotel-ordering</a>
+            <a href='https://egrub.net/features/advanced-in-system.html'>advanced-in-system</a>
+            <a href='https://egrub.net/features/advanced-in-system-ordering-hotel.html'>advanced-in-system-ordering-hotel</a>
+            <a href='https://egrub.net/features/advanced-in-system-ordering.html'>advanced-in-system-ordering</a>
+            <a href='https://egrub.net/features/advanced-integrated.html'>advanced-integrated</a>
+            <a href='https://egrub.net/features/advanced-integrated-point-of-sale.html'>advanced-integrated-point-of-sale</a>
+            <a href='https://egrub.net/features/advanced-integrated-pos.html'>advanced-integrated-pos</a>
+            <a href='https://egrub.net/features/advanced-interactive-app.html'>advanced-interactive-app</a>
+            <a href='https://egrub.net/features/advanced-interactive-app-ordering.html'>advanced-interactive-app-ordering</a>
+            <a href='https://egrub.net/features/advanced-interactive-display.html'>advanced-interactive-display</a>
+            <a href='https://egrub.net/features/advanced-interactive-display-screen.html'>advanced-interactive-display-screen</a>
+            <a href='https://egrub.net/features/advanced-interactive.html'>advanced-interactive</a>
+            <a href='https://egrub.net/features/advanced-interactive-kitchen.html'>advanced-interactive-kitchen</a>
+            <a href='https://egrub.net/features/advanced-interactive-kitchen-monitoring.html'>advanced-interactive-kitchen-monitoring</a>
+            <a href='https://egrub.net/features/advanced-interactive-monitoring.html'>advanced-interactive-monitoring</a>
+            <a href='https://egrub.net/features/advanced-interactive-monitoring-kitchen.html'>advanced-interactive-monitoring-kitchen</a>
+            <a href='https://egrub.net/features/advanced-interactive-ordering-app.html'>advanced-interactive-ordering-app</a>
+            <a href='https://egrub.net/features/advanced-interactive-ordering.html'>advanced-interactive-ordering</a>
+            <a href='https://egrub.net/features/advanced-interactive-ordering-system.html'>advanced-interactive-ordering-system</a>
+            <a href='https://egrub.net/features/advanced-interactive-screen-display.html'>advanced-interactive-screen-display</a>
+            <a href='https://egrub.net/features/advanced-interactive-screen.html'>advanced-interactive-screen</a>
+            <a href='https://egrub.net/features/advanced-interactive-system.html'>advanced-interactive-system</a>
+            <a href='https://egrub.net/features/advanced-interactive-system-ordering.html'>advanced-interactive-system-ordering</a>
+            <a href='https://egrub.net/features/advanced-interface-digital.html'>advanced-interface-digital</a>
+            <a href='https://egrub.net/features/advanced-interface.html'>advanced-interface</a>
+            <a href='https://egrub.net/features/advanced-interfaces-digital.html'>advanced-interfaces-digital</a>
+            <a href='https://egrub.net/features/advanced-interfaces.html'>advanced-interfaces</a>
+            <a href='https://egrub.net/features/advanced-internet-complete.html'>advanced-internet-complete</a>
+            <a href='https://egrub.net/features/advanced-internet.html'>advanced-internet</a>
+            <a href='https://egrub.net/features/advanced-inventory-app-embedded.html'>advanced-inventory-app-embedded</a>
+            <a href='https://egrub.net/features/advanced-inventory-app.html'>advanced-inventory-app</a>
+            <a href='https://egrub.net/features/advanced-inventory-easy.html'>advanced-inventory-easy</a>
+            <a href='https://egrub.net/features/advanced-inventory-easy-monitoring.html'>advanced-inventory-easy-monitoring</a>
+            <a href='https://egrub.net/features/advanced-inventory-embedded-app.html'>advanced-inventory-embedded-app</a>
+            <a href='https://egrub.net/features/advanced-inventory-embedded.html'>advanced-inventory-embedded</a>
+            <a href='https://egrub.net/features/advanced-inventory-embedded-system.html'>advanced-inventory-embedded-system</a>
+            <a href='https://egrub.net/features/advanced-inventory-erp-level.html'>advanced-inventory-erp-level</a>
+            <a href='https://egrub.net/features/advanced-inventory.html'>advanced-inventory</a>
+            <a href='https://egrub.net/features/advanced-inventory-ingredient.html'>advanced-inventory-ingredient</a>
+            <a href='https://egrub.net/features/advanced-inventory-in-hotel.html'>advanced-inventory-in-hotel</a>
+            <a href='https://egrub.net/features/advanced-inventory-in-hotel-system.html'>advanced-inventory-in-hotel-system</a>
+            <a href='https://egrub.net/features/advanced-inventory-items-auto-deduct.html'>advanced-inventory-items-auto-deduct</a>
+            <a href='https://egrub.net/features/advanced-inventory-items-auto.html'>advanced-inventory-items-auto</a>
+            <a href='https://egrub.net/features/advanced-inventory-items-deduct-auto.html'>advanced-inventory-items-deduct-auto</a>
+            <a href='https://egrub.net/features/advanced-inventory-items-deduct.html'>advanced-inventory-items-deduct</a>
+            <a href='https://egrub.net/features/advanced-inventory-items.html'>advanced-inventory-items</a>
+            <a href='https://egrub.net/features/advanced-inventory-management.html'>advanced-inventory-management</a>
+            <a href='https://egrub.net/features/advanced-inventory-monitor.html'>advanced-inventory-monitor</a>
+            <a href='https://egrub.net/features/advanced-inventory-monitoring-easy.html'>advanced-inventory-monitoring-easy</a>
+            <a href='https://egrub.net/features/advanced-inventory-monitoring.html'>advanced-inventory-monitoring</a>
+            <a href='https://egrub.net/features/advanced-inventory-monitoring-up-to-date.html'>advanced-inventory-monitoring-up-to-date</a>
+            <a href='https://egrub.net/features/advanced-inventory-pos.html'>advanced-inventory-pos</a>
+            <a href='https://egrub.net/features/advanced-inventory-standards.html'>advanced-inventory-standards</a>
+            <a href='https://egrub.net/features/advanced-inventory-system-embedded.html'>advanced-inventory-system-embedded</a>
+            <a href='https://egrub.net/features/advanced-inventory-system.html'>advanced-inventory-system</a>
+            <a href='https://egrub.net/features/advanced-inventory-system-in-hotel.html'>advanced-inventory-system-in-hotel</a>
+            <a href='https://egrub.net/features/advanced-inventory-techniques.html'>advanced-inventory-techniques</a>
+            <a href='https://egrub.net/features/advanced-inventory-tracking.html'>advanced-inventory-tracking</a>
+            <a href='https://egrub.net/features/advanced-inventory-up-to-date.html'>advanced-inventory-up-to-date</a>
+            <a href='https://egrub.net/features/advanced-inventory-up-to-date-monitoring.html'>advanced-inventory-up-to-date-monitoring</a>
+            <a href='https://egrub.net/features/advanced-investment.html'>advanced-investment</a>
+            <a href='https://egrub.net/features/advanced-ios-app.html'>advanced-ios-app</a>
+            <a href='https://egrub.net/features/advanced-ios-app-ordering.html'>advanced-ios-app-ordering</a>
+            <a href='https://egrub.net/features/advanced-ios-app-pos.html'>advanced-ios-app-pos</a>
+            <a href='https://egrub.net/features/advanced-ios.html'>advanced-ios</a>
+            <a href='https://egrub.net/features/advanced-ios-ordering-app.html'>advanced-ios-ordering-app</a>
+            <a href='https://egrub.net/features/advanced-ios-ordering.html'>advanced-ios-ordering</a>
+            <a href='https://egrub.net/features/advanced-ios-pos-app.html'>advanced-ios-pos-app</a>
+            <a href='https://egrub.net/features/advanced-ios-pos.html'>advanced-ios-pos</a>
+            <a href='https://egrub.net/features/advanced-italian.html'>advanced-italian</a>
+            <a href='https://egrub.net/features/advanced-italian-menu.html'>advanced-italian-menu</a>
+            <a href='https://egrub.net/features/advanced-italian-menu-ordering.html'>advanced-italian-menu-ordering</a>
+            <a href='https://egrub.net/features/advanced-italian-ordering.html'>advanced-italian-ordering</a>
+            <a href='https://egrub.net/features/advanced-italian-ordering-menu.html'>advanced-italian-ordering-menu</a>
+            <a href='https://egrub.net/features/advanced-item-association.html'>advanced-item-association</a>
+            <a href='https://egrub.net/features/advanced-item-conversion.html'>advanced-item-conversion</a>
+            <a href='https://egrub.net/features/advanced-item.html'>advanced-item</a>
+            <a href='https://egrub.net/features/advanced-item-order.html'>advanced-item-order</a>
+            <a href='https://egrub.net/features/advanced-item-order-review.html'>advanced-item-order-review</a>
+            <a href='https://egrub.net/features/advanced-item-review.html'>advanced-item-review</a>
+            <a href='https://egrub.net/features/advanced-item-review-order.html'>advanced-item-review-order</a>
+            <a href='https://egrub.net/features/advanced-item-sales.html'>advanced-item-sales</a>
+            <a href='https://egrub.net/features/advanced-item-sales-table.html'>advanced-item-sales-table</a>
+            <a href='https://egrub.net/features/advanced-items.html'>advanced-items</a>
+            <a href='https://egrub.net/features/advanced-items-monitor.html'>advanced-items-monitor</a>
+            <a href='https://egrub.net/features/advanced-item-suggestions-automated.html'>advanced-item-suggestions-automated</a>
+            <a href='https://egrub.net/features/advanced-item-suggestions.html'>advanced-item-suggestions</a>
+            <a href='https://egrub.net/features/advanced-items-upsell.html'>advanced-items-upsell</a>
+            <a href='https://egrub.net/features/advanced-item-table.html'>advanced-item-table</a>
+            <a href='https://egrub.net/features/advanced-item-table-sales.html'>advanced-item-table-sales</a>
+            <a href='https://egrub.net/features/advanced-japanese.html'>advanced-japanese</a>
+            <a href='https://egrub.net/features/advanced-japanese-menu.html'>advanced-japanese-menu</a>
+            <a href='https://egrub.net/features/advanced-japanese-menu-ordering.html'>advanced-japanese-menu-ordering</a>
+            <a href='https://egrub.net/features/advanced-japanese-ordering.html'>advanced-japanese-ordering</a>
+            <a href='https://egrub.net/features/advanced-japanese-ordering-menu.html'>advanced-japanese-ordering-menu</a>
+            <a href='https://egrub.net/features/advanced-kiosk-advertisement.html'>advanced-kiosk-advertisement</a>
+            <a href='https://egrub.net/features/advanced-kiosk-app.html'>advanced-kiosk-app</a>
+            <a href='https://egrub.net/features/advanced-kiosk-fastfood.html'>advanced-kiosk-fastfood</a>
+            <a href='https://egrub.net/features/advanced-kiosk.html'>advanced-kiosk</a>
+            <a href='https://egrub.net/features/advanced-kiosk-international.html'>advanced-kiosk-international</a>
+            <a href='https://egrub.net/features/advanced-kiosk-international-passionforkiosks.html'>advanced-kiosk-international-passionforkiosks</a>
+            <a href='https://egrub.net/features/advanced-kiosk-no-monthly-charges.html'>advanced-kiosk-no-monthly-charges</a>
+            <a href='https://egrub.net/features/advanced-kiosk-ordering.html'>advanced-kiosk-ordering</a>
+            <a href='https://egrub.net/features/advanced-kiosk-ordering-self.html'>advanced-kiosk-ordering-self</a>
+            <a href='https://egrub.net/features/advanced-kiosk-ordering-system.html'>advanced-kiosk-ordering-system</a>
+            <a href='https://egrub.net/features/advanced-kiosk-self.html'>advanced-kiosk-self</a>
+            <a href='https://egrub.net/features/advanced-kiosk-self-ordering.html'>advanced-kiosk-self-ordering</a>
+            <a href='https://egrub.net/features/advanced-kiosk-system.html'>advanced-kiosk-system</a>
+            <a href='https://egrub.net/features/advanced-kiosk-system-ordering.html'>advanced-kiosk-system-ordering</a>
+            <a href='https://egrub.net/features/advanced-kiosk-worldwide-etablet.html'>advanced-kiosk-worldwide-etablet</a>
+            <a href='https://egrub.net/features/advanced-kiosk-worldwide.html'>advanced-kiosk-worldwide</a>
+            <a href='https://egrub.net/features/advanced-kitchen-display-options.html'>advanced-kitchen-display-options</a>
+            <a href='https://egrub.net/features/advanced-kitchen-display-options-multiple.html'>advanced-kitchen-display-options-multiple</a>
+            <a href='https://egrub.net/features/advanced-kitchen.html'>advanced-kitchen</a>
+            <a href='https://egrub.net/features/advanced-kitchen-interactive.html'>advanced-kitchen-interactive</a>
+            <a href='https://egrub.net/features/advanced-kitchen-interactive-monitoring.html'>advanced-kitchen-interactive-monitoring</a>
+            <a href='https://egrub.net/features/advanced-kitchen-management.html'>advanced-kitchen-management</a>
+            <a href='https://egrub.net/features/advanced-kitchen-monitoring.html'>advanced-kitchen-monitoring</a>
+            <a href='https://egrub.net/features/advanced-kitchen-monitoring-interactive.html'>advanced-kitchen-monitoring-interactive</a>
+            <a href='https://egrub.net/features/advanced-kitchen-monitoring-system.html'>advanced-kitchen-monitoring-system</a>
+            <a href='https://egrub.net/features/advanced-kitchen-multiple-display-options.html'>advanced-kitchen-multiple-display-options</a>
+            <a href='https://egrub.net/features/advanced-kitchen-multiple.html'>advanced-kitchen-multiple</a>
+            <a href='https://egrub.net/features/advanced-kitchen-notifications.html'>advanced-kitchen-notifications</a>
+            <a href='https://egrub.net/features/advanced-kitchen-operations.html'>advanced-kitchen-operations</a>
+            <a href='https://egrub.net/features/advanced-kitchen-printers.html'>advanced-kitchen-printers</a>
+            <a href='https://egrub.net/features/advanced-kitchen-reports.html'>advanced-kitchen-reports</a>
+            <a href='https://egrub.net/features/advanced-kitchen-system.html'>advanced-kitchen-system</a>
+            <a href='https://egrub.net/features/advanced-kitchen-system-monitoring.html'>advanced-kitchen-system-monitoring</a>
+            <a href='https://egrub.net/features/advanced-korean.html'>advanced-korean</a>
+            <a href='https://egrub.net/features/advanced-korean-menu.html'>advanced-korean-menu</a>
+            <a href='https://egrub.net/features/advanced-korean-menu-ordering.html'>advanced-korean-menu-ordering</a>
+            <a href='https://egrub.net/features/advanced-korean-ordering.html'>advanced-korean-ordering</a>
+            <a href='https://egrub.net/features/advanced-korean-ordering-menu.html'>advanced-korean-ordering-menu</a>
+            <a href='https://egrub.net/features/advanced-labor-and.html'>advanced-labor-and</a>
+            <a href='https://egrub.net/features/advanced-labor-and-transaction.html'>advanced-labor-and-transaction</a>
+            <a href='https://egrub.net/features/advanced-labor-cost.html'>advanced-labor-cost</a>
+            <a href='https://egrub.net/features/advanced-labor-cost-lower.html'>advanced-labor-cost-lower</a>
+            <a href='https://egrub.net/features/advanced-labor.html'>advanced-labor</a>
+            <a href='https://egrub.net/features/advanced-labor-less.html'>advanced-labor-less</a>
+            <a href='https://egrub.net/features/advanced-labor-less-tips.html'>advanced-labor-less-tips</a>
+            <a href='https://egrub.net/features/advanced-labor-lower-cost.html'>advanced-labor-lower-cost</a>
+            <a href='https://egrub.net/features/advanced-labor-lower.html'>advanced-labor-lower</a>
+            <a href='https://egrub.net/features/advanced-labor-savings.html'>advanced-labor-savings</a>
+            <a href='https://egrub.net/features/advanced-labor-tips.html'>advanced-labor-tips</a>
+            <a href='https://egrub.net/features/advanced-labor-tips-less.html'>advanced-labor-tips-less</a>
+            <a href='https://egrub.net/features/advanced-labor-transaction-and.html'>advanced-labor-transaction-and</a>
+            <a href='https://egrub.net/features/advanced-labor-transaction.html'>advanced-labor-transaction</a>
+            <a href='https://egrub.net/features/advanced-langauge.html'>advanced-langauge</a>
+            <a href='https://egrub.net/features/advanced-langauge-selection.html'>advanced-langauge-selection</a>
+            <a href='https://egrub.net/features/advanced-language.html'>advanced-language</a>
+            <a href='https://egrub.net/features/advanced-language-translate.html'>advanced-language-translate</a>
+            <a href='https://egrub.net/features/advanced-led.html'>advanced-led</a>
+            <a href='https://egrub.net/features/advanced-led-tv.html'>advanced-led-tv</a>
+            <a href='https://egrub.net/features/advanced-lessen.html'>advanced-lessen</a>
+            <a href='https://egrub.net/features/advanced-lessen-training.html'>advanced-lessen-training</a>
+            <a href='https://egrub.net/features/advanced-lessen-training-user.html'>advanced-lessen-training-user</a>
+            <a href='https://egrub.net/features/advanced-lessen-user.html'>advanced-lessen-user</a>
+            <a href='https://egrub.net/features/advanced-lessen-user-training.html'>advanced-lessen-user-training</a>
+            <a href='https://egrub.net/features/advanced-less.html'>advanced-less</a>
+            <a href='https://egrub.net/features/advanced-less-labor.html'>advanced-less-labor</a>
+            <a href='https://egrub.net/features/advanced-less-labor-tips.html'>advanced-less-labor-tips</a>
+            <a href='https://egrub.net/features/advanced-less-spend.html'>advanced-less-spend</a>
+            <a href='https://egrub.net/features/advanced-less-tips.html'>advanced-less-tips</a>
+            <a href='https://egrub.net/features/advanced-less-tips-labor.html'>advanced-less-tips-labor</a>
+            <a href='https://egrub.net/features/advanced-less-training.html'>advanced-less-training</a>
+            <a href='https://egrub.net/features/advanced-less-training-user.html'>advanced-less-training-user</a>
+            <a href='https://egrub.net/features/advanced-less-user.html'>advanced-less-user</a>
+            <a href='https://egrub.net/features/advanced-less-user-training.html'>advanced-less-user-training</a>
+            <a href='https://egrub.net/features/advanced-level.html'>advanced-level</a>
+            <a href='https://egrub.net/features/advanced-level-management.html'>advanced-level-management</a>
+            <a href='https://egrub.net/features/advanced-level-management-spicy.html'>advanced-level-management-spicy</a>
+            <a href='https://egrub.net/features/advanced-level-spicy.html'>advanced-level-spicy</a>
+            <a href='https://egrub.net/features/advanced-level-spicy-management.html'>advanced-level-spicy-management</a>
+            <a href='https://egrub.net/features/advanced-lifetime.html'>advanced-lifetime</a>
+            <a href='https://egrub.net/features/advanced-lifetime-system-updates.html'>advanced-lifetime-system-updates</a>
+            <a href='https://egrub.net/features/advanced-limit-alarm.html'>advanced-limit-alarm</a>
+            <a href='https://egrub.net/features/advanced-limit-alarm-serving.html'>advanced-limit-alarm-serving</a>
+            <a href='https://egrub.net/features/advanced-limit-alarm-serving-time.html'>advanced-limit-alarm-serving-time</a>
+            <a href='https://egrub.net/features/advanced-limit-alarm-time.html'>advanced-limit-alarm-time</a>
+            <a href='https://egrub.net/features/advanced-limit-alarm-time-serving.html'>advanced-limit-alarm-time-serving</a>
+            <a href='https://egrub.net/features/advanced-limit.html'>advanced-limit</a>
+            <a href='https://egrub.net/features/advanced-limit-serving-alarm.html'>advanced-limit-serving-alarm</a>
+            <a href='https://egrub.net/features/advanced-limit-serving-alarm-time.html'>advanced-limit-serving-alarm-time</a>
+            <a href='https://egrub.net/features/advanced-limit-serving.html'>advanced-limit-serving</a>
+            <a href='https://egrub.net/features/advanced-limit-serving-time-alarm.html'>advanced-limit-serving-time-alarm</a>
+            <a href='https://egrub.net/features/advanced-limit-serving-time.html'>advanced-limit-serving-time</a>
+            <a href='https://egrub.net/features/advanced-limit-time-alarm.html'>advanced-limit-time-alarm</a>
+            <a href='https://egrub.net/features/advanced-limit-time-alarm-serving.html'>advanced-limit-time-alarm-serving</a>
+            <a href='https://egrub.net/features/advanced-limit-time.html'>advanced-limit-time</a>
+            <a href='https://egrub.net/features/advanced-limit-time-serving-alarm.html'>advanced-limit-time-serving-alarm</a>
+            <a href='https://egrub.net/features/advanced-limit-time-serving.html'>advanced-limit-time-serving</a>
+            <a href='https://egrub.net/features/advanced-location.html'>advanced-location</a>
+            <a href='https://egrub.net/features/advanced-location-transfer.html'>advanced-location-transfer</a>
+            <a href='https://egrub.net/features/advanced-low-cost-business-ideas.html'>advanced-low-cost-business-ideas</a>
+            <a href='https://egrub.net/features/advanced-low-cost.html'>advanced-low-cost</a>
+            <a href='https://egrub.net/features/advanced-lower-cost.html'>advanced-lower-cost</a>
+            <a href='https://egrub.net/features/advanced-lower-cost-labor.html'>advanced-lower-cost-labor</a>
+            <a href='https://egrub.net/features/advanced-lower.html'>advanced-lower</a>
+            <a href='https://egrub.net/features/advanced-lower-labor-cost.html'>advanced-lower-labor-cost</a>
+            <a href='https://egrub.net/features/advanced-lower-labor.html'>advanced-lower-labor</a>
+            <a href='https://egrub.net/features/advanced-lower-operation-cost.html'>advanced-lower-operation-cost</a>
+            <a href='https://egrub.net/features/advanced-lower-production-ccost.html'>advanced-lower-production-ccost</a>
+            <a href='https://egrub.net/features/advanced-made-easy.html'>advanced-made-easy</a>
+            <a href='https://egrub.net/features/advanced-made-easy-stock-monitoring.html'>advanced-made-easy-stock-monitoring</a>
+            <a href='https://egrub.net/features/advanced-major-chains.html'>advanced-major-chains</a>
+            <a href='https://egrub.net/features/advanced-major-chains-orderin-process.html'>advanced-major-chains-orderin-process</a>
+            <a href='https://egrub.net/features/advanced-major.html'>advanced-major</a>
+            <a href='https://egrub.net/features/advanced-major-orderin-process-chains.html'>advanced-major-orderin-process-chains</a>
+            <a href='https://egrub.net/features/advanced-major-orderin-process.html'>advanced-major-orderin-process</a>
+            <a href='https://egrub.net/features/advanced-manage.html'>advanced-manage</a>
+            <a href='https://egrub.net/features/advanced-management-hotel.html'>advanced-management-hotel</a>
+            <a href='https://egrub.net/features/advanced-management-hotel-in.html'>advanced-management-hotel-in</a>
+            <a href='https://egrub.net/features/advanced-management.html'>advanced-management</a>
+            <a href='https://egrub.net/features/advanced-management-ingredient.html'>advanced-management-ingredient</a>
+            <a href='https://egrub.net/features/advanced-management-in-hotel.html'>advanced-management-in-hotel</a>
+            <a href='https://egrub.net/features/advanced-management-in.html'>advanced-management-in</a>
+            <a href='https://egrub.net/features/advanced-management-inventory.html'>advanced-management-inventory</a>
+            <a href='https://egrub.net/features/advanced-management-kitchen.html'>advanced-management-kitchen</a>
+            <a href='https://egrub.net/features/advanced-management-level.html'>advanced-management-level</a>
+            <a href='https://egrub.net/features/advanced-management-level-spicy.html'>advanced-management-level-spicy</a>
+            <a href='https://egrub.net/features/advanced-management-meal.html'>advanced-management-meal</a>
+            <a href='https://egrub.net/features/advanced-management-menu.html'>advanced-management-menu</a>
+            <a href='https://egrub.net/features/advanced-management-new-generation.html'>advanced-management-new-generation</a>
+            <a href='https://egrub.net/features/advanced-management-new-generation-ordering.html'>advanced-management-new-generation-ordering</a>
+            <a href='https://egrub.net/features/advanced-management-ordering.html'>advanced-management-ordering</a>
+            <a href='https://egrub.net/features/advanced-management-ordering-new-generation.html'>advanced-management-ordering-new-generation</a>
+            <a href='https://egrub.net/features/advanced-management-recipe.html'>advanced-management-recipe</a>
+            <a href='https://egrub.net/features/advanced-management-restaurant.html'>advanced-management-restaurant</a>
+            <a href='https://egrub.net/features/advanced-management-restaurant-the.html'>advanced-management-restaurant-the</a>
+            <a href='https://egrub.net/features/advanced-management-spicy.html'>advanced-management-spicy</a>
+            <a href='https://egrub.net/features/advanced-management-spicy-level.html'>advanced-management-spicy-level</a>
+            <a href='https://egrub.net/features/advanced-management-system.html'>advanced-management-system</a>
+            <a href='https://egrub.net/features/advanced-management-the.html'>advanced-management-the</a>
+            <a href='https://egrub.net/features/advanced-management-the-restaurant.html'>advanced-management-the-restaurant</a>
+            <a href='https://egrub.net/features/advanced-management-warehouse.html'>advanced-management-warehouse</a>
+            <a href='https://egrub.net/features/advanced-manage-order-flow.html'>advanced-manage-order-flow</a>
+            <a href='https://egrub.net/features/advanced-mandarin.html'>advanced-mandarin</a>
+            <a href='https://egrub.net/features/advanced-mandarin-menu.html'>advanced-mandarin-menu</a>
+            <a href='https://egrub.net/features/advanced-mandarin-menu-ordering.html'>advanced-mandarin-menu-ordering</a>
+            <a href='https://egrub.net/features/advanced-mandarin-ordering.html'>advanced-mandarin-ordering</a>
+            <a href='https://egrub.net/features/advanced-mandarin-ordering-menu.html'>advanced-mandarin-ordering-menu</a>
+            <a href='https://egrub.net/features/advanced-manuals.html'>advanced-manuals</a>
+            <a href='https://egrub.net/features/advanced-manuals-system.html'>advanced-manuals-system</a>
+            <a href='https://egrub.net/features/advanced-meal.html'>advanced-meal</a>
+            <a href='https://egrub.net/features/advanced-meal-management.html'>advanced-meal-management</a>
+            <a href='https://egrub.net/features/advanced-menu-advertise.html'>advanced-menu-advertise</a>
+            <a href='https://egrub.net/features/advanced-menu-advertisement.html'>advanced-menu-advertisement</a>
+            <a href='https://egrub.net/features/advanced-menu-best.html'>advanced-menu-best</a>
+            <a href='https://egrub.net/features/advanced-menu-best-seller.html'>advanced-menu-best-seller</a>
+            <a href='https://egrub.net/features/advanced-menu-best-selling.html'>advanced-menu-best-selling</a>
+            <a href='https://egrub.net/features/advanced-menu-display.html'>advanced-menu-display</a>
+            <a href='https://egrub.net/features/advanced-menu-display-scheduling-.html'>advanced-menu-display-scheduling-</a>
+            <a href='https://egrub.net/features/advanced-menu-display-scheduling.html'>advanced-menu-display-scheduling</a>
+            <a href='https://egrub.net/features/advanced-menu-filipino.html'>advanced-menu-filipino</a>
+            <a href='https://egrub.net/features/advanced-menu-filipino-ordering.html'>advanced-menu-filipino-ordering</a>
+            <a href='https://egrub.net/features/advanced-menu-french.html'>advanced-menu-french</a>
+            <a href='https://egrub.net/features/advanced-menu-french-ordering.html'>advanced-menu-french-ordering</a>
+            <a href='https://egrub.net/features/advanced-menu.html'>advanced-menu</a>
+            <a href='https://egrub.net/features/advanced-menu-informative.html'>advanced-menu-informative</a>
+            <a href='https://egrub.net/features/advanced-menu-informative-more.html'>advanced-menu-informative-more</a>
+            <a href='https://egrub.net/features/advanced-menu-italian.html'>advanced-menu-italian</a>
+            <a href='https://egrub.net/features/advanced-menu-italian-ordering.html'>advanced-menu-italian-ordering</a>
+            <a href='https://egrub.net/features/advanced-menu-japanese.html'>advanced-menu-japanese</a>
+            <a href='https://egrub.net/features/advanced-menu-japanese-ordering.html'>advanced-menu-japanese-ordering</a>
+            <a href='https://egrub.net/features/advanced-menu-korean.html'>advanced-menu-korean</a>
+            <a href='https://egrub.net/features/advanced-menu-korean-ordering.html'>advanced-menu-korean-ordering</a>
+            <a href='https://egrub.net/features/advanced-menu-management.html'>advanced-menu-management</a>
+            <a href='https://egrub.net/features/advanced-menu-mandarin.html'>advanced-menu-mandarin</a>
+            <a href='https://egrub.net/features/advanced-menu-mandarin-ordering.html'>advanced-menu-mandarin-ordering</a>
+            <a href='https://egrub.net/features/advanced-menu-more.html'>advanced-menu-more</a>
+            <a href='https://egrub.net/features/advanced-menu-more-informative.html'>advanced-menu-more-informative</a>
+            <a href='https://egrub.net/features/advanced-menu-ordering-filipino.html'>advanced-menu-ordering-filipino</a>
+            <a href='https://egrub.net/features/advanced-menu-ordering-french.html'>advanced-menu-ordering-french</a>
+            <a href='https://egrub.net/features/advanced-menu-ordering.html'>advanced-menu-ordering</a>
+            <a href='https://egrub.net/features/advanced-menu-ordering-italian.html'>advanced-menu-ordering-italian</a>
+            <a href='https://egrub.net/features/advanced-menu-ordering-japanese.html'>advanced-menu-ordering-japanese</a>
+            <a href='https://egrub.net/features/advanced-menu-ordering-korean.html'>advanced-menu-ordering-korean</a>
+            <a href='https://egrub.net/features/advanced-menu-ordering-mandarin.html'>advanced-menu-ordering-mandarin</a>
+            <a href='https://egrub.net/features/advanced-menu-ordering-translation.html'>advanced-menu-ordering-translation</a>
+            <a href='https://egrub.net/features/advanced-menu-scheduling--display.html'>advanced-menu-scheduling--display</a>
+            <a href='https://egrub.net/features/advanced-menu-scheduling-display.html'>advanced-menu-scheduling-display</a>
+            <a href='https://egrub.net/features/advanced-menu-scheduling-.html'>advanced-menu-scheduling-</a>
+            <a href='https://egrub.net/features/advanced-menu-scheduling.html'>advanced-menu-scheduling</a>
+            <a href='https://egrub.net/features/advanced-menu-search.html'>advanced-menu-search</a>
+            <a href='https://egrub.net/features/advanced-menu-seller-best.html'>advanced-menu-seller-best</a>
+            <a href='https://egrub.net/features/advanced-menu-seller.html'>advanced-menu-seller</a>
+            <a href='https://egrub.net/features/advanced-menu-selling-best.html'>advanced-menu-selling-best</a>
+            <a href='https://egrub.net/features/advanced-menu-selling.html'>advanced-menu-selling</a>
+            <a href='https://egrub.net/features/advanced-menu-translation.html'>advanced-menu-translation</a>
+            <a href='https://egrub.net/features/advanced-menu-translation-ordering.html'>advanced-menu-translation-ordering</a>
+            <a href='https://egrub.net/features/advanced-menu-translations.html'>advanced-menu-translations</a>
+            <a href='https://egrub.net/features/advanced-mid-size.html'>advanced-mid-size</a>
+            <a href='https://egrub.net/features/advanced-mid-size-restaurants.html'>advanced-mid-size-restaurants</a>
+            <a href='https://egrub.net/features/advanced-mobile-ready.html'>advanced-mobile-ready</a>
+            <a href='https://egrub.net/features/advanced-mobile-ready-restaurant.html'>advanced-mobile-ready-restaurant</a>
+            <a href='https://egrub.net/features/advanced-modernized.html'>advanced-modernized</a>
+            <a href='https://egrub.net/features/advanced-modernized-ordering.html'>advanced-modernized-ordering</a>
+            <a href='https://egrub.net/features/advanced-modernized-roi.html'>advanced-modernized-roi</a>
+            <a href='https://egrub.net/features/advanced-monitor-accurately.html'>advanced-monitor-accurately</a>
+            <a href='https://egrub.net/features/advanced-monitor-accurately-sales.html'>advanced-monitor-accurately-sales</a>
+            <a href='https://egrub.net/features/advanced-monitor-available.html'>advanced-monitor-available</a>
+            <a href='https://egrub.net/features/advanced-monitor-available-ingredients.html'>advanced-monitor-available-ingredients</a>
+            <a href='https://egrub.net/features/advanced-monitor-crew.html'>advanced-monitor-crew</a>
+            <a href='https://egrub.net/features/advanced-monitor-crew-perofrmance.html'>advanced-monitor-crew-perofrmance</a>
+            <a href='https://egrub.net/features/advanced-monitor.html'>advanced-monitor</a>
+            <a href='https://egrub.net/features/advanced-monitoring-display.html'>advanced-monitoring-display</a>
+            <a href='https://egrub.net/features/advanced-monitoring-easy.html'>advanced-monitoring-easy</a>
+            <a href='https://egrub.net/features/advanced-monitoring-easy-inventory.html'>advanced-monitoring-easy-inventory</a>
+            <a href='https://egrub.net/features/advanced-monitoring.html'>advanced-monitoring</a>
+            <a href='https://egrub.net/features/advanced-monitoring-interactive.html'>advanced-monitoring-interactive</a>
+            <a href='https://egrub.net/features/advanced-monitoring-interactive-kitchen.html'>advanced-monitoring-interactive-kitchen</a>
+            <a href='https://egrub.net/features/advanced-monitoring-inventory-easy.html'>advanced-monitoring-inventory-easy</a>
+            <a href='https://egrub.net/features/advanced-monitoring-inventory.html'>advanced-monitoring-inventory</a>
+            <a href='https://egrub.net/features/advanced-monitoring-inventory-up-to-date.html'>advanced-monitoring-inventory-up-to-date</a>
+            <a href='https://egrub.net/features/advanced-monitoring-kitchen.html'>advanced-monitoring-kitchen</a>
+            <a href='https://egrub.net/features/advanced-monitoring-kitchen-interactive.html'>advanced-monitoring-kitchen-interactive</a>
+            <a href='https://egrub.net/features/advanced-monitoring-kitchen-system.html'>advanced-monitoring-kitchen-system</a>
+            <a href='https://egrub.net/features/advanced-monitor-ingredients-available.html'>advanced-monitor-ingredients-available</a>
+            <a href='https://egrub.net/features/advanced-monitor-ingredients.html'>advanced-monitor-ingredients</a>
+            <a href='https://egrub.net/features/advanced-monitoring-system.html'>advanced-monitoring-system</a>
+            <a href='https://egrub.net/features/advanced-monitoring-system-kitchen.html'>advanced-monitoring-system-kitchen</a>
+            <a href='https://egrub.net/features/advanced-monitoring-up-to-date.html'>advanced-monitoring-up-to-date</a>
+            <a href='https://egrub.net/features/advanced-monitoring-up-to-date-inventory.html'>advanced-monitoring-up-to-date-inventory</a>
+            <a href='https://egrub.net/features/advanced-monitor-inventory.html'>advanced-monitor-inventory</a>
+            <a href='https://egrub.net/features/advanced-monitor-items.html'>advanced-monitor-items</a>
+            <a href='https://egrub.net/features/advanced-monitor-percentage.html'>advanced-monitor-percentage</a>
+            <a href='https://egrub.net/features/advanced-monitor-perofrmance-crew.html'>advanced-monitor-perofrmance-crew</a>
+            <a href='https://egrub.net/features/advanced-monitor-perofrmance.html'>advanced-monitor-perofrmance</a>
+            <a href='https://egrub.net/features/advanced-monitor-sales-accurately.html'>advanced-monitor-sales-accurately</a>
+            <a href='https://egrub.net/features/advanced-monitor-sales.html'>advanced-monitor-sales</a>
+            <a href='https://egrub.net/features/advanced-monitor-specifics-of-stocks.html'>advanced-monitor-specifics-of-stocks</a>
+            <a href='https://egrub.net/features/advanced-monthly-fee.html'>advanced-monthly-fee</a>
+            <a href='https://egrub.net/features/advanced-monthly-fee-no-recurring.html'>advanced-monthly-fee-no-recurring</a>
+            <a href='https://egrub.net/features/advanced-monthly.html'>advanced-monthly</a>
+            <a href='https://egrub.net/features/advanced-monthly-no-recurring-fee.html'>advanced-monthly-no-recurring-fee</a>
+            <a href='https://egrub.net/features/advanced-monthly-no-recurring.html'>advanced-monthly-no-recurring</a>
+            <a href='https://egrub.net/features/advanced-monthly-reports.html'>advanced-monthly-reports</a>
+            <a href='https://egrub.net/features/advanced-monthly-ticket-sales.html'>advanced-monthly-ticket-sales</a>
+            <a href='https://egrub.net/features/advanced-more-costumers.html'>advanced-more-costumers</a>
+            <a href='https://egrub.net/features/advanced-more-costumers-tips.html'>advanced-more-costumers-tips</a>
+            <a href='https://egrub.net/features/advanced-more-earn.html'>advanced-more-earn</a>
+            <a href='https://egrub.net/features/advanced-more.html'>advanced-more</a>
+
+
+            <a href="https://egrub.net/features/touchsolutions/2018-247-support-system.html">2018-247-support-system</a>
+            <a href="https://egrub.net/features/touchsolutions/accredited-avoid-order-queuing.html">accredited-avoid-order-queuing</a>
+            <a href="https://egrub.net/features/touchsolutions/alternative-branding-easy-setup-system-kitchen-management.html">alternative-branding-easy-setup-system-kitchen-management</a>
+            <a href="https://egrub.net/features/touchsolutions/android-dynamic-ui.html">android-dynamic-ui</a>
+            <a href="https://egrub.net/features/touchsolutions/automated-easy-to-use-app-easy-to-use-system-all-in-one-system.html">automated-easy-to-use-app-easy-to-use-system-all-in-one-system</a>
+            <a href="https://egrub.net/features/touchsolutions/best-version-food-advertisement-menu-advertisement.html">best-version-food-advertisement-menu-advertisement</a>
+            <a href="https://egrub.net/features/touchsolutions/wireless-self-service-system.html">wireless-self-service-system</a>
+            <a href="https://egrub.net/features/touchsolutions/user-friendly-restaurantorderingsystem.html">user-friendly-restaurantorderingsystem</a>
+            <a href="https://egrub.net/features/touchsolutions/trusted-realtime-order-status-table-service-solution.html">trusted-realtime-order-status-table-service-solution</a>
+            <a href="https://egrub.net/features/touchsolutions/top-passionforkiosks.html">top-passionforkiosks</a>
+            <a href="https://egrub.net/features/touchsolutions/suggested-recipe-translation-menu-translation.html">suggested-recipe-translation-menu-translation</a>
+            <a href="https://egrub.net/features/touchsolutions/small-pos-system.html">small-pos-system</a>
+            <a href="https://egrub.net/features/touchsolutions/quick-restaurant.html">quick-restaurant</a>
+            <a href="https://egrub.net/features/touchsolutions/online-spicy-level-management-feature-filled-system.html">online-spicy-level-management-feature-filled-system</a>
+            <a href="https://egrub.net/features/touchsolutions/new-restaurant-service.html">new-restaurant-service</a>
+            <a href="https://egrub.net/features/touchsolutions/must-have-rapid-roi-kiosk.html">must-have-rapid-roi-kiosk</a>
+            <a href="https://egrub.net/features/touchsolutions/manageable-restaurant-analytics.html">manageable-restaurant-analytics</a>
+            <a href="https://egrub.net/features/touchsolutions/leader-realtime-order-notification-digital-interface.html">leader-realtime-order-notification-digital-interface</a>
+            <a href="https://egrub.net/features/touchsolutions/japanese-receipt-printing.html">japanese-receipt-printing</a>
+            <a href="https://egrub.net/features/touchsolutions/indian-realtime-order-notification.html">indian-realtime-order-notification</a>
+            <a href="https://egrub.net/features/touchsolutions/high-end-passionforkiosks-kiosk-international.html">high-end-passionforkiosks-kiosk-international</a>
+            <a href="https://egrub.net/features/touchsolutions/full-scale-operations-easy-setup-restaurant.html">full-scale-operations-easy-setup-restaurant</a>
+            <a href="https://egrub.net/features/touchsolutions/first-ordering-menu-translation-system-app-menu-translation-recipe-translation.html">first-ordering-menu-translation-system-app-menu-translation-recipe-translation</a>
+            <a href="https://egrub.net/features/touchsolutions/fast-monthly-reports-weekly-reports-language-translate.html">fast-monthly-reports-weekly-reports-language-translate</a>
+            <a href="https://egrub.net/features/touchsolutions/excellent-menu-translation-recipe-translation.html">excellent-menu-translation-recipe-translation</a>
+            <a href="https://egrub.net/features/touchsolutions/elite-lower-operation-cost.html">elite-lower-operation-cost</a>
+            <a href="https://egrub.net/features/touchsolutions/easy-to-use-lower-production-ccost.html">easy-to-use-lower-production-ccost</a>
+            <a href="https://egrub.net/features/touchsolutions/dynamic-kiosk-ordering.html">dynamic-kiosk-ordering</a>
+            <a href="https://egrub.net/features/touchsolutions/cool-inventory-system-in-hotel.html">cool-inventory-system-in-hotel</a>
+            <a href="https://egrub.net/features/touchsolutions/competitive-grow-restaurant-business.html">competitive-grow-restaurant-business</a>
+            <a href="https://egrub.net/features/touchsolutions/cheap-food-industry.html">cheap-food-industry</a>
+
+
+            <a href="http://www.affordable-digital-menu.info">affordable-digital-menu</a>
+
+            <a href="http://www.affordable-kiosk-system.info">affordable-kiosk-system</a>
+
+            <a href="http://www.affordable-ordering-system.info">affordable-ordering-system</a>
+
+            <a href="http://www.affordable-point-of-sale-2018.info">affordable-point-of-sale-2018</a>
+
+
+            <a href="http://www.affordable-point-of-sale.info">affordable-point-of-sale</a>
+
+            <a href="http://www.affordable-pos-2018.info">affordable-pos-2018</a>
+
+            <a href="http://www.affordable-pos.info">affordable-pos</a>
+
+            <a href="http://www.all-kiosk-systems.info">all-kiosk-systems</a>
+
+            <a href="http://www.all-kiosks.info">all-kiosks</a>
+
+            <a href="http://www.all-touch-systems.info">all-touch-systems</a>
+
+            <a href="http://www.android-food-ordering.info">android-food-ordering</a>
+
+            <a href="http://www.android-foodcart.info">android-foodcart</a>
+
+            <a href="http://www.android-kiosk.info">android-kiosk</a>
+
+            <a href="http://www.android-menu-2018.info">android-menu-2018</a>
+
+            <a href="http://www.android-menu.info">android-menu</a>
+
+            <a href="http://www.android-point-of-sale-2018.info">android-point-of-sale-2018</a>
+
+            <a href="http://www.android-point-of-sale.info">android-point-of-sale</a>
+
+            <a href="http://www.android-pos-2018.info">android-pos-2018</a>
+
+            <a href="http://www.android-pos.info">android-pos</a>
+
+            <a href="http://www.android-restaurant.info">android-restaurant</a>
+
+            <a href="http://www.android-touch-kiosk.info">android-touch-kiosk</a>
+
+            <a href="http://www.android-touch-menu.info">android-touch-menu</a>
+
+            <a href="http://www.automated-ordering.info">automated-ordering</a>
+
+            <a href="http://www.best-kiosk.info">best-kiosk</a>
+
+            <a href="http://www.bestpointofsale.info">bestpointofsale</a>
+
+            <a href="http://www.bestpos.info">bestpos</a>
+
+            <a href="http://www.budget-pos.info">budget-pos</a>
+
+            <a href="http://www.budgetkiosks.info">budgetkiosks</a>
+
+            <a href="http://www.budgetpointofsale.info">budgetpointofsale</a>
+
+            <a href="http://www.click-to-order.info">click-to-order</a>
+
+            <a href="http://www.convinient-ordering.info">convinient-ordering</a>
+
+            <a href="http://www.customizedkiosks.info">customizedkiosks</a>
+
+            <a href="http://www.designmymenu.info">designmymenu</a>
+
+            <a href="http://www.digi-menu.info">digi-menu</a>
+
+            <a href="http://www.digital-food.info">digital-food</a>
+
+            <a href="http://www.digital-interface.info">digital-interface</a>
+
+            <a href="http://www.digital-kitchen.info">digital-kitchen</a>
+
+            <a href="http://www.digital-menu.info">digital-menu</a>
+
+            <a href="http://www.digital-ordering.info">digital-ordering</a>
+
+            <a href="http://www.digital-restaurant.info">digital-restaurant</a>
+
+            <a href="http://www.digital-waiter.info">digital-waiter</a>
+
+            <a href="http://www.dynamic-kiosks.info">dynamic-kiosks</a>
+
+            <a href="http://www.dynamic-menu.info">dynamic-menu</a>
+
+            <a href="http://www.easy-orders.info">easy-orders</a>
+
+            <a href="http://www.efficient-kiosk-system.info">efficient-kiosk-system</a>
+
+            <a href="http://www.efficient-ordering-management.info">efficient-ordering-management</a>
+
+            <a href="http://www.electronic-foodcart.info">electronic-foodcart</a>
+
+            <a href="http://www.electronic-kiosk.info">electronic-kiosk</a>
+
+            <a href="http://www.electronic-menu.info">electronic-menu</a>
+
+            <a href="http://www.electronic-restaurant.info">electronic-restaurant</a>
+
+            <a href="http://www.everythingkiosk.info">everythingkiosk</a>
+
+            <a href="http://www.fastfood-digital-menu.info">fastfood-digital-menu</a>
+
+            <a href="http://www.fastfood-kiosk-provider.info">fastfood-kiosk-provider</a>
+
+            <a href="http://www.fastfood-kiosk.info">fastfood-kiosk</a>
+
+            <a href="http://www.fastfood-manager-provider.info">fastfood-manager-provider</a>
+
+            <a href="http://www.fastfood-manager.info">fastfood-manager</a>
+
+            <a href="http://www.fastfood-point-of-sale-2018.info">fastfood-point-of-sale-2018</a>
+
+            <a href="http://www.fastfood-point-of-sale-provider.info">fastfood-point-of-sale-provider</a>
+
+            <a href="http://www.fastfood-point-of-sale.info">fastfood-point-of-sale</a>
+
+            <a href="http://www.fastfood-pos-2018.info">fastfood-pos-2018</a>
+
+            <a href="http://www.fastfood-pos-provider.info">fastfood-pos-provider</a>
+
+            <a href="http://www.fastfood-pos.info">fastfood-pos</a>
+
+            <a href="http://www.fastfood-solutions-provider.info">fastfood-solutions-provider</a>
+
+            <a href="http://www.fastfood-solutions.info">fastfood-solutions</a>
+
+            <a href="http://www.fastfood-touch-menu.info">fastfood-touch-menu</a>
+
+            <a href="http://www.food-manager.info">food-manager</a>
+
+            <a href="http://www.food-ordering-system.info">food-ordering-system</a>
+
+            <a href="http://www.foodbytouch.info">foodbytouch</a>
+
+            <a href="http://www.foodcart-2018.info">foodcart-2018</a>
+
+            <a href="http://www.foodcart-digital-menu.info">foodcart-digital-menu</a>
+
+            <a href="http://www.foodcart-manager.info">foodcart-manager</a>
+
+            <a href="http://www.foodcart-monitoring.info">foodcart-monitoring</a>
+
+            <a href="http://www.foodcart-ordering-provider.info">foodcart-ordering-provider</a>
+
+            <a href="http://www.foodcart-touch-menu.info">foodcart-touch-menu</a>
+
+            <a href="http://www.inter-active-kiosk.info">inter-active-kiosk</a>
+
+            <a href="http://www.interactive-menu.info">interactive-menu</a>
+
+            <a href="http://www.interactive-ordering.info">interactive-ordering</a>
+
+            <a href="http://www.intuitive-kiosk.info">intuitive-kiosk</a>
+
+            <a href="http://www.intuitive-ordering.info">intuitive-ordering</a>
+
+            <a href="http://www.ki-osk.info">ki-osk</a>
+
+            <a href="http://www.kiosk-2018.info">kiosk-2018</a>
+
+            <a href="http://www.kiosk-distributor.info">kiosk-distributor</a>
+
+            <a href="http://www.kiosk-international.info">kiosk-international</a>
+
+            <a href="http://www.kiosk-manager-provider.info">kiosk-manager-provider</a>
+
+            <a href="http://www.kiosk-manager.info">kiosk-manager</a>
+
+            <a href="http://www.kiosk-manufacturer.info">kiosk-manufacturer</a>
+
+            <a href="http://www.kiosk-point-of-sale-2018.info">kiosk-point-of-sale-2018</a>
+
+            <a href="http://www.kiosk-point-of-sale.info">kiosk-point-of-sale</a>
+
+            <a href="http://www.kiosk-pos-2018.info">kiosk-pos-2018</a>
+
+            <a href="http://www.kiosk-pos-provider.info">kiosk-pos-provider</a>
+
+            <a href="http://www.kiosk-pos.info">kiosk-pos</a>
+
+            <a href="http://www.kiosk-provider.info">kiosk-provider</a>
+
+            <a href="http://www.kiosk-supplier.info">kiosk-supplier</a>
+
+            <a href="http://www.kiosk-system-provider.info">kiosk-system-provider</a>
+
+            <a href="http://www.kiosk-system.info">kiosk-system</a>
+
+            <a href="http://www.kiosk-touch-screen.info">kiosk-touch-screen</a>
+
+            <a href="http://www.kiosk-worldwide.info">kiosk-worldwide</a>
+
+            <a href="http://www.kioskalternative.info">kioskalternative</a>
+
+            <a href="http://www.kioskbydesign.info">kioskbydesign</a>
+
+            <a href="http://www.kitchen-display-system.info">kitchen-display-system</a>
+
+            <a href="http://www.kitchen-flow-system.info">kitchen-flow-system</a>
+
+            <a href="http://www.kitchen-management.info">kitchen-management</a>
+
+            <a href="http://www.latest-kiosk-2018.info">latest-kiosk-2018</a>
+
+            <a href="http://www.latest-kiosk.info">latest-kiosk</a>
+
+            <a href="http://www.latest-point-of-sale-2018.info">latest-point-of-sale-2018</a>
+
+            <a href="http://www.latest-point-of-sale.info">latest-point-of-sale</a>
+
+            <a href="http://www.latest-pos-2018.info">latest-pos-2018</a>
+
+            <a href="http://www.latest-pos.info">latest-pos</a>
+
+            <a href="http://www.lukslofts.ph">lukslofts</a>
+
+            <a href="http://www.menu-by-touch.info">menu-by-touch</a>
+
+            <a href="http://www.menu-on-android.info">menu-on-android</a>
+
+            <a href="http://www.menu-on-tablet.info">menu-on-tablet</a>
+
+            <a href="http://www.menu-upsell.info">menu-upsell</a>
+
+            <a href="http://www.menus-system.info">menus-system</a>
+
+            <a href="http://www.modern-menu.info">modern-menu</a>
+
+            <a href="http://www.modern-point-of-sale.info">modern-point-of-sale</a>
+
+            <a href="http://www.modern-pos.info">modern-pos</a>
+
+            <a href="http://www.multilingual-display.info">multilingual-display</a>
+
+            <a href="http://www.multilingual-menu.info">multilingual-menu</a>
+
+            <a href="http://www.on-premise-digital-ordering.info">on-premise-digital-ordering</a>
+
+            <a href="http://www.on-premise-kiosk.info">on-premise-kiosk</a>
+
+            <a href="http://www.on-premise-ordering-system.info">on-premise-ordering-system</a>
+
+            <a href="http://www.on-premise-point-of-sale-2018.info">on-premise-point-of-sale-2018</a>
+
+            <a href="http://www.on-premise-point-of-sale.info">on-premise-point-of-sale</a>
+
+            <a href="http://www.on-premise-pos-2018.info">on-premise-pos-2018</a>
+
+            <a href="http://www.on-premise-pos.info">on-premise-pos</a>
+
+            <a href="http://www.on-premise-restaurant-system.info">on-premise-restaurant-system</a>
+
+            <a href="http://www.order-kiosk.info">order-kiosk</a>
+
+            <a href="http://www.order-queue-manager.info">order-queue-manager</a>
+
+            <a href="http://www.order-queue-system.info">order-queue-system</a>
+
+            <a href="http://www.order-taking-system.info">order-taking-system</a>
+
+            <a href="http://www.orderbykiosk.info">orderbykiosk</a>
+
+            <a href="http://www.orderbytablet.info">orderbytablet</a>
+
+            <a href="http://www.orderbytouch.info">orderbytouch</a>
+
+            <a href="http://www.ordering-app-provider.info">ordering-app-provider</a>
+
+            <a href="http://www.ordering-app.info">ordering-app</a>
+
+            <a href="http://www.ordering-system-provider.info">ordering-system-provider</a>
+
+            <a href="http://www.ordering-systems.info">ordering-systems</a>
+
+            <a href="http://www.ordertaker.info">ordertaker</a>
+
+            <a href="http://www.paperless-kitchen.info">paperless-kitchen</a>
+
+            <a href="http://www.paperless-menu.info">paperless-menu</a>
+
+            <a href="http://www.paperless-ordering.info">paperless-ordering</a>
+
+            <a href="http://www.paperless-restaurant.info">paperless-restaurant</a>
+
+            <a href="http://www.passionforkiosks.info">passionforkiosks</a>
+
+            <a href="http://www.point-of-sale-s.info">point-of-sale-s</a>
+
+            <a href="http://www.point-of-sale-solutions-2018.info">point-of-sale-solutions-2018</a>
+
+            <a href="http://www.pos-distributor.info">pos-distributor</a>
+
+            <a href="http://www.pos-manufacturer.info">pos-manufacturer</a>
+
+            <a href="http://www.pos-provider.info">pos-provider</a>
+
+            <a href="http://www.pos-solution-s.info">pos-solution-s</a>
+
+            <a href="http://www.pos-solutions-2018.info">pos-solutions-2018</a>
+
+            <a href="http://www.pos-supplier.info">pos-supplier</a>
+
+            <a href="http://www.pos-with-inventory.info">pos-with-inventory</a>
+
+            <a href="http://www.posalternative.info">posalternative</a>
+
+            <a href="http://www.profitbykiosk.info">profitbykiosk</a>
+
+            <a href="http://www.quick-serve-kiosk.info">quick-serve-kiosk</a>
+
+            <a href="http://www.quick-serve-point-of-sale-2018.info">quick-serve-point-of-sale-2018</a>
+
+            <a href="http://www.quick-serve-point-of-sale.info">quick-serve-point-of-sale</a>
+
+            <a href="http://www.quick-serve-pos-2018.info">quick-serve-pos-2018</a>
+
+            <a href="http://www.quick-serve-pos.info">quick-serve-pos</a>
+
+            <a href="http://www.quick-serve-solution.info">quick-serve-solution</a>
+
+            <a href="http://www.quick-serve-touch-menu.info">quick-serve-touch-menu</a>
+
+            <a href="http://www.rapid-roi-kiosk.info">rapid-roi-kiosk</a>
+
+            <a href="http://www.restaurant-assistant.info">restaurant-assistant</a>
+
+            <a href="http://www.restaurant-manager-provider.info">restaurant-manager-provider</a>
+
+            <a href="http://www.restaurant-manager.info">restaurant-manager</a>
+
+            <a href="http://www.restaurant-menu-provider.info">restaurant-menu-provider</a>
+
+            <a href="http://www.restaurant-menu.info">restaurant-menu</a>
+
+            <a href="http://www.restaurant-solutions-provider.info">restaurant-solutions-provider</a>
+
+            <a href="http://www.restaurant-solutions.info">restaurant-solutions</a>
+
+            <a href="http://www.secure-ordering.info">secure-ordering</a>
+
+            <a href="http://www.secure-pos.info">secure-pos</a>
+
+            <a href="http://www.self-ordering-kiosk.info">self-ordering-kiosk</a>
+
+            <a href="http://www.self-serve-kiosk.info">self-serve-kiosk</a>
+
+            <a href="http://www.simplified-kiosk.info">simplified-kiosk</a>
+
+            <a href="http://www.simplified-ordering.info">simplified-ordering</a>
+
+            <a href="http://www.smart-kiosk.info">smart-kiosk</a>
+
+            <a href="http://www.smart-menu.info">smart-menu</a>
+
+            <a href="http://www.smart-ordering-system-2018.info">smart-ordering-system-2018</a>
+
+            <a href="http://www.smart-ordering-system.info">smart-ordering-system</a>
+
+            <a href="http://www.smart-point-of-sale-2018.info">smart-point-of-sale-2018</a>
+
+            <a href="http://www.smart-point-of-sale.info">smart-point-of-sale</a>
+
+            <a href="http://www.smart-pos-2018.info">smart-pos-2018</a>
+
+            <a href="http://www.smart-pos.info">smart-pos</a>
+
+            <a href="http://www.smart-restaurant-system-2018.info">smart-restaurant-system-2018</a>
+
+            <a href="http://www.smart-restaurant-system.info">smart-restaurant-system</a>
+
+            <a href="http://www.smart-tou-ch.info">smart-tou-ch</a>
+
+            <a href="http://www.smart-waiter.info">smart-waiter</a>
+
+            <a href="http://www.standalonekiosk.info">standalonekiosk</a>
+
+            <a href="http://www.standalonepoint-of-sale.info">standalonepoint-of-sale</a>
+
+            <a href="http://www.standalonepos.info">standalonepos</a>
+
+            <a href="http://www.sure-roi-systems.info">sure-roi-systems</a>
+
+            <a href="http://www.table-ordering-system.info">table-ordering-system</a>
+
+            <a href="http://www.tablet-menu.info">tablet-menu</a>
+
+            <a href="http://www.tablet-ordering-system.info">tablet-ordering-system</a>
+
+            <a href="http://www.takemyorder.info">takemyorder</a>
+
+            <a href="http://www.taptoorder.info">taptoorder</a>
+
+            <a href="http://www.top-kiosk.info">top-kiosk</a>
+
+            <a href="http://www.touch-kiosk.info">touch-kiosk</a>
+
+            <a href="http://www.touch-menu-system.info">touch-menu-system.inf</a>
+
+            <a href="http://www.touch-ordering.info">touch-ordering</a>
+
+            <a href="http://www.touch-point-of-sale.info">touch-point-of-sale</a>
+
+            <a href="http://www.touch-pos.info">touch-pos</a>
+
+            <a href="http://www.touchtoorder.info">touchtoorder</a>
+
+            <a href="http://www.universalkiosks.info">universalkiosks</a>
+
+            <a href="http://www.upsell-menu.info">upsell-menu</a>
+
+            <a href="http://www.waiter-application.info">waiter-application</a>
+
+            <a href="http://www.xn--caf-digital-menu-dqb.info">xn--caf-digital-menu-dqb</a>
+
+            <a href="http://www.xn--caf-kiosk-d4a.info">xn--caf-kiosk-d4a</a>
+
+            <a href="http://www.xn--caf-ordering-system-dzb.info">xn--caf-ordering-system-dzb</a>
+
+            <a href="http://www.xn--caf-point-of-sale-dtb.info">xn--caf-point-of-sale-dtb</a>
+
+            <a href="http://www.xn--caf-pos-dya.info">xn--caf-pos-dya</a>
+
+            <a href="http://www.self-service-kiosk.net ">self-service-kiosk</a>
+            <a href="http://www.pos-kiosk.net ">pos-kiosk</a>
+            <a href="http://www.digitalordering.net ">digitalordering</a>
+            <a href="http://www.pos-for-restaurants.net ">pos-for-restaurants</a>
+            <a href="http://www.kiosk-systems.net ">kiosk-systems</a>
+            <a href="http://www.touch-screen-ordering.com ">touch-screen-ordering</a>
+            <a href="http://www.touchtoorder.net ">touchtoorder</a>
+            <a href="http://www.food-ordering.net ">food-ordering</a>
+            <a href="https://www.egrub.net">egrub</a>
+            <a href="https://www.lukslofts.com">lukslofts</a>
+            <a href="https://www.integranet.ph">integranet</a>
+            <a href="https://www.integritynet.biz">integritynet</a>
+            <a href="https://www.integritybpo.com">integritybpo</a>
+            <a href="https://www.integritypbx.net">integritypbx</a>
+            <a href="https://www.integritypci.com">integritypci</a>
+        </h1>
+    </div>
+
+    <script is:inline src="js/jquery-3.2.1.min.js"></script>
+    <script is:inline src="js/plugins.js"></script>
+    <script is:inline src="js/main.js"></script>
+    <script is:inline src="js/index.js"></script>
+    
+    <script is:inline src="js/typewriter.js"></script>
+
+</body>
+
+</html>

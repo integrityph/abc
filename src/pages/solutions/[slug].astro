@@ -1,0 +1,23 @@
+---
+import SolutionLayout from "@/layouts/SolutionLayout.astro";
+import { getCollection, getEntry } from "astro:content";
+
+export async function getStaticPaths() {
+	const solutionEntries = await getCollection("solutions");
+
+	return solutionEntries
+		.map((entry) => ({
+			params: { slug: entry.slug },
+			props: { entry },
+		}));;
+}
+
+const { entry } = Astro.props;
+
+const { Content } = await entry.render();
+
+---
+<SolutionLayout title={entry.data.list_title} slug={entry.slug}>
+	<h1>{entry.data.view_title}</h1>
+	<Content />
+</SolutionLayout>

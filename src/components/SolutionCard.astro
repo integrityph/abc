@@ -1,0 +1,25 @@
+---
+import { getEntry } from "astro:content"
+
+const { slug } = Astro.props;
+
+const solution = await getEntry("solutions", slug)
+
+if (!solution) {
+	throw new Error(`Unable to find solutions with slug ${slug}`);
+}
+
+const solutionURL = `/solutions/${solution.slug}`;
+---
+<div id="solution-01" class="col-six md-six tab-full mob-full showcase-solution" data-aos="fade-up">
+	<a href={solutionURL}>
+			<img src={solution.data.image} alt="Lukslofts" class="solution-image solution-tilt">
+			<div class="solution-label">
+					<h2>
+							<img src={solution.data.logo_small} alt="" class="solution-logo">
+							{solution.data.list_title}
+					</h2>
+					<p>{solution.data.list_sub_title}</p>
+			</div>
+	</a>
+</div>
