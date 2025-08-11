@@ -67,10 +67,10 @@
 
             if (loc > triggerHeight) {
                 hdr.addClass('sticky');
-                imglogo.attr("src", "assets/img/solutions/solution-logo/integritynet-logo-default.png");
+                imglogo.attr("src", "/static/images/integritynet-logo-default.png");
             } else {
                 hdr.removeClass('sticky');
-                imglogo.attr("src", "assets/img/solutions/solution-logo/integritynet-logo-red.png");
+                imglogo.attr("src", "/static/images/integritynet-logo-red.png");
             }
 
             if (loc > triggerHeight + 20) {

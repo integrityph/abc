@@ -2,7 +2,7 @@ import { defineCollection, z } from 'astro:content';
 
 const solutionCollection = defineCollection({
   schema: z.object({
-    name: z.string(),
+    title: z.string(),
     list_title: z.string(),
     list_sub_title: z.string(),
 		image: z.string(),

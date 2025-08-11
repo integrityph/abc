@@ -13,7 +13,7 @@ collections:
     folder: "src/content/solutions"
     create: true
     fields:
-      - { label: "Name", name: "name", widget: "string" }
+      - { label: "Title", name: "title", widget: "string" }
       - { label: "List Title", name: "list_title", widget: "string" }
       - { label: "List Sub Title", name: "list_sub_title", widget: "string"}
       - { label: "Image", name: "image", widget: "image" }

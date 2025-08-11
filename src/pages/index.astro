@@ -2,7 +2,6 @@
 import { getCollection, getEntry, getEntries } from "astro:content";
 import SolutionCard from "@/components/SolutionCard.astro"
 
-
 const year = new Date().getFullYear();
 
 const featuredSolutions = await getCollection("solutions");
@@ -19,6 +18,7 @@ const featuredSolutions = await getCollection("solutions");
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="css/base.css">
+    <!-- <link rel="stylesheet" href="css/fontawesome-all.css"> -->
     <link rel="stylesheet" href="css/vendor.css">
     <link rel="stylesheet" href="css/main.css?v=1.1">
     <link rel="stylesheet" href="css/custom.css?v=1.1">
@@ -38,7 +38,7 @@ const featuredSolutions = await getCollection("solutions");
 
     <div hidden id="preloader">
         <div id="loader">
-            <img src="assets/img/solutions/solution-logo/integritynet-animated-logo.gif" alt="Preloader">
+            <img src="/static/images/integritynet-animated-logo.gif" alt="Preloader">
         </div>
     </div>
 
@@ -46,7 +46,7 @@ const featuredSolutions = await getCollection("solutions");
         <div class="row">
             <div class="header-logo">
                 <a class="site-logo" href="index.html">
-                    <img src="assets/img/solutions/solution-logo/integritynet-logo-red.png" alt="Homepage" class="image-logo">
+                    <img src="/static/images/integritynet-logo-red.png" alt="Homepage" class="image-logo">
                 </a>
             </div>
 
@@ -66,7 +66,7 @@ const featuredSolutions = await getCollection("solutions");
         </div>
     </header>
 
-    <section id="home" class="s-home page-hero target-section" data-parallax="scroll" data-image-src="assets/img/workspace/buildings/CTV_4783-min.jpg" data-natural-width=3000 data-natural-height=2000 data-position-y=center>
+    <section id="home" class="s-home page-hero target-section" data-parallax="scroll" data-image-src="/static/images/CTV_4783-min.jpg" data-natural-width=3000 data-natural-height=2000 data-position-y=center>
 
         <div class="shadow-overlay"></div>
 
@@ -231,42 +231,42 @@ const featuredSolutions = await getCollection("solutions");
 
             <div class="col-block item-client">
                 <a href="#0">
-                    <img src="images/clients/icon-atom.svg" alt="">
+                    <img src="/static/images/icon-atom.svg" alt="">
                 </a>
             </div>
             <div class="col-block item-client">
                 <a href="#0">
-                    <img src="images/clients/icon-dropbox.svg" alt="">
+                    <img src="/static/images/icon-dropbox.svg" alt="">
                 </a>
             </div>
             <div class="col-block item-client">
                 <a href="#0">
-                    <img src="images/clients/icon-firefox.svg" alt="">
+                    <img src="/static/images/icon-firefox.svg" alt="">
                 </a>
             </div>
             <div class="col-block item-client">
                 <a href="#0">
-                    <img src="images/clients/icon-github.svg" alt="">
+                    <img src="/static/images/icon-github.svg" alt="">
                 </a>
             </div>
             <div class="col-block item-client">
                 <a href="#0">
-                    <img src="images/clients/icon-mozilla.svg" alt="">
+                    <img src="/static/images/icon-mozilla.svg" alt="">
                 </a>
             </div>
             <div class="col-block item-client">
                 <a href="#0">
-                    <img src="images/clients/icon-linux.svg" alt="">
+                    <img src="/static/images/icon-linux.svg" alt="">
                 </a>
             </div>
             <div class="col-block item-client">
                 <a href="#0">
-                    <img src="images/clients/icon-ubuntu.svg" alt="">
+                    <img src="/static/images/icon-ubuntu.svg" alt="">
                 </a>
             </div>
             <div class="col-block item-client">
                 <a href="#0">
-                    <img src="images/clients/icon-sass.svg" alt="">
+                    <img src="/static/images/icon-sass.svg" alt="">
                 </a>
             </div>
 
@@ -308,7 +308,7 @@ const featuredSolutions = await getCollection("solutions");
 
         <div class="row contact-infos">
             <div class="col-five md-six tab-1-2 mob-full contact-logo" data-aos="fade-up">
-                <img src="assets/img/solutions/solution-icons/integritynet-icon-default.png" alt="inet-logo" class="inet-logo-contact">
+                <img src="/static/images/integritynet-icon-default.png" alt="inet-logo" class="inet-logo-contact">
                 <h1>INTEGRITYNET</h1>
                 <p>Passion for Excellence and <br> Dedication to Rendering Quality Service.</p>
             </div>

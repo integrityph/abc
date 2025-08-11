@@ -33,16 +33,16 @@
 /* Imports */
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700|Merriweather:300,400,400i,700|Libre+Baskerville:700"); /* Google Font Import */
 
-@import url("../assets/typeface/montserrat/stylesheet.css"); /* Main Font */
-@import url("../assets/typeface/cera-pro/stylesheet.css"); /* Sans Font */
-@import url("../assets/typeface/inconsolata/stylesheet.css"); /* Mono */
-@import url("../assets/typeface/open-sans/stylesheet.css"); /* Fallback */
+@import url("/typeface/montserrat/stylesheet.css");
+@import url("/typeface/cera-pro/stylesheet.css");
+@import url("/typeface/inconsolata/stylesheet.css");
+@import url("/typeface/open-sans/stylesheet.css");
 
-@import url("../assets/icons/font-awesome/css/fontawesome-all.css");
-@import url("../assets/icons/mdicon/material-icons.css");
-@import url("../assets/plugins/timeline/timeline.css");
-@import url("../assets/plugins/contact-email/contact-email.css");
-@import url("root.css");
+@import url("/static/images/icons/font-awesome/css/fontawesome-all.min.css");
+@import url("/static/images/icons/mdicon/material-icons.css");
+@import url("/plugins/timeline/timeline.css");
+@import url("/plugins/contact-email/contact-email.css");
+@import url("/css/root.css");
 
 /* ===================================================================
  * # normalize
@@ -955,5 +955,3 @@ textarea {
   margin-right: auto;
   text-align: center;
 }
-
-/*# sourceMappingURL=base.css.map */
