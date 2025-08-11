@@ -3,7 +3,9 @@ title: share events
 list_title: Share Events
 list_sub_title: Events and Catering
 image: /static/images/uploads/events-01.jpg
-logo_small: /static/images/uploads/share-icon-default.png
+logo_small:
+  url: /static/images/uploads/share-icon-default.png
+  alt: shareevents
 logo_large: /static/images/uploads/share-icon-default.png
 order: 2
 view_title: Let us cater your next event

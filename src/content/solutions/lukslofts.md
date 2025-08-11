@@ -3,7 +3,9 @@ title: lukslofts
 list_title: Luks Lofts Hotel
 list_sub_title: Hotel Accommodation
 image: /static/images/uploads/lukslofts-01.jpg
-logo_small: /static/images/uploads/lukslofts-icon-default.png
+logo_small:
+  url: /static/images/uploads/lukslofts-icon-default.png
+  alt: lukslofts
 logo_large: /static/images/uploads/lukslofts-logo-default.png
 order: 1
 view_title: See the Future of Luxury Lifestyle

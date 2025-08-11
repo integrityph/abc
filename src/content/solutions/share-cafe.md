@@ -3,7 +3,9 @@ title: share cafe
 list_title: Share Cafe
 list_sub_title: Restaurant and Catering
 image: /static/images/uploads/share-01.jpg
-logo_small: /static/images/uploads/share-icon-default-box.png
+logo_small:
+  url: /static/images/uploads/share-icon-default-box.png
+  alt: sharecafe
 logo_large: /static/images/uploads/share-logo-default.png
 order: 4
 view_title: About us

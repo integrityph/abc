@@ -3,7 +3,9 @@ title: digibutler
 list_title: DigiButler
 list_sub_title: Guest Engagement System
 image: /static/images/uploads/digibutler-01.jpg
-logo_small: /static/images/uploads/digibutler-icon-default.png
+logo_small:
+  url: /static/images/uploads/digibutler-icon-default.png
+  alt: digibutlers
 logo_large: /static/images/uploads/digibutler-logo-default.png
 order: 3
 view_title: About DigiButler
