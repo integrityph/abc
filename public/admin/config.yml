@@ -17,7 +17,12 @@ collections:
       - { label: "List Title", name: "list_title", widget: "string" }
       - { label: "List Sub Title", name: "list_sub_title", widget: "string"}
       - { label: "Image", name: "image", widget: "image" }
-      - { label: "Logo Small", name: "logo_small", widget: "image" }
+      - label: "Logo Small"
+        name: "logo_small"
+        widget: "object"
+        fields:
+          - { label: "Url", name: "url", widget: "image" }
+          - { label: "Alt", name: "alt", widget: "string" }
       - { label: "Logo Large", name: "logo_large", widget: "image" }
       - { label: "Order", name: "order", widget: "number" }
       - { label: "View Title", name: "view_title", widget: "string" }

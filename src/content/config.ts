@@ -6,8 +6,11 @@ const solutionCollection = defineCollection({
     list_title: z.string(),
     list_sub_title: z.string(),
 		image: z.string(),
-		logo_small: z.string(),
-		logo_large: z.string(),
+    logo_small: z.object({
+      url: z.string(),
+      alt: z.string()
+    }),
+    logo_large: z.string(),
 		order: z.number(),
 		view_title: z.string(),
 		view_sub_title: z.string(),
