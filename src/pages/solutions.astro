@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import SolutionCard from "@/components/SolutionCard.astro";
+import LogoList from "@/components/LogoList.astro";
 
 import { getCollection } from "astro:content";
 
@@ -16,36 +17,9 @@ const featuredSolutions = await getCollection("solutions");
           </h1>
 
           <ul class="solution-logo-list">
-              <li tooltip = "Luks Lofts Hotel" flow = "down">
-                  <img src="/static/images/lukslofts-icon-default.png" alt="Luks Lofts Hotel">
-              </li>
-              <li tooltip="DigiButler" flow="down">
-                  <img src="/static/images/digibutler-icon-default.png" alt="DigiButler">
-              </li>
-              <li tooltip="Zumumu" flow="down">
-                  <img src="/static/images/zumumu-icon-default.png" alt="Zumumu">
-              </li>
-              <li tooltip="Share Cafe" flow="down">
-                  <img src="/static/images/share-icon-default-box.png" alt="Share Cafe">
-              </li>
-              <li tooltip="Share Events" flow="down">
-                  <img src="/static/images/share-icon-default.png" alt="Share Events">
-              </li>
-              <li tooltip="IntegraNet" flow="down">
-                  <img src="/static/images/integranet-icon-default.png" alt="IntegraNet">
-              </li>
-              <li tooltip="IntegrityBPO" flow="down">
-                  <img src="/static/images/bpo-icon-default.png" alt="IntegrityBPO">
-              </li>
-              <li tooltip="IntegrityPBX" flow="down">
-                  <img src="/static/images/pbx-icon-default.png" alt="IntegrityPBX">
-              </li>
-              <li tooltip="IntegrityPCI" flow="down">
-                  <img src="/static/images/pci-icon-default.png" alt="IntegrityPCI">
-              </li>
-              <li tooltip="HRMS" flow="down">
-                  <img src="/static/images/hrms-icon-default.png" alt="HRMS">
-              </li>
+            {featuredSolutions.map(solution => (
+              <LogoList tooltip={solution.data.list_title} src={solution.data.logo_small.url} alt={solution.data.logo_small.alt}  />
+            ))}
           </ul>
       </div>
     </div>
