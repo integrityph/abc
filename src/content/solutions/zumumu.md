@@ -1,7 +1,7 @@
 ---
 title: zumumu
 list_title: Zumumu
-list_sub_title: Restaurant & Hotel Management System
+list_sub_title: Restaurant Management System
 image: /static/images/uploads/zumumu-02.jpg
 logo_small:
   url: /static/images/uploads/zumumu-icon-default.png
