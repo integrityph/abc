@@ -17,7 +17,9 @@ const featuredSolutions = await getCollection("solutions");
           </h1>
 
           <ul class="solution-logo-list">
-            {featuredSolutions.map(solution => (
+            {featuredSolutions
+            .sort((a, b) => a.data.order - b.data.order)
+            .map(solution => (
               <LogoList tooltip={solution.data.list_title} src={solution.data.logo_small.url} alt={solution.data.logo_small.alt}  />
             ))}
           </ul>
