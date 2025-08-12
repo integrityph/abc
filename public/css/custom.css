@@ -1981,7 +1981,7 @@ ul.contact-social-list>li {
     background-color: #151515;
     background-repeat: no-repeat;
     background-position: center center;
-    background-image: url(../assets/img/workspace/buildings/CTV_4794.jpg);
+    background-image: url(../public/static/images/CTV_4794.jpg);
     background-size: cover;
     position: relative;
     color: rgba(255, 255, 255, 0.5);
@@ -2005,7 +2005,7 @@ ul.contact-social-list>li {
     padding-bottom: 5.4rem;
     color: rgba(255, 255, 255, 0.5);
     background-color: #000000;
-    background-image: url(../assets/img/workspace/buildings/CTV_4767.jpg);
+    background-image: url(../public/static/images/CTV_4767.jpg);
     background-repeat: no-repeat;
     background-position: center bottom;
     background-size: cover;
@@ -2038,7 +2038,7 @@ ul.contact-social-list>li {
     background-color: #151515;
     background-repeat: no-repeat;
     background-position: center center;
-    background-image: url(../assets/img/parallax/about-01.jpg);
+    background-image: url(../public/static/images/about-01.jpg);
     background-size: cover;
     position: relative;
     color: rgba(255, 255, 255, 0.5);
@@ -2062,7 +2062,7 @@ ul.contact-social-list>li {
     background-color: #151515;
     background-repeat: no-repeat;
     background-position: center center;
-    background-image: url(../assets/img/parallax/about-02.jpg);
+    background-image: url(../public/static/images/about-02.jpg);
     background-size: cover;
     position: relative;
     color: rgba(255, 255, 255, 0.5);
@@ -2090,7 +2090,7 @@ ul.contact-social-list>li {
     background-color: #151515;
     background-repeat: no-repeat;
     background-position: center center;
-    background-image: url(../assets/img/parallax/about-03.jpg);
+    background-image: url(../public/static/images/about-03.jpg);
     background-size: cover;
     position: relative;
     color: rgba(255, 255, 255, 0.5);
