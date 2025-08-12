@@ -1,0 +1,121 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro"
+import ServiceHeader from "@/layouts/services/ServiceHeader.astro"
+import { getCollection } from "astro:content"
+
+const services = await getCollection('services')
+---
+
+<BaseLayout>
+  <section id="services" class="s-services-parallax page-hero target-section">
+    <div class="row section-header">
+        <div class="col-full">
+            <h3 data-num="01" class="subhead">What We Do</h3>
+            <h1 class="display-1 display-1--light">
+                Our services are tailored to make your business grow and stand out.
+            </h1>
+            <p class="lead lead-light">
+                Technology is continually evolving but storytelling remains at the heart of how people communicate. We craft our products and solutions with love and care that enable our clients to engage on a larger platform and help their businesses grow periodically.
+            </p>
+        </div>
+    </div>
+
+    <div class="home-content__scroll">
+        <a href="#services-list" class="scroll-link smoothscroll">
+            Scroll
+        </a>
+    </div>
+</section>
+
+<section id="services-list" class="s-works target-section">
+  <div class="row section-header">
+      <div class="col-full">
+          <h3 data-num="02" class="subhead">Services List</h3>
+          <h1 class="display-1">
+              Elevating products and solutions at every touchpoint.
+          </h1>
+          <p class="lead">
+              IntegrityNet shares knowledge of offshore department, through its deep project management experiences, processes and methodology and wide network of personnel sources to ensure an outsourcing strategy that works for every client. With strong plans of investing in people and technology, the company’s strategy revolves around an inexorable commitment to provide superior services using world-class technology. The aim to build a culture based on the values of integrity and trust; supported by action with results.
+          </p>
+      </div>
+  </div>
+
+  <div class="row section-header services-list-wrap">
+    {services.map(service => <ServiceHeader props={service.data} />)}  
+  </div>
+</section>
+
+<section id="services-stats" class="s-stats">
+  <div class="row stats-block block-1-4 block-m-1-2 block-mob-full">
+
+      <div class="col-block item-stats ">
+          <div class="item-stats__count">10</div>
+          <h5>Years of Experience</h5>
+      </div>
+      <div class="col-block item-stats">
+          <div class="item-stats__count">140</div>
+          <h5>Clients Worldwide</h5>
+      </div>
+      <div class="col-block item-stats">
+          <div class="item-stats__count">7</div>
+          <h5>Location Sites <br> Nationwide</h5>
+      </div>
+      <div class="col-block item-stats">
+          <div class="item-stats__count">2319</div>
+          <h5>Cups of Coffee</h5>
+      </div>
+
+  </div>
+</section>
+
+<section id="company-approach" class="s-works inet-parallax target-section">
+  <div class="row section-header">
+      <div class="col-full">
+          <h3 data-num="03" class="subhead">Company Approach</h3>
+          <h1 class="display-1">
+              Design-driven.
+              <br>
+              Stategy-led.
+          </h1>
+      </div>
+  </div>
+
+  <div class="row services-list block-1-3 block-m-1-2 block-tab-full">
+      <div class="col-block item-service">
+          <h4>Discover</h4>
+          <p>
+              Our goal is to fully understand each client's business and the environment in which it operates. We look to completely understand the target audience and how they will interact with the digital products we deliver.
+          </p>
+      </div>
+
+      <div class="col-block item-service">
+          <h4>Strategize</h4>
+          <p>
+              Our planning process turns research into a clear set of action items to meet business goals. We take this information to build the blueprint to drive more traffic and convert potential customers into business leads.
+          </p>
+      </div>
+
+      <div class="col-block item-service">
+          <h4>Execute</h4>
+          <p>
+              Our dedicated team of neoworkers and project developers use their gained knowledge in their field of
+              expertise to create visually-engaging products with the overall user experience in mind. We're confident and proud of every project and solutions we deliver.
+          </p>
+      </div>
+
+      <div class="col-block item-service">
+          <h4>Launch</h4>
+          <p>
+              During the Implementation, our job is to translate creative into a full program that goes live. Implementation often includes an array of services, which can include design, development and search marketing.
+          </p>
+      </div>
+
+      <div class="col-block item-service">
+          <h4>Evolve</h4>
+          <p>
+              Last but not least, our task is to use scientific metrics to track and analyze campaign performance. This helps us easily identify what worked and what did not, we then initiate new strategies to maximize your business goals.
+          </p>
+      </div>
+  </div>
+</section>
+</BaseLayout>

@@ -20,6 +20,17 @@ const solutionCollection = defineCollection({
   }),
 });
 
+const servicesCollection = defineCollection({
+  schema: z.object({
+		title: z.string(),
+		image: z.object({
+			src: z.string(),
+			alt: z.string(),
+		}),
+  }),
+});
+
 export const collections = {
   solutions: solutionCollection,
+	services: servicesCollection,
 };

@@ -1,0 +1,8 @@
+---
+const { props } = Astro.props;
+---
+<div class="col-four services-list-card">
+  <img src={props.image.src} alt={props.image.alt}>
+  <p>{props.title}</p>
+</div>
+
