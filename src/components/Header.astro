@@ -1,5 +1,5 @@
 ---
-
+const { pathname }  = Astro.url;
 ---
 
   <header class="s-header">
@@ -12,11 +12,11 @@
 
           <nav class="header-nav-wrap">
               <ul class="header-nav">
-                  <li class="current active"><a href="/">Home</a></li>
-                  <li><a href="/solutions">Solutions</a></li>
-                  <li><a href="/services">Services</a></li>
-                  <li><a href="/about">About</a></li>
-                  <li><a href="/contact">Contact</a></li>
+                  <li class={`${pathname === "/" ? "active": ""}`}><a href="/">Home</a></li>
+                  <li class={`${pathname.startsWith("/solutions") ? "active": ""}`}><a href="/solutions">Solutions</a></li>
+                  <li class={`${pathname.startsWith("/services") ? "active": ""}`}><a href="/services">Services</a></li>
+                  <li class={`${pathname.startsWith("/about") ? "active": ""}`}><a href="/about">About</a></li>
+                  <li class={`${pathname.startsWith("/contact") ? "active": ""}`}><a href="/contact">Contact</a></li>
               </ul>
           </nav>
 

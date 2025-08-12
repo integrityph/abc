@@ -1,7 +1,30 @@
 ---
 import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro"
-// const year = new Date().getFullYear();
+
+const { pathname }  = Astro.url;
+
+let path;
+
+switch (pathname) {
+  case "/":
+    path = "inet-home";
+    break;
+  case "/solutions":
+    path = "inet-works";
+    break;
+  case "/services":
+    path = "inet-services";
+    break;
+  case "/about":
+    path = "inet-about";
+    break;
+  case "/contact":
+    path = "inet-contact";
+    break;
+  default:
+    path = "inet-works";
+}
 ---
 <html class="no-js" lang="en">
   <head>
@@ -23,7 +46,7 @@ import Footer from "@/components/Footer.astro"
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
   </head>
 
-  <body id="top" class="inet-home">
+  <body id="top" class=`${path}`>
 
     <div class="cursor-dot-outline"></div>
     <div class="cursor-dot"></div>
