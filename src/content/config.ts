@@ -30,7 +30,15 @@ const servicesCollection = defineCollection({
   }),
 });
 
+const aboutCollection = defineCollection({
+  schema: z.object({
+    title: z.string(),
+    description: z.string()
+  })
+})
+
 export const collections = {
   solutions: solutionCollection,
 	services: servicesCollection,
+  about: aboutCollection,
 };
