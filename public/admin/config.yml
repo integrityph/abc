@@ -31,3 +31,17 @@ collections:
       - { label: "Custom Action Name", name: "custom_action_name", widget: "string", required: false }
       - { label: "Custom Action URL", name: "custom_action_url", widget: "string", required: false }
       - { label: "Body", name: "body", widget: "markdown" }
+  - name: "services"
+    label: "Services"
+    folder: "src/content/services"
+    create: true
+    fields:
+      - { label: "Title", name: "title", widget: "string", required: true }
+      - label: "Image"
+        name: "image"
+        widget: "object"
+        collapsed: true
+        fields: 
+          - { label: "Source", name: "src", widget: "image" }
+          - { label: "Alt", name: "alt", widget: "string", required: false }
+      - { label: "Body", name: "body", widget: "markdown", required: false }
