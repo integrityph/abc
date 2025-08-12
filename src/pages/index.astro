@@ -72,13 +72,16 @@ const featuredSolutions = await getCollection("solutions");
     </div>
 
     <div class="row section-header">
-        {
-          featuredSolutions.map(solution => (
+      {
+        featuredSolutions.map((solution, index) => (
+          index < 4 ? 
             <div class="col-six md-six tab-full mob-full showcase-solution" data-aos="fade-up">
               <SolutionCard slug={solution.slug} />
             </div>
-          ))
-        }
+          : null
+        )
+        )
+      }
 
     </div>
 
