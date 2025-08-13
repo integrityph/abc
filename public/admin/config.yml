@@ -23,7 +23,18 @@ collections:
         fields:
           - { label: "Url", name: "url", widget: "image" }
           - { label: "Alt", name: "alt", widget: "string" }
-      - { label: "Logo Large", name: "logo_large", widget: "image" }
+      - label: "Logo Large"
+        name: "logo_large"
+        widget: "object"
+        fields:
+          - { label: "Url", name: "url", widget: "image" }
+          - { label: "Url", name: "url", widget: "string" }
+      - label: "Parallax"
+        name: "parallax"
+        widget: "object"
+        fields:
+          - { label: "Url", name: "url", widget: "image" }
+          - { label: "Alt", name: "alt", widget: "string" }
       - { label: "Order", name: "order", widget: "number" }
       - { label: "View Title", name: "view_title", widget: "string" }
       - { label: "View Sub Title", name: "view_sub_title", widget: "string", required: false }

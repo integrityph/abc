@@ -10,7 +10,14 @@ const solutionCollection = defineCollection({
       url: z.string(),
       alt: z.string()
     }),
-    logo_large: z.string(),
+    logo_large: z.object({
+      url: z.string(),
+      alt: z.string()
+    }),
+    parallax: z.object({
+      url: z.string(),
+      alt: z.string()
+    }),
 		order: z.number(),
 		view_title: z.string(),
 		view_sub_title: z.string(),
