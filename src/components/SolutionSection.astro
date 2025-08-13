@@ -1,0 +1,11 @@
+---
+const props = Astro.props;
+---
+
+<section class="work-features">
+  <div class="row section-header">
+    <div class="col-full more-cata-btn" data-aos="fade-up">
+      <a href=`${props.href}` target="_blank" class="btn inet-btn-stroke-dark btn--large btn-raised" title=`${props.href}`>More About {props.name} <i class="fa fa-external-link-alt"></i></a>
+    </div>
+  </div>
+</section>
