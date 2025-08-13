@@ -3,6 +3,7 @@ import SolutionLayout from "@/layouts/SolutionLayout.astro";
 import { getCollection, getEntry } from "astro:content";
 
 import SolutionSection from "@/components/SolutionSection.astro";
+import MoreSolution from "@/components/MoreSolution.astro";
 
 export async function getStaticPaths() {
 	const solutionEntries = await getCollection("solutions");
@@ -71,7 +72,7 @@ console.log(entry.data)
 
   <SolutionSection href={entry.data.url} name={entry.data.list_title} />
 
-
+  <MoreSolution />
 </SolutionLayout>
 
 
