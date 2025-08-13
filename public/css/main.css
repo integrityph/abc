@@ -187,7 +187,7 @@ p img {
   margin: 0;
 }
 
-p.lead {
+p.lead, .lead p {
   font-family: var(--font-sans), sans-serif;
   font-weight: 300;
   font-size: 2.4rem;
@@ -1558,6 +1558,7 @@ input::-moz-focus-inner {
 
 .section-header .display-1,
 .section-header p.lead,
+.section-header .lead p,
 .section-header ul.solution-logo-list,
 .section-header .inet-services-list,
 .section-header.services-list-wrap,
