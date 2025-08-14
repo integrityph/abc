@@ -7,17 +7,17 @@ const featuredSolutions = await getCollection("solutions");
 ---
 
 <section class="more-work">
-      <div class="row section-header more-work-header">
-          <h1 class="display-1">More Solutions</h1>
-      </div>
+  <div class="row section-header more-work-header">
+    <h1 class="display-1">More Solutions</h1>
+  </div>
 
-      <div class="row block-1-2 block-m-1-2 block-tab-full block-mob-full more-work-content">
-          {featuredSolutions.map((solution, index) => (
-            index < 2 ?
-              <div class="col-block showcase-solution" data-aos="fade-up" data-aos-delay="200">
-                <SolutionCard slug={solution.slug}/>
-              </div>
-            : null
-          ))}
-      </div>
-  </section>
+  <div class="row block-1-2 block-m-1-2 block-tab-full block-mob-full more-work-content">
+    {featuredSolutions.map((solution, index) => (
+      index < 2 ?
+        <div class="col-block showcase-solution" data-aos="fade-up" data-aos-delay="200">
+          <SolutionCard slug={solution.slug}/>
+        </div>
+      : null
+    ))}
+  </div>
+</section>
