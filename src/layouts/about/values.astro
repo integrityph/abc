@@ -1,9 +1,17 @@
 ---
 const { props } = Astro.props;
+
+interface Values {
+  title: string;
+  description: string;
+}
 ---
-  <div class="col-six md-six tab-full item-service" data-aos="fade-up">
-      <h4>{props.title}</h4>
-      <p>
-          {props.description}
-      </p>
-  </div>
+
+{
+  props.values.map((value: Values) => (
+    <div class="col-six md-six tab-full item-service" data-aos="fade-up">
+      <h4>{value.title}</h4>
+      <p>{value.description}</p>
+    </div>
+  ))
+}
