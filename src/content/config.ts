@@ -21,6 +21,14 @@ const solutionCollection = defineCollection({
       url: z.string(),
       alt: z.string()
     }),
+    gallery: z.array(
+      z.object({
+        title: z.string(),
+        caption: z.string(),
+        src: z.string(),
+        alt: z.string()
+      })
+    ),
 		order: z.number(),
 		view_title: z.string(),
 		view_sub_title: z.string(),

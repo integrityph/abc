@@ -1,8 +1,9 @@
 ---
 import SolutionLayout from "@/layouts/SolutionLayout.astro";
-import { getCollection, getEntry } from "astro:content";
-
+import Gallery from "@/components/Gallery.astro";
 import MoreSolution from "@/components/MoreSolution.astro";
+
+import { getCollection, getEntry } from "astro:content";
 
 export async function getStaticPaths() {
 	const solutionEntries = await getCollection("solutions");
@@ -22,7 +23,7 @@ const parallaxImage = {
   backgroundImage: `url(${entry.data.parallax.url})`
 }
 
-console.log(entry.data)
+const galleries = entry.data.gallery;
 
 ---
 <SolutionLayout title={entry.data.list_title} slug={entry.slug}>
@@ -69,6 +70,22 @@ console.log(entry.data)
 
   <Content />
 
+
+  <section class="work-gallery">
+    <div class="portfolio block-1-4 block-m-1-3 block-tab-1-2 collapse">
+      { galleries.map((gallery, index) => (
+        index < 8 ?
+          <Gallery src={gallery.src} alt={gallery.alt} title={gallery.title} caption={gallery.caption} url={entry.data.url} />
+        :null
+      ))}
+    </div>
+
+    <div class="row section-header" data-aos="fade-up">
+      <div class="col-full more-cta-btn">
+        <a href="/gallery" class="btn inet-btn-main-red btn--large btn-raised" data-aos="fade-up">View Our Gallery <i class="fa fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
   <MoreSolution />
 </SolutionLayout>
 

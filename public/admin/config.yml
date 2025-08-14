@@ -40,6 +40,14 @@ collections:
         fields:
           - { label: "Url", name: "url", widget: "image" }
           - { label: "Alt", name: "alt", widget: "string" }
+      - label: "Gallery"
+        name: "gallery"
+        widget: "list"
+        fields: 
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Caption", name: "caption", widget: "string", required: false }
+          - { label: "Source", name: "src", widget: "image" }
+          - { label: "Alt", name: "alt", widget: "string", required: false }
       - { label: "Order", name: "order", widget: "number" }
       - { label: "View Title", name: "view_title", widget: "string" }
       - { label: "View Sub Title", name: "view_sub_title", widget: "string", required: false }
