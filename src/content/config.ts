@@ -51,8 +51,20 @@ const servicesCollection = defineCollection({
 
 const aboutCollection = defineCollection({
   schema: z.object({
-    title: z.string(),
-    description: z.string()
+    values: z.array(
+      z.object({
+        title: z.string(),
+        description: z.string(),
+      })
+    ),
+    gallery_image: z.array(
+      z.object({
+        title: z.string(),
+        caption: z.string(),
+        src: z.string(),
+        alt: z.string(),
+      })
+    )
   })
 })
 
@@ -72,5 +84,5 @@ const aboutCollection = defineCollection({
 export const collections = {
   solutions: solutionCollection,
 	services: servicesCollection,
-  about: aboutCollection,
+  about: aboutCollection
 };

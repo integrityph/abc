@@ -72,11 +72,26 @@ collections:
       - { label: "Body", name: "body", widget: "markdown", required: false }
   - name: "about"
     label: "About"
-    folder: "src/content/about/values"
+    folder: "src/content/about"
     create: true
     fields:
-      - { label: "Title", name: "title", widget: "string", required: true }
-      - { label: "Description", name: "description", widget: "string", required: true }
+      - { label: "File Name", name: "title", widget: "string", required: true }
+      - label: "Values"
+        name: "values"
+        widget: "list"
+        collapsed: true
+        fields: 
+        - { label: "Title", name: "title", widget: "string", required: true }
+        - { label: "Description", name: "description", widget: "string", required: true }
+      - label: "Gallery Image"
+        name: "gallery_image"
+        widget: "list"
+        collapsed: true
+        fields: 
+          - { label: "Title", name: "title", widget: "string", required: false }
+          - { label: "Caption", name: "caption", widget: "string", required: false }
+          - { label: "Source", name: "src", widget: "image", required: false }
+          - { label: "Alt", name: "alt", widget: "string", required: false }
       - { label: "Body", name: "body", widget: "markdown", required: false }
 
   # - name: "gallery"
