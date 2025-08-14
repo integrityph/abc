@@ -12,12 +12,12 @@ if (!solution) {
 const solutionURL = `/solutions/${solution.slug}`;
 ---
 <a href={solutionURL}>
-    <img src={solution.data.image} alt="Lukslofts" class="solution-image solution-tilt">
-    <div class="solution-label">
-        <h2>
-            <img src={solution.data.logo_small.url} alt={solution.data.logo_small.alt} class="solution-logo">
-            {solution.data.list_title}
-        </h2>
-        <p>{solution.data.list_sub_title}</p>
-    </div>
+  <img src={solution.data.image.url} alt={solution.data.image.alt} class="solution-image solution-tilt">
+  <div class="solution-label">
+    <h2>
+      <img src={solution.data.logo_small.url} alt={solution.data.logo_small.alt} class="solution-logo">
+      {solution.data.list_title}
+    </h2>
+    <p>{solution.data.list_sub_title}</p>
+  </div>
 </a>
