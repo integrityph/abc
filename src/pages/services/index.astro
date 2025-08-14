@@ -1,6 +1,6 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro"
-import ServiceHeader from "@/layouts/services/ServiceHeader.astro"
+import ServiceCard from "@/layouts/services/ServiceCard.astro"
 import { getCollection } from "astro:content"
 
 const services = await getCollection('services')
@@ -41,7 +41,7 @@ const services = await getCollection('services')
   </div>
 
   <div class="row section-header services-list-wrap">
-    {services.map(service => <ServiceHeader props={service.data} />)}  
+    {services.map(service => <ServiceCard props={service.data} />)}  
   </div>
 </section>
 
