@@ -2,7 +2,6 @@
 import SolutionLayout from "@/layouts/SolutionLayout.astro";
 import { getCollection, getEntry } from "astro:content";
 
-import SolutionSection from "@/components/SolutionSection.astro";
 import MoreSolution from "@/components/MoreSolution.astro";
 
 export async function getStaticPaths() {
@@ -49,7 +48,7 @@ console.log(entry.data)
       </div>
   
       <div class="col-six md-six tab-1-2 hide-on-mobile work-hero-text-media" data-aos="fade-left">
-        <img src={entry.data.image} alt="">
+        <img src={entry.data.image.url} alt={entry.data.image.alt}>
       </div>
     </div>
   
@@ -60,17 +59,15 @@ console.log(entry.data)
   
         <div class="col-ten md-ten tab-full mob-full work-detail-text" data-aos="fade-up">
             <h1 class="display-1">{entry.data.view_title}</h1>
-  
-            <span class="lead">
-              <Content />
-            </span>
+
+            <p class="lead">{entry.data.view_text}</p>
         </div>
     </div>
-  
-    <div class="s-stats parallax-work solutions-parallax" style={parallaxImage}></div>
   </section>
 
-  <SolutionSection href={entry.data.url} name={entry.data.list_title} />
+  <section class="s-stats parallax-work solutions-parallax" style={parallaxImage}></section>
+
+  <Content />
 
   <MoreSolution />
 </SolutionLayout>
