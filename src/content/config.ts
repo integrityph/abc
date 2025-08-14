@@ -48,20 +48,21 @@ const aboutCollection = defineCollection({
   })
 })
 
-const galleryCollection = defineCollection({
-  schema: z.object({
-    title: z.string(),
-    caption: z.string(),
-    image: z.object({
-      src: z.string(),
-      alt: z.string()
-    })
-  })
-})
+// const galleryCollection = defineCollection({
+//   schema: z.object({
+//     image: z.array(
+//       z.object({
+//         title: z.string(),
+//         caption: z.string(),
+//         src: z.string(),
+//         alt: z.string(),
+//       })
+//     )
+//   })
+// });
 
 export const collections = {
   solutions: solutionCollection,
 	services: servicesCollection,
   about: aboutCollection,
-  about_gallery: galleryCollection,
 };

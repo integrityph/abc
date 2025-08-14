@@ -1,27 +1,26 @@
 ---
-const { props } = Astro.props
+const {props} = Astro.props
 ---
-  <div class="col-block item-folio" data-aos="fade-up">
-      <div class="item-folio__thumb">
-          <a href={props.image.src} class="thumb-link" title="IntegrityNet Building 1" data-size="1050x700">
-              <img src={props.image.src} alt={props.image.alt}>
-          </a>
-      </div>
+    <div class="col-block item-folio" data-aos="fade-up">
+        <div class="item-folio__thumb">
+            <a href={props.image.src} class="thumb-link" title="IntegrityNet Building 1" data-size="1050x700">
+                <img src={props.image.src} alt={props.image.alt}/>
+            </a>
+        </div>
+        <div class="item-folio__text">
+            <h3 class="item-folio__title">
+                {props.title}
+            </h3>
+            <p class="item-folio__cat">
+                {props.title}
+            </p>
+        </div>
 
-      <div class="item-folio__text">
-          <h3 class="item-folio__title">
-              {props.title}
-          </h3>
-          <p class="item-folio__cat">
-              {props.title}
-          </p>
-      </div>
+        <a href="" class="item-folio__project-link" title="Project link">
+            {props.title}
+        </a>
 
-      <a href="" class="item-folio__project-link" title="Project link">
-          {props.title}
-      </a>
-
-      <div class="item-folio__caption">
-          {props.caption}
-      </div>
-  </div>
+        <div class="item-folio__caption">
+            {props.caption}
+        </div>
+    </div>
