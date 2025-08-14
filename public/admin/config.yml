@@ -16,7 +16,12 @@ collections:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "List Title", name: "list_title", widget: "string" }
       - { label: "List Sub Title", name: "list_sub_title", widget: "string"}
-      - { label: "Image", name: "image", widget: "image" }
+      - label: "Image"
+        name: "image"
+        widget: "object"
+        fields:
+          - { label: "Url", name: "url", widget: "image" }
+          - { label: "Alt", name: "alt", widget: "string" }
       - label: "Logo Small"
         name: "logo_small"
         widget: "object"
@@ -28,7 +33,7 @@ collections:
         widget: "object"
         fields:
           - { label: "Url", name: "url", widget: "image" }
-          - { label: "Url", name: "url", widget: "string" }
+          - { label: "Alt", name: "alt", widget: "string" }
       - label: "Parallax"
         name: "parallax"
         widget: "object"
@@ -38,6 +43,7 @@ collections:
       - { label: "Order", name: "order", widget: "number" }
       - { label: "View Title", name: "view_title", widget: "string" }
       - { label: "View Sub Title", name: "view_sub_title", widget: "string", required: false }
+      - { label: "View Text", name: "view_text", widget: "string" }
       - { label: "URL", name: "url", widget: "string" }
       - { label: "Custom Action Name", name: "custom_action_name", widget: "string", required: false }
       - { label: "Custom Action URL", name: "custom_action_url", widget: "string", required: false }

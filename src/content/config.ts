@@ -5,7 +5,10 @@ const solutionCollection = defineCollection({
     title: z.string(),
     list_title: z.string(),
     list_sub_title: z.string(),
-		image: z.string(),
+		image: z.object({
+      url: z.string(),
+      alt: z.string()
+    }),
     logo_small: z.object({
       url: z.string(),
       alt: z.string()
@@ -21,6 +24,7 @@ const solutionCollection = defineCollection({
 		order: z.number(),
 		view_title: z.string(),
 		view_sub_title: z.string(),
+    view_text: z.string(),
 		url: z.string(),
 		custom_action_name: z.string().nullable().optional(),
 		custom_action_url: z.string().nullable().optional(),
