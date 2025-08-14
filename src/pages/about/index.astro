@@ -4,60 +4,82 @@ import Values from "@/layouts/about/values.astro";
 import Gallery from "@/components/Gallery.astro";
 import { getCollection } from "astro:content";
 
-const about = await getCollection('about')
-const gallery = await getCollection('about_gallery')
+const about = await getCollection("about");
 ---
+
 <BaseLayout>
+  <section
+    id="about-hero"
+    class="s-about inet-parallax page-hero target-section"
+  >
+    <div class="row section-header" data-aos="fade-up">
+      <div class="col-full">
+        <h3 data-num="01" class="subhead">Who We Are</h3>
+        <h1 class="display-1">
+          IntegrityNet is a wide-ranged solutions company based in Batangas,
+          Philippines.
+        </h1>
 
-      <section id="about-hero" class="s-about inet-parallax page-hero target-section">
-        <div class="row section-header" data-aos="fade-up">
-            <div class="col-full">
-                <h3 data-num="01" class="subhead">Who We Are</h3>
-                <h1 class="display-1">
-                    IntegrityNet is a wide-ranged solutions company based in Batangas, Philippines.
-                </h1>
+        <p class="lead about-text-1">
+          Integritynet Solutions and Services is one of the fastest growing
+          customer services, and phone systems provider catering to both
+          national and international companies. The company’s leadership in the
+          Business Process Outsourcing and Telecommunications industry combined
+          with a strong management team and an impressive track record of
+          growing client businesses are the pillars of its operations.
+        </p>
 
-                <p class="lead about-text-1">
-                    Integritynet Solutions and Services is one of the fastest growing customer services, and phone systems provider catering to both national and international companies. The company’s leadership in the Business Process Outsourcing and Telecommunications industry combined with a strong management team and an impressive track record of growing client businesses are the pillars of its operations.
-                </p>
+        <p hidden class="lead about-text-2">
+          Heedful to the needs of its clients, Integrity Net is on its way of
+          distinguishing itself amongst the most trusted call center and
+          solutions providers in the Philippines and around the world.
+          <br /><br />
+          Certified by the Securities and Exchange Commission in October 2010, the
+          company opened the doors to its first batch of call center specialists
+          a month thereafter. Integrity PBX, was launched two years later, and has
+          been servicing a renowned Medical Center in Batangas since then.
+        </p>
 
-                <p hidden class="lead about-text-2">
-                    Heedful to the needs of its clients, Integrity Net is on its way of distinguishing itself amongst the most trusted call center and solutions providers in the Philippines and around the world.
-                    <br><br>
-                    Certified by the Securities and Exchange Commission in October 2010, the company opened the doors to its first batch of call center specialists a month thereafter. Integrity PBX, was launched two years later, and has been servicing a renowned Medical Center in Batangas since then.
-                </p>
+        <p hidden class="lead about-text-3">
+          IntegrityNet embraces strong cultural values as an organization
+          focused on people – the very core of the competitive business edge.
+          The company takes pride on embracing diversity, developing a
+          performance driven culture and nurturing a fun learning environment.
+          <br /><br />
+          The company recognizes that as an organization, success can be retained
+          through commitment and adding VALUE to its clients and customers. IntegrityNet
+          prides itself on embracing change, innovation and problem solving. The
+          company looks for turnkey solutions as it commits to providing excellent
+          service to various clients.
+        </p>
 
-                <p hidden class="lead about-text-3">
-                    IntegrityNet embraces strong cultural values as an organization focused on people – the very core of the competitive business edge. The company takes pride on embracing diversity, developing a performance driven culture and nurturing a fun learning environment.
-                    <br><br>
-                    The company recognizes that as an organization, success can be retained through commitment and adding VALUE to its clients and customers. IntegrityNet prides itself on embracing change, innovation and problem solving. The company looks for turnkey solutions as it commits to providing excellent service to various clients.
-                </p>
+        <p class="lead">
+          <button class="btn inet-btn-stroke-red about-more-btn"
+            >Read More <i class="fas fa-chevron-down"></i></button
+          >
+        </p>
 
-                <p class="lead">
-                    <button class="btn inet-btn-stroke-red about-more-btn">Read More <i class="fas fa-chevron-down"></i></button>
-                </p>
-
-                <div hidden class="about-text-carousel">
-                    <a href="" class="button-arrow-left about-prev"></a>
-                    <div class="current-indicator">01</div>
-                    <div class="indicator-separator">&mdash;</div>
-                    <div class="total-indicator">03</div>
-                    <a href="" class="button-arrow-right about-next"></a>
-                </div>
-                
-            </div>
+        <div hidden class="about-text-carousel">
+          <a href="" class="button-arrow-left about-prev"></a>
+          <div class="current-indicator">01</div>
+          <div class="indicator-separator">&mdash;</div>
+          <div class="total-indicator">03</div>
+          <a href="" class="button-arrow-right about-next"></a>
         </div>
+      </div>
+    </div>
 
-        <div class="home-content__scroll scroll-dark">
-            <a href="#company-history" class="scroll-link smoothscroll">
-                Scroll
-            </a>
-        </div>
-    </section>
+    <div class="home-content__scroll scroll-dark">
+      <a href="#company-history" class="scroll-link smoothscroll"> Scroll </a>
+    </div>
+  </section>
 
-    <section id="about-parallax" class="s-stats">
-        <div class="row stats-block block-1-4 block-m-1-2 block-mob-full" data-aos="fade-up">
-            <!-- <div class="col-block item-stats ">
+  <section id="about-parallax" class="s-stats">
+    <div
+      class="row stats-block block-1-4 block-m-1-2 block-mob-full"
+      data-aos="fade-up"
+    >
+      <!-- <div class="col-block item-stats ">
                 <div class="item-stats__count">213</div>
                 <h5>Projects Completed</h5>
             </div>
@@ -73,296 +95,399 @@ const gallery = await getCollection('about_gallery')
                 <div class="item-stats__count">2319</div>
                 <h5>Cups of Coffee</h5>
             </div> -->
+    </div>
+  </section>
+
+  <section id="company-history" class="s-work inet-parallax target-section">
+    <div class="row section-header" data-aos="fade-up">
+      <div class="col-ten md-ten tab-full mob-full">
+        <h3 data-num="02" class="subhead">History</h3>
+        <h1 class="display-1">How we started</h1>
+      </div>
+    </div>
+
+    <section class="cd-horizontal-timeline">
+      <div class="timeline">
+        <div class="events-wrapper">
+          <div class="events">
+            <ol>
+              <li>
+                <a href="#0" data-date="01/01/2009" class="selected">2009</a>
+              </li>
+              <li><a href="#0" data-date="01/01/2010">2010</a></li>
+              <li><a href="#0" data-date="01/01/2012">2012</a></li>
+              <li><a href="#0" data-date="01/01/2013">2013</a></li>
+              <li><a href="#0" data-date="01/01/2014">2014</a></li>
+              <li><a href="#0" data-date="01/01/2015">2015</a></li>
+              <li><a href="#0" data-date="01/01/2016">Early 2016</a></li>
+              <li><a href="#0" data-date="01/10/2016">2016</a></li>
+              <li><a href="#0" data-date="01/01/2017">2017</a></li>
+              <li><a href="#0" data-date="01/01/2018">2018</a></li>
+              <li><a href="#0" data-date="01/01/2019">2019</a></li>
+              <li><a href="#0" data-date="01/10/2019">Mid 2019</a></li>
+              <li><a href="#0" data-date="01/25/2019">Late 2019</a></li>
+              <li><a href="#0" data-date="01/25/2020">2020</a></li>
+            </ol>
+
+            <span class="filling-line" aria-hidden="true"></span>
+          </div>
         </div>
+
+        <ul class="cd-timeline-navigation">
+          <li><a href="#0" class="prev inactive">Prev</a></li>
+          <li><a href="#0" class="next">Next</a></li>
+        </ul>
+      </div>
+
+      <div class="events-content">
+        <ol>
+          <li class="selected" data-date="01/01/2009">
+            <p>
+              <img
+                src="assets/img/solutions/solution-icons/integritynet-icon-default.png"
+                alt="IntegrityNet"
+              />
+            </p>
+            <h2>IntegrityNet</h2>
+            <span>2009</span>
+            <p>
+              <b>IntegrityNet</b> was established and is professionally working with
+              companies in USA and Australia serving all their call center needs,
+              and now planning to expand in the local Philippine market.
+            </p>
+          </li>
+
+          <li data-date="01/01/2010">
+            <p>
+              <img
+                src="assets/img/solutions/solution-icons/bpo-icon-default.png"
+                alt="IntegrityBPO"
+              />
+            </p>
+            <h2>IntegrityBPO</h2>
+            <span>2010</span>
+            <p>
+              Expanding its business in the Philippine Market by October 2010.
+              Founded at Houston, Texas, <b>IntegrityNet Call Center</b>
+              <i>(now <b>IntegrityBPO</b>)</i> was able to enlarge and hit the call
+              center industry.
+            </p>
+          </li>
+
+          <li data-date="01/01/2012">
+            <p>
+            <img src="assets/img/solutions/solution-icons/pbx-icon-default.png" alt="IntegrityPBX"/>
+            </p>
+            <h2>IntegrityPBX</h2>
+            <span>2012</span>
+            <p>
+              Launched <b>IntegrityPBX</b>, an ultra-reliable phone system,
+              supported by a special system has been saving different
+              organizations' money and enabling them to focus on achieving core
+              goals and covet success without worrying about over costing phone
+              bills. IntegrityPBX' reliability has been greatly appreciated by
+              these organizations as it boasts its affordable yet unsurpassed
+              and unlimited features.
+            </p>
+          </li>
+
+          <li data-date="01/01/2013">
+            <p>
+              <img
+                src="assets/img/solutions/solution-icons/pci-icon-default.png"
+                alt="IntegrityPCI"
+              />
+            </p>
+            <h2>IntegrityPCI</h2>
+            <span>2013</span>
+            <p>
+              IntegrityNet had produced a one-of-a-kind and today's most
+              advanced and innovative software that secures credit card data on
+              payment transactions made over the phone. It is the best software
+              without hardware installation requirements that will help any
+              organizations that accept payments over the phone protect the
+              credit card data of their customers and comply with PCI DSS. <b
+                >IntegrityPCI</b
+              > will help gain the loyalty and confidence of their clients.
+            </p>
+          </li>
+
+          <li data-date="01/01/2014">
+            <p>
+              <img
+                src="assets/img/solutions/solution-icons/hrms-icon-default.png"
+                alt="HRMS"
+              />
+            </p>
+            <h2>HRMS</h2>
+            <span>2014</span>
+            <p>
+              Due to the growing community of the company, the software
+              development team had launched <b>HRMS</b>. A very flexible system
+              that enables department heads to manage employee schedules,
+              evaluations, and attendance. All employees have their own account
+              where they can access and view the status of their daily
+              attendance, evaulations and payroll details.
+            </p>
+          </li>
+
+          <li data-date="01/01/2015">
+            <p>
+              <img
+                src="assets/img/solutions/solution-icons/lukslofts-icon-default.png"
+                alt="Luks Lofts Hotel"
+              />
+            </p>
+            <h2>Luks Lofts Hotel</h2>
+            <span>2015</span>
+            <p>
+              Began the building of hotel by late 2013 and finished by 2015,
+              Luks Lofts Hotel offers impeccable service and all the essential
+              amenities to invigorate travelers. Top features of the hotel
+              include private jet pool and automatic sliding doors with sensors,
+              keyless door access, blazing fast internet, 24hour room service,
+              24hour security and many more.
+            </p>
+          </li>
+
+          <li data-date="01/01/2016">
+            <p>
+              <img
+                src="assets/img/solutions/solution-icons/integranet-icon-default.png"
+                alt="IntegraNet"
+              />
+            </p>
+            <h2>IntegraNet</h2>
+            <span>Early 2016</span>
+            <p>
+              The company produced <b>IntegraNet Network Services</b>, the
+              fastest in Internet in Batangas and Puerto Galera. It aims to
+              provide total Managed Network Services that is delivered and
+              operated by highly qualified experienced staff. We provide an
+              end-to-end network management service, including network
+              connectivity, proactive monitoring and management of Customer
+              Premise Equipment (CPE) as well as 24/7 support.
+            </p>
+          </li>
+
+          <li data-date="01/10/2016">
+            <p>
+              <img
+                src="assets/img/solutions/solution-icons/altin-icon-default.png"
+                alt="Altin Pawnshop"
+              />
+            </p>
+            <h2>Altin Pawnshop</h2>
+            <span>2016</span>
+            <p>
+              From Hotel to Internet Provider businesses, the company explored
+              to produce and launch Trusted Pawnshop Services by 2016.
+            </p>
+          </li>
+
+          <li data-date="01/01/2017">
+            <p>
+              <img
+                src="assets/img/solutions/solution-icons/egrub-icon-default.png"
+                alt="eGrub"
+              />
+            </p>
+            <h2>eGrub</h2>
+            <span>2017</span>
+            <p>
+              With the restaurant inside the Hotel, the company developed eGrub.
+              From Kiosks to Mobile Ordering, eGrub is the only solution you
+              need to run your restaurant from A-Z. It is a non-cloud based
+              server with self-order solution, Table Tracking, Kitchen Display,
+              Queue Manager, integrated Point-of-Sale, Inventory, Timekeeping
+              and Scheduling, Reporting & Analytics, Floor Management,
+              Reservation Management System all in one.
+            </p>
+          </li>
+
+          <li data-date="01/01/2018">
+            <p>
+              <img
+                src="assets/img/solutions/solution-icons/digibutler-icon-default.png"
+                alt="DigiButler"
+              />
+            </p>
+            <h2>DigiButler</h2>
+            <span>2018</span>
+            <p>
+              Despite the engaged nature of the company, DigiButler was
+              originally launched by mid 2018, the state of the art premise
+              based guest engagement system designed for Hotels and Motels of
+              all types and sizes. It guarantees to improve guest satisfaction
+              while reducing staff and significantly increasing revenue.
+            </p>
+          </li>
+
+          <li data-date="01/01/2019">
+            <p>
+              <img
+                src="assets/img/solutions/solution-icons/share-icon-default.png"
+                alt="Share Cafe"
+              />
+            </p>
+            <h2>Share Cafe</h2>
+            <span>2019</span>
+            <p>
+              With two years in the making, Share Cafe was launched and finally
+              operational by April 2019. It is a casual restaurant that strives
+              to create exquisite cuisine with incredible taste at a modest
+              price point in a welcoming and stylish atmosphere.
+            </p>
+          </li>
+
+          <li data-date="01/10/2019">
+            <p>
+              <img
+                src="assets/img/solutions/solution-icons/zumumu-icon-default.png"
+                alt="Share Cafe"
+              />
+            </p>
+            <h2>Zumumu</h2>
+            <span>Mid 2019</span>
+            <p>
+              The restaurant and hotel industry disruptor. Zumumu is the first
+              to use <b>Progressive Web Application (PWA)</b> for the hospitality
+              industry. It redefines the concept of self-order process by eliminating
+              expensive hardware and maintenance costs related to table tablets and
+              self-order kiosks. It comes complete with Point Of Sale and Kitchen
+              Display systems run in a single web server. The proprietary Zumumu
+              Tag makes the system totally secure from rogue orders.
+            </p>
+          </li>
+
+          <li data-date="01/25/2019">
+            <p>
+              <img
+                src="assets/img/solutions/solution-icons/2fa2-icon-default.png"
+                alt="Share Cafe"
+              />
+            </p>
+            <h2>2FA2</h2>
+            <span>Late 2019</span>
+            <p>Authentication Redesigned, in the palm of your hands.</p>
+          </li>
+
+          <li data-date="01/25/2020">
+            <p>
+              <img
+                src="assets/img/solutions/solution-icons/share-icon-default.png"
+                alt="Share Events"
+              />
+            </p>
+            <h2>Share Events</h2>
+            <span>2020</span>
+            <p>
+              After the successful launch of Share Cafe in 2019, the company
+              finished building its Halls for events such as business meetings,
+              wedding receptions, social gatherings, debut and special
+              occassions, and any full service catered events.
+            </p>
+          </li>
+        </ol>
+      </div>
     </section>
+  </section>
 
-    <section id="company-history" class="s-work inet-parallax target-section">
-        <div class="row section-header" data-aos="fade-up">
-            <div class="col-ten md-ten tab-full mob-full">
-                <h3 data-num="02" class="subhead">History </h3>
-                <h1 class="display-1">
-                    How we started
-                </h1>
-            </div>
-        </div>
+  <section id="company-statement" class="s-statement target-section">
+    <div class="row section-header" data-aos="fade-up">
+      <div class="col-full">
+        <h3 data-num="03" class="subhead">A Digital Agency</h3>
+        <h1 class="display-1">
+          Building great business solutions for industry-leading brands.
+        </h1>
+        <p class="lead">
+          <a href="solutions.html" class="btn btn--primary">Our Solutions </a>
+        </p>
+      </div>
+    </div>
+  </section>
 
-        <section class="cd-horizontal-timeline">
-            <div class="timeline">
-                <div class="events-wrapper">
-                    <div class="events">
-                        <ol>
-                            <li><a href="#0" data-date="01/01/2009" class="selected">2009</a></li>
-                            <li><a href="#0" data-date="01/01/2010">2010</a></li>
-                            <li><a href="#0" data-date="01/01/2012">2012</a></li>
-                            <li><a href="#0" data-date="01/01/2013">2013</a></li>
-                            <li><a href="#0" data-date="01/01/2014">2014</a></li>
-                            <li><a href="#0" data-date="01/01/2015">2015</a></li>
-                            <li><a href="#0" data-date="01/01/2016">Early 2016</a></li>
-                            <li><a href="#0" data-date="01/10/2016">2016</a></li>
-                            <li><a href="#0" data-date="01/01/2017">2017</a></li>
-                            <li><a href="#0" data-date="01/01/2018">2018</a></li>
-                            <li><a href="#0" data-date="01/01/2019">2019</a></li>
-                            <li><a href="#0" data-date="01/10/2019">Mid 2019</a></li>
-                            <li><a href="#0" data-date="01/25/2019">Late 2019</a></li>
-                            <li><a href="#0" data-date="01/25/2020">2020</a></li>
-                        </ol>
+  <section id="company-awards" class="s-clients inet-parallax target-section">
+    <div class="row section-header" data-aos="fade-up">
+      <div class="col-full">
+        <h3 data-num="04" class="subhead">ISO Certification</h3>
+        <h1 class="display-1 display-1--light">
+          <!-- Awards we’ve earned along the way. -->
+        </h1>
+      </div>
+    </div>
 
-                        <span class="filling-line" aria-hidden="true"></span>
-                    </div>
-                </div>
+    <div class="row section-header" data-aos="fade-up">
+      <div class="col-eight md-eight tab-full mob-full">
+        <p class="lead inet-light-text">
+          Integritynet Solutions and Services is an ISO 27001:2013 certified for
+          business process outsourcing for Inbound support, technical support
+          and back office support.
+          <br />
+          We are now on our way to becoming a one-stop solution provider offering
+          enterprise software solutions and services. Keeping abreast with the digitization
+          wave, we have proven our mettle in the arena of digital transformation.
+        </p>
+      </div>
 
-                <ul class="cd-timeline-navigation">
-                    <li><a href="#0" class="prev inactive">Prev</a></li>
-                    <li><a href="#0" class="next">Next</a></li>
-                </ul>
-            </div>
+      <div class="col-four md-four tab-full mob-full">
+        <img
+          src="assets/img/about/iso-cert-2018.jpg"
+          alt=""
+          class="iso-cert-img"
+        />
+      </div>
+    </div>
+  </section>
 
-            <div class="events-content">
-                <ol>
-                    <li class="selected" data-date="01/01/2009">
-                        <p>
-                            <img src="assets/img/solutions/solution-icons/integritynet-icon-default.png" alt="IntegrityNet">
-                        </p>
-                        <h2>IntegrityNet</h2>
-                        <span>2009</span>
-                        <p>
-                            <b>IntegrityNet</b> was established and is professionally working with companies in USA and Australia serving all their call center needs, and now planning to expand in the local Philippine market.
-                        </p>
-                    </li>
+  <section id="company-values" class="s-about inet-parallax target-section">
+    <div class="row section-header" data-aos="fade-up">
+      <div class="col-six company-culture">
+        <h3 data-num="05" class="subhead">Company Values</h3>
+        <h1 class="display-1">
+          Our Culture <br />
+          Values and <br />
+          Beliefs
+        </h1>
+      </div>
 
-                    <li data-date="01/01/2010">
-                        <p>
-                            <img src="assets/img/solutions/solution-icons/bpo-icon-default.png" alt="IntegrityBPO">
-                        </p>
-                        <h2>IntegrityBPO</h2>
-                        <span>2010</span>
-                        <p>
-                            Expanding its business in the Philippine Market by October 2010. Founded at Houston, Texas, <b>IntegrityNet Call Center</b> <i>(now <b>IntegrityBPO</b>)</i> was able to enlarge and hit the call center industry.
-                        </p>
-                    </li>
+      <div class="col-full md-full tab-full services-list">
+        {about.map((ab) => <Values props={ab.data} />)}
+      </div>
+    </div>
+  </section>
 
-                    <li data-date="01/01/2012">
-                        <p>
-                            <img src="assets/img/solutions/solution-icons/pbx-icon-default.png" alt="IntegrityPBX">
-                        </p>
-                        <h2>IntegrityPBX</h2>
-                        <span>2012</span>
-                        <p>
-                            Launched <b>IntegrityPBX</b>, an ultra-reliable phone system, supported by a special system has been saving different organizations' money and enabling them to focus on achieving core goals and covet success without worrying about over costing phone bills. IntegrityPBX' reliability has been greatly appreciated by these organizations as it boasts its affordable yet unsurpassed and unlimited features.
-                        </p>
-                    </li>
+  <section id="workspace" class="s-works target-section">
+    <div class="row section-header" data-aos="fade-up">
+      <div class="col-full">
+        <h3 data-num="06" class="subhead">Facilities</h3>
+        <h1 class="display-1">Workspace Views</h1>
+        <p class="lead">
+          A look at where we work and play, with sweeping views of Batangas
+          City.
+        </p>
+      </div>
+    </div>
 
-                    <li data-date="01/01/2013">
-                        <p>
-                            <img src="assets/img/solutions/solution-icons/pci-icon-default.png" alt="IntegrityPCI">
-                        </p>
-                        <h2>IntegrityPCI</h2>
-                        <span>2013</span>
-                        <p>
-                            IntegrityNet had produced a one-of-a-kind and today's most advanced and innovative software that secures credit card data on payment transactions made over the phone. It is the best software without hardware installation requirements that will help any organizations that accept payments over the phone protect the credit card data of their customers and comply with PCI DSS. <b>IntegrityPCI</b> will help gain the loyalty and confidence of their clients.
-                        </p>
-                    </li>
-
-                    <li data-date="01/01/2014">
-                        <p>
-                            <img src="assets/img/solutions/solution-icons/hrms-icon-default.png" alt="HRMS">
-                        </p>
-                        <h2>HRMS</h2>
-                        <span>2014</span>
-                        <p>
-                            Due to the growing community of the company, the software development team had launched <b>HRMS</b>. A very flexible system that enables department heads to manage employee schedules, evaluations, and attendance. All employees have their own account where they can access and view the status of their daily attendance, evaulations and payroll details.
-                        </p>
-                    </li>
-
-                    <li data-date="01/01/2015">
-                        <p>
-                            <img src="assets/img/solutions/solution-icons/lukslofts-icon-default.png" alt="Luks Lofts Hotel">
-                        </p>
-                        <h2>Luks Lofts Hotel</h2>
-                        <span>2015</span>
-                        <p>
-                            Began the building of hotel by late 2013 and finished by 2015, Luks Lofts Hotel offers impeccable service and all the essential amenities to invigorate travelers. Top features of the hotel include private jet pool and automatic sliding doors with sensors, keyless door access, blazing fast internet, 24hour room service, 24hour security and many more.
-                        </p>
-                    </li>
-
-                    <li data-date="01/01/2016">
-                        <p>
-                            <img src="assets/img/solutions/solution-icons/integranet-icon-default.png" alt="IntegraNet">
-                        </p>
-                        <h2>IntegraNet</h2>
-                        <span>Early 2016</span>
-                        <p>
-                            The company produced <b>IntegraNet Network Services</b>, the fastest in Internet in Batangas and Puerto Galera. It aims to provide total Managed Network Services that is delivered and operated by highly qualified experienced staff. We provide an end-to-end network management service, including network connectivity, proactive monitoring and management of Customer Premise Equipment (CPE) as well as 24/7 support.
-                        </p>
-                    </li>
-
-                    <li data-date="01/10/2016">
-                        <p>
-                            <img src="assets/img/solutions/solution-icons/altin-icon-default.png" alt="Altin Pawnshop">
-                        </p>
-                        <h2>Altin Pawnshop</h2>
-                        <span>2016</span>
-                        <p>
-                            From Hotel to Internet Provider businesses, the company explored to produce and launch Trusted Pawnshop Services by 2016.
-                        </p>
-                    </li>
-
-                    <li data-date="01/01/2017">
-                        <p>
-                            <img src="assets/img/solutions/solution-icons/egrub-icon-default.png" alt="eGrub">
-                        </p>
-                        <h2>eGrub</h2>
-                        <span>2017</span>
-                        <p>
-                            With the restaurant inside the Hotel, the company developed eGrub. From Kiosks to Mobile Ordering,
-                            eGrub is the only solution you need to run your restaurant from A-Z. It is a non-cloud based server with self-order solution, Table Tracking, Kitchen Display, Queue Manager, integrated Point-of-Sale, Inventory, Timekeeping and Scheduling, Reporting & Analytics, Floor Management, Reservation Management System all in one.
-                        </p>
-                    </li>
-
-                    <li data-date="01/01/2018">
-                        <p>
-                            <img src="assets/img/solutions/solution-icons/digibutler-icon-default.png" alt="DigiButler">
-                        </p>
-                        <h2>DigiButler</h2>
-                        <span>2018</span>
-                        <p>
-                            Despite the engaged nature of the company, DigiButler was originally launched by mid 2018, the state of the art premise based guest engagement system designed for Hotels and Motels of all types and sizes. It guarantees to improve guest satisfaction while reducing staff and significantly increasing revenue.
-                        </p>
-                    </li>
-
-                    <li data-date="01/01/2019">
-                        <p>
-                            <img src="assets/img/solutions/solution-icons/share-icon-default.png" alt="Share Cafe">
-                        </p>
-                        <h2>Share Cafe</h2>
-                        <span>2019</span>
-                        <p>
-                            With two years in the making, Share Cafe was launched and finally operational by April 2019. It is a casual restaurant that strives to create exquisite cuisine with incredible taste at a modest price point in a welcoming and stylish atmosphere.
-                        </p>
-                    </li>
-                    
-                    <li data-date="01/10/2019">
-                        <p>
-                            <img src="assets/img/solutions/solution-icons/zumumu-icon-default.png" alt="Share Cafe">
-                        </p>
-                        <h2>Zumumu</h2>
-                        <span>Mid 2019</span>
-                        <p>
-                            The restaurant and hotel industry disruptor. Zumumu is the first to use <b>Progressive Web Application (PWA)</b> for the hospitality industry. It redefines the concept of self-order process by eliminating expensive hardware and maintenance costs related to table tablets and self-order kiosks. It comes complete with Point Of Sale and Kitchen Display systems run in a single web server. The proprietary Zumumu Tag makes the system totally secure from rogue orders.
-                        </p>
-                    </li>
-                    
-                    <li data-date="01/25/2019">
-                        <p>
-                            <img src="assets/img/solutions/solution-icons/2fa2-icon-default.png" alt="Share Cafe">
-                        </p>
-                        <h2>2FA2</h2>
-                        <span>Late 2019</span>
-                        <p>
-                            Authentication Redesigned, in the palm of your hands.
-                        </p>
-                    </li>
-                    
-                    <li data-date="01/25/2020">
-                        <p>
-                            <img src="assets/img/solutions/solution-icons/share-icon-default.png" alt="Share Events">
-                        </p>
-                        <h2>Share Events</h2>
-                        <span>2020</span>
-                        <p>
-                            After the successful launch of Share Cafe in 2019, the company finished building its Halls for events such as business meetings, wedding receptions, social gatherings, debut and special occassions, and any full service catered events.
-                        </p>
-                    </li>
-
-                </ol>
-            </div>
-        </section>
-    </section>
-
-    <section id="company-statement" class="s-statement target-section">
-        <div class="row section-header" data-aos="fade-up">
-            <div class="col-full">
-                <h3 data-num="03" class="subhead">A Digital Agency </h3>
-                <h1 class="display-1">
-                    Building great business solutions for industry-leading brands.
-                </h1>
-                <p class="lead">
-                    <a href="solutions.html" class="btn btn--primary">Our Solutions </a>
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <section id="company-awards" class="s-clients inet-parallax target-section">
-        <div class="row section-header" data-aos="fade-up">
-            <div class="col-full">
-                <h3 data-num="04" class="subhead">ISO Certification</h3>
-                <h1 class="display-1 display-1--light">
-                    <!-- Awards we’ve earned along the way. -->
-                </h1>
-            </div>
-        </div>
-
-        <div class="row section-header" data-aos="fade-up">
-            <div class="col-eight md-eight tab-full mob-full">
-                <p class="lead inet-light-text">Integritynet Solutions and Services is an ISO 27001:2013 certified for business process outsourcing for Inbound support, technical support and back office support.
-                <br>
-                We are now on our way to becoming a one-stop solution provider offering enterprise software solutions and services. Keeping abreast with the digitization wave, we have proven our mettle in the arena of digital transformation.</p>
-            </div>
-
-            <div class="col-four md-four tab-full mob-full">
-                <img src="assets/img/about/iso-cert-2018.jpg" alt="" class="iso-cert-img">
-            </div>
-
-        </div>
-
-    </section>
-
-    <section id="company-values" class="s-about inet-parallax target-section">
-        <div class="row section-header" data-aos="fade-up">
-            <div class="col-six company-culture">
-                <h3 data-num="05" class="subhead">Company Values</h3>
-                <h1 class="display-1">
-                    Our Culture <br>
-                    Values and <br>
-                    Beliefs
-                </h1>
-            </div>
-
-            <div class="col-full md-full tab-full services-list">
-
-                {about.map(ab => <Values props={ab.data} />)}
-
-            </div>
-        </div>
-    </section>
-
-    <section id="workspace" class="s-works target-section">
-        <div class="row section-header" data-aos="fade-up">
-            <div class="col-full">
-                <h3 data-num="06" class="subhead">Facilities</h3>
-                <h1 class="display-1">
-                    Workspace Views
-                </h1>
-                <p class="lead">
-                    A look at where we work and play, with sweeping views of Batangas City.
-                </p>
-            </div>
-        </div>
-
-        <div class="portfolio block-1-4 block-m-1-3 block-tab-1-2 collapse">
-            {gallery.map((gal, index) => (
-              index < 8 ? 
-              <Gallery props={gal.data} />
-              : null 
-              ))
-            }
-        </div>
-
-        <div class="more-cta-btn block-1-4 block-m-1-3 block-tab-1-2">
-            <a href="gallery.html" class="btn btn--primary" data-aos="fade-up">View Our Gallery <i class="fa fa-arrow-right"></i></a>
-        </div>
-
-    </section>
-
+    <div class="portfolio block-1-4 block-m-1-3 block-tab-1-2 collapse">
+      {
+        about.flatMap(abouts =>
+          abouts.data.gallery_image?.map(gallery => (
+            <Gallery
+              src={gallery.src}
+              alt={gallery.alt}
+              title={gallery.title}
+              caption={gallery.caption}
+              url="/about"
+            />
+          )) || []
+        )
+      }
+    </div>
+    <div class="more-cta-btn block-1-4 block-m-1-3 block-tab-1-2">
+      <a href="gallery.html" class="btn btn--primary" data-aos="fade-up"
+        >View Our Gallery <i class="fa fa-arrow-right"></i></a
+      >
+    </div>
+  </section>
 </BaseLayout>
