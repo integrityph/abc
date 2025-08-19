@@ -6,13 +6,12 @@ import MoreSolution from "@/components/MoreSolution.astro";
 import { getCollection, getEntry } from "astro:content";
 
 export async function getStaticPaths() {
-	const solutionEntries = await getCollection("solutions");
+  const solutionEntries = await getCollection("solutions");
 
-	return solutionEntries
-		.map((entry) => ({
-			params: { slug: entry.slug },
-			props: { entry },
-		}));;
+  return solutionEntries.map((entry) => ({
+    params: { slug: entry.slug },
+    props: { entry },
+  }));
 }
 
 const { entry } = Astro.props;
@@ -20,78 +19,136 @@ const { entry } = Astro.props;
 const { Content } = await entry.render();
 
 const parallaxImage = {
-  backgroundImage: `url(${entry.data.parallax.url})`
-}
+  backgroundImage: `url(${entry.data.parallax.url})`,
+};
 
 const galleries = entry.data.gallery;
 
 ---
+
 <SolutionLayout title={entry.data.list_title} slug={entry.slug}>
   <section class="s-works page-hero target-section">
     <div class="row section-header work-hero" data-aos="fade-up">
-      <div class="col-six md-six tab-1-2 mob-full work-hero-text" data-aos="fade-right">
-        <h3 data-num={entry.data.order.toString().padStart(2, '0')} class="subhead">{entry.data.list_sub_title}</h3>
-  
+      <div
+        class="col-six md-six tab-1-2 mob-full work-hero-text"
+        data-aos="fade-right"
+      >
+        <h3
+          data-num={entry.data.order.toString().padStart(2, "0")}
+          class="subhead"
+        >
+          {entry.data.list_sub_title}
+        </h3>
+
         <h1 class="display-1">
-          <img src={entry.data.logo_large.url} alt={entry.data.logo_large.alt} class="image-size-300">
-          <br>
+          <img
+            src={entry.data.logo_large.url}
+            alt={entry.data.logo_large.alt}
+            class="image-size-300"
+          />
+          <br />
           {entry.data.list_title}
         </h1>
         <p class="lead">{entry.data.view_sub_title}</p>
-  
+
         <p class="lead">
-          <a href={entry.data.url} target="_blank" class="btn inet-btn-stroke-red">Visit Website <i class="fa fa-external-link-alt"></i></a>
-          {entry.data.custom_action_url  ? 
-            <a href={entry.data.custom_action_url} target="_blank" class="btn inet-btn-stroke-dark">{entry.data.custom_action_name ? entry.data.custom_action_name : "Learn More"} <i class="fa fa-long-arrow-alt-right"></i></a>
-            : null
+          <a
+            href={entry.data.url}
+            target="_blank"
+            class="btn inet-btn-stroke-red"
+            >Visit Website <i class="fa fa-external-link-alt"></i></a
+          >
+          {
+            entry.data.custom_action_url ? (
+              <a
+                href={entry.data.custom_action_url}
+                target="_blank"
+                class="btn inet-btn-stroke-dark"
+              >
+                {entry.data.custom_action_name
+                  ? entry.data.custom_action_name
+                  : "Learn More"}{" "}
+                <i class="fa fa-long-arrow-alt-right" />
+              </a>
+            ) : null
           }
         </p>
       </div>
-  
-      <div class="col-six md-six tab-1-2 hide-on-mobile work-hero-text-media" data-aos="fade-left">
-        <img src={entry.data.image.url} alt={entry.data.image.alt}>
+
+      <div
+        class="col-six md-six tab-1-2 hide-on-mobile work-hero-text-media"
+        data-aos="fade-left"
+      >
+        <img src={entry.data.image.url} alt={entry.data.image.alt} />
       </div>
     </div>
-  
-    <div class="row section-header work-details">
-        <div class="col-two md-two hide-on-tablet hide-on-mobile work-detail-media">
-            &nbsp;
-        </div>
-  
-        <div class="col-ten md-ten tab-full mob-full work-detail-text" data-aos="fade-up">
-            <h1 class="display-1">{entry.data.view_title}</h1>
 
-            <p class="lead">{entry.data.view_text}</p>
-        </div>
+    <div class="row section-header work-details">
+      <div
+        class="col-two md-two hide-on-tablet hide-on-mobile work-detail-media"
+      >
+        &nbsp;
+      </div>
+
+      <div
+        class="col-ten md-ten tab-full mob-full work-detail-text"
+        data-aos="fade-up"
+      >
+        <h1 class="display-1">{entry.data.view_title}</h1>
+
+        <p class="lead">{entry.data.view_text}</p>
+      </div>
     </div>
   </section>
 
-  <section class="s-stats parallax-work solutions-parallax" style={parallaxImage}></section>
+  <section
+    class="s-stats parallax-work solutions-parallax"
+    style={parallaxImage}
+  >
+  </section>
 
   <Content />
 
+  <!-- {galleries != null ? <h1 style="color:white">Galleries is `${typeof galleries}`</h1> : <h1 style="color:white">Galleries is `${typeof galleries}`</h1> } -->
 
-  <section class="work-gallery">
-    <div class="portfolio block-1-4 block-m-1-3 block-tab-1-2 collapse">
-      { galleries.map((gallery, index) => (
-        index < 8 ?
-          <Gallery src={gallery.src} alt={gallery.alt} title={gallery.title} caption={gallery.caption} url={entry.data.url} />
-        :null
-      ))}
-    </div>
+  {
+    (galleries || []).length > 0 && (
+      <section class="work-gallery">
+        <div class="portfolio block-1-4 block-m-1-3 block-tab-1-2 collapse">
+          {galleries &&
+            galleries.map((gallery, index) =>
+              index < 8 ? (
+                <Gallery
+                  src={gallery.src}
+                  alt={gallery.alt}
+                  title={gallery.title}
+                  caption={gallery.caption}
+                  url={entry.data.url}
+                />
+              ) : null,
+            )}
+        </div>
 
-    <div class="row section-header" data-aos="fade-up">
-      <div class="col-full more-cta-btn">
-        <a href="/gallery" class="btn inet-btn-main-red btn--large btn-raised" data-aos="fade-up">View Our Gallery <i class="fa fa-arrow-right"></i></a>
-      </div>
-    </div>
-  </section>
+        <div class="row section-header" data-aos="fade-up">
+          <div class="col-full more-cta-btn">
+            <a
+              href="/gallery"
+              class="btn inet-btn-main-red btn--large btn-raised"
+              data-aos="fade-up"
+            >
+              View Our Gallery <i class="fa fa-arrow-right" />
+            </a>
+          </div>
+        </div>
+      </section>
+    )
+  }
+
   <MoreSolution />
 </SolutionLayout>
 
-
 <style>
-  .solutions-parallax{
+  .solutions-parallax {
     height: 100vh;
     padding-top: 6.6rem;
     padding-bottom: 5.4rem;
