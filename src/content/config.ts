@@ -23,12 +23,12 @@ const solutionCollection = defineCollection({
     }),
     gallery: z.array(
       z.object({
-        title: z.string(),
-        caption: z.string(),
+        title: z.string() ,
+        caption: z.string().nullable().optional(),
         src: z.string(),
-        alt: z.string()
+        alt: z.string().nullable().optional()
       })
-    ),
+    ).nullable().optional(),
 		order: z.number(),
 		view_title: z.string(),
 		view_sub_title: z.string(),
