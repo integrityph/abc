@@ -19,7 +19,7 @@ order: 10
 view_title: HRMS in Action
 view_sub_title: ''
 view_text: A very flexible system that enables department heads to manage employee schedules, evaluations, and attendance. All employees have their own account where they can access and view the status of their daily attendance, evaluations and payroll details.
-url: https://integritynet.ph/contact.html
+url: /contact
 custom_action_name: ''
 custom_action_url: ''
 ---
