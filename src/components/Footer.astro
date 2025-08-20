@@ -6,7 +6,7 @@ const props = Astro.props;
 <section id="contact" class="s-contact target-section">
   <div class="row section-header" data-aos="fade-up">
     <div class="col-full">
-      <h3 data-num="04" class="subhead">Get In Touch</h3>
+      <h3 data-num={props.order} class="subhead">Get In Touch</h3>
       <h1 class="display-1 display-1--light">
         {props.text}
         {
@@ -15,6 +15,11 @@ const props = Astro.props;
           )
         }
       </h1>
+      {
+        props.subtext && (
+          <p class="lead lead-light">{props.subtext}</p>
+        )
+      }
       {
         props.btnName && (
           <p class={`lead ${props.altBtn ? "lead-light" : null}`}>
