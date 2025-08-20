@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
+import Footer from "@/components/Footer.astro";
 import SolutionCard from "@/components/SolutionCard.astro";
 import LogoList from "@/components/LogoList.astro";
 
@@ -7,30 +8,39 @@ import { getCollection } from "astro:content";
 
 const featuredSolutions = await getCollection("solutions");
 ---
+
 <BaseLayout>
   <section id="solutions-hero" class="s-works page-hero target-section">
     <div class="row section-header work-showcase-logo" data-aos="fade-up">
       <div class="col-full">
-          <h3 data-num="01" class="subhead">Featured Solutions</h3>
-          <h1 class="display-1">
-              Explore our latest business solutions.
-          </h1>
+        <h3 data-num="01" class="subhead">Featured Solutions</h3>
+        <h1 class="display-1">Explore our latest business solutions.</h1>
 
-          <ul class="solution-logo-list">
-            {featuredSolutions
-            .sort((a, b) => a.data.order - b.data.order)
-            .map(solution => (
-              <LogoList tooltip={solution.data.list_title} src={solution.data.logo_small.url} alt={solution.data.logo_small.alt}  />
-            ))}
-          </ul>
+        <ul class="solution-logo-list">
+          {
+            featuredSolutions
+              .sort((a, b) => a.data.order - b.data.order)
+              .map((solution) => (
+                <LogoList
+                  tooltip={solution.data.list_title}
+                  src={solution.data.logo_small.url}
+                  alt={solution.data.logo_small.alt}
+                />
+              ))
+          }
+        </ul>
       </div>
     </div>
 
-    <div class="row section-header block-1-3 block-m-1-2 block-tab-1-2 block-mob-full work-showcase">
+    <div
+      class="row section-header block-1-3 block-m-1-2 block-tab-1-2 block-mob-full work-showcase">
       <div>
         {
-          featuredSolutions.map(solution => (
-            <div class="col-block showcase-solution" data-aos="fade-up" data-aos-delay="100">
+          featuredSolutions.map((solution) => (
+            <div
+              class="col-block showcase-solution"
+              data-aos="fade-up"
+              data-aos-delay="100">
               <SolutionCard slug={solution.slug} />
             </div>
           ))
@@ -38,4 +48,9 @@ const featuredSolutions = await getCollection("solutions");
       </div>
     </div>
   </section>
+
+  <Footer
+    text="Talk to us. Let’s work together and start something great."
+    btnName="Say Hello"
+  />
 </BaseLayout>

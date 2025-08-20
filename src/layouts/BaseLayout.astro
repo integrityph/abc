@@ -1,8 +1,7 @@
 ---
 import Header from "@/components/Header.astro";
-import Footer from "@/components/Footer.astro"
 
-const { pathname }  = Astro.url;
+const { pathname } = Astro.url;
 
 let path;
 
@@ -26,73 +25,81 @@ switch (pathname) {
     path = "inet-works";
 }
 ---
+
 <html class="no-js" lang="en">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>IntegrityNet · Solutions & Services</title>
-    <meta name="description" content="Passion for Excellence and Dedication to Rendering Quality Service.">
-    <meta name="author" content="IntegrityNet Group of Companies">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="Passion for Excellence and Dedication to Rendering Quality Service."
+    />
+    <meta name="author" content="IntegrityNet Group of Companies" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <link rel="stylesheet" href="/css/base.css">
-    <link rel="stylesheet" href="/css/vendor.css">
-    <link rel="stylesheet" href="/css/main.css?v=1.1">
-    <link rel="stylesheet" href="/css/custom.css?v=1.1">
+    <link rel="stylesheet" href="/css/base.css" />
+    <link rel="stylesheet" href="/css/vendor.css" />
+    <link rel="stylesheet" href="/css/main.css?v=1.1" />
+    <link rel="stylesheet" href="/css/custom.css?v=1.1" />
 
     <script is:inline src="/js/modernizr.js"></script>
     <script is:inline src="/js/pace.min.js"></script>
 
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
   </head>
 
   <body id="top" class=`${path}`>
-
     <div class="cursor-dot-outline"></div>
     <div class="cursor-dot"></div>
 
     <Header />
 
     <slot />
-    
-    <Footer />
-
 
     <div aria-hidden="true" class="pswp" role="dialog" tabindex="-1">
-
       <div class="pswp__bg"></div>
       <div class="pswp__scroll-wrap">
+        <div class="pswp__container">
+          <div class="pswp__item"></div>
+          <div class="pswp__item"></div>
+          <div class="pswp__item"></div>
+        </div>
 
-      <div class="pswp__container">
-        <div class="pswp__item"></div>
-        <div class="pswp__item"></div>
-        <div class="pswp__item"></div>
-      </div>
-
-      <div class="pswp__ui pswp__ui--hidden">
-        <div class="pswp__top-bar">
-          <div class="pswp__counter"></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
-          <button class="pswp__button pswp__button--share" title="Share"></button> <button class="pswp__button pswp__button--fs"
-            title="Toggle fullscreen"></button> <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-          <div class="pswp__preloader">
-            <div class="pswp__preloader__icn">
-              <div class="pswp__preloader__cut">
-                <div class="pswp__preloader__donut"></div>
+        <div class="pswp__ui pswp__ui--hidden">
+          <div class="pswp__top-bar">
+            <div class="pswp__counter"></div><button
+              class="pswp__button pswp__button--close"
+              title="Close (Esc)"></button>
+            <button class="pswp__button pswp__button--share" title="Share"
+            ></button>
+            <button
+              class="pswp__button pswp__button--fs"
+              title="Toggle fullscreen"></button>
+            <button class="pswp__button pswp__button--zoom" title="Zoom in/out"
+            ></button>
+            <div class="pswp__preloader">
+              <div class="pswp__preloader__icn">
+                <div class="pswp__preloader__cut">
+                  <div class="pswp__preloader__donut"></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-          <div class="pswp__share-tooltip"></div>
-        </div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
-        <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
-        <div class="pswp__caption">
-          <div class="pswp__caption__center"></div>
+          <div
+            class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+            <div class="pswp__share-tooltip"></div>
+          </div><button
+            class="pswp__button pswp__button--arrow--left"
+            title="Previous (arrow left)"></button>
+          <button
+            class="pswp__button pswp__button--arrow--right"
+            title="Next (arrow right)"></button>
+          <div class="pswp__caption">
+            <div class="pswp__caption__center"></div>
+          </div>
         </div>
       </div>
-
-        </div>
-
     </div>
 
     <script is:inline src="/js/jquery-3.2.1.min.js"></script>
