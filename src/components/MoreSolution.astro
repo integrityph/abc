@@ -3,7 +3,15 @@ import SolutionCard from "./SolutionCard.astro"
 
 import { getCollection } from "astro:content";
 
-const featuredSolutions = await getCollection("solutions");
+const { props } = Astro.props;
+const solutions = await getCollection("solutions");
+
+const solutionIndex = solutions.findIndex(solution => solution.id === props)
+const beforeSolutionIndex = solutions.slice(0, solutionIndex)
+const afterSolutionIndex = solutions.slice(solutionIndex + 1, solutions.length)
+const processedfeaturedSolutions = beforeSolutionIndex.concat(afterSolutionIndex) 
+
+const featuredSolutions  = processedfeaturedSolutions.map(solution => ({solution, sort: Math.random()})).sort((a, b) => a.sort - b.sort).map(({solution}) => solution)
 ---
 
 <section class="more-work">
