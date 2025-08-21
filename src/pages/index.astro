@@ -3,7 +3,7 @@ import { getCollection, getEntry, getEntries } from "astro:content";
 
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import SolutionCard from "@/components/SolutionCard.astro";
-import Footer from "@/components/Footer.astro";
+import ContactSection from "@/components/ContactSection.astro";
 
 const featuredSolutions = await getCollection("solutions");
 ---
@@ -3176,9 +3176,10 @@ const featuredSolutions = await getCollection("solutions");
     </h1>
   </div>
 
-  <Footer
-    text="Let's work together and start something great. Drop us a line at"
-    email="sales@integritynet.biz"
+  <ContactSection
     order="4"
+    subhead="Get in Touch"
+    header="Let's work together and start something great. Drop us a line at"
+    email=sales@integritynet.biz
   />
 </BaseLayout>

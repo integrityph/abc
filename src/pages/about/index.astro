@@ -1,7 +1,7 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
-import Footer from "@/components/Footer.astro";
 import Values from "@/layouts/about/values.astro";
+import ContactSection from "@/components/ContactSection.astro";
 import Gallery from "@/components/Gallery.astro";
 import { getCollection } from "astro:content";
 
@@ -488,11 +488,13 @@ const about = await getCollection("about");
     </div>
   </section>
 
-  <Footer
-    text="Want to work with creative people and make something great?"
+  <ContactSection
+    order="7"
+    subhead="Work with us"
+    header="Want to work with creative people and make something great?"
+    paragraph="We are constantly on the lookout for the best and brightest minds. Check out our current vacancies."
+    btnUrl="/careers"
     btnName="See Careers"
     altBtn={true}
-    subtext="We are constantly on the lookout for the best and brightest minds. Check out our current vacancies."
-    order=""7
   />
 </BaseLayout>

@@ -1,7 +1,7 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
-import Footer from "@/components/Footer.astro";
 import SolutionCard from "@/components/SolutionCard.astro";
+import ContactSection from "@/components/ContactSection.astro";
 import LogoList from "@/components/LogoList.astro";
 
 import { getCollection } from "astro:content";
@@ -49,9 +49,10 @@ const featuredSolutions = await getCollection("solutions");
     </div>
   </section>
 
-  <Footer
-    text="Talk to us. Let’s work together and start something great."
-    btnName="Say Hello"
+  <ContactSection
     order="2"
+    subhead="Get in Touch"
+    header="Talk to us. Let's work together and start something great."
+    btnName="Say Hello"
   />
 </BaseLayout>

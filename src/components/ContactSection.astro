@@ -1,35 +1,37 @@
 ---
-const year = new Date().getFullYear();
 const props = Astro.props;
+console.log(props);
 ---
 
 <section id="contact" class="s-contact target-section">
-  <div class="row section-header" data-aos="fade-up">
-    <div class="col-full">
-      <h3 data-num={props.order} class="subhead">{props.subhead}</h3>
-      <h1 class="display-1 display-1--light">
-        {props.header}
-        {
-          props.email && (
-            <a href="mailto:sales@integritynet.biz">{props.email}</a>
-          )
-        }
-      </h1>
-      {props.paragraph && <p class="lead lead-light">{props.paragraph}</p>}
-      {props.subtext && <p class="lead lead-light">{props.subtext}</p>}
-      {
-        props.btnName && (
-          <p class={`lead ${props.altBtn ? "lead-light" : null}`}>
-            <a
-              href={props.btnUrl}
-              class={`${props.altBtn ? "btn inet-btn-main-invert-light" : "btn inet-btn-main-invert-red"}`}>
-              {props.btnName}
-            </a>
-          </p>
-        )
-      }
-    </div>
-  </div>
+  {
+    props.header && (
+      <div class="row section-header" data-aos="fade-up">
+        <div class="col-full">
+          <h3 data-num={props.order} class="subhead">
+            {props.subhead}
+          </h3>
+          <h1 class="display-1 display-1--light">
+            {props.header}
+            {props.email && (
+              <a href="mailto:sales@integritynet.biz">{props.email}</a>
+            )}
+          </h1>
+          {props.paragraph && <p class="lead lead-light">{props.paragraph}</p>}
+          {props.subtext && <p class="lead lead-light">{props.subtext}</p>}
+          {props.btnName && (
+            <p class={`lead ${props.altBtn ? "lead-light" : null}`}>
+              <a
+                href={props.btnUrl}
+                class={`${props.altBtn ? "btn inet-btn-main-invert-light" : "btn inet-btn-main-invert-red"}`}>
+                {props.btnName}
+              </a>
+            </p>
+          )}
+        </div>
+      </div>
+    )
+  }
 
   <div class="row contact-infos">
     <div

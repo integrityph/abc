@@ -1,7 +1,7 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import ServiceCard from "@/layouts/services/ServiceCard.astro";
-import Footer from "@/components/Footer.astro";
+import ContactSection from "@/components/ContactSection.astro";
 import { getCollection } from "astro:content";
 
 const services = await getCollection("services");
@@ -11,8 +11,7 @@ const services = await getCollection("services");
   <section
     id="services"
     class="s-services-parallax page-hero target-section"
-    style={`background-image: url("/static/images/CTV_4811.jpg")`}
-  >
+    style={`background-image: url("/static/images/CTV_4811.jpg")`}>
     <div class="row section-header">
       <div class="col-full">
         <h3 data-num="01" class="subhead">What We Do</h3>
@@ -61,8 +60,7 @@ const services = await getCollection("services");
   <section
     id="services-stats"
     class="s-stats"
-    style={`background-image: url("/static/images/CTV_4787.jpg")`}
-  >
+    style={`background-image: url("/static/images/CTV_4787.jpg")`}>
     <div class="row stats-block block-1-4 block-m-1-2 block-mob-full">
       <div class="col-block item-stats">
         <div class="item-stats__count">10</div>
@@ -86,8 +84,7 @@ const services = await getCollection("services");
   <section
     id="company-approach"
     class="s-works inet-parallax target-section"
-    style={`background-image: url("/static/images/services-01.jpg")`}
-  >
+    style={`background-image: url("/static/images/services-01.jpg")`}>
     <div class="row section-header">
       <div class="col-full">
         <h3 data-num="03" class="subhead">Company Approach</h3>
@@ -150,9 +147,10 @@ const services = await getCollection("services");
       </div>
     </div>
   </section>
-  <Footer
-    text="Let's work together and start something great. Drop us a line at"
-    email="sales@integritynet.biz"
+  <ContactSection
     order="4"
+    subhead="Get in Touch"
+    header="Let's work together and start something great. Drop us a line at"
+    email="sales@integritynet.biz"
   />
 </BaseLayout>

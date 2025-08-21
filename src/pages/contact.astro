@@ -1,111 +1,202 @@
 ---
-import BaseLayout from "@/layouts/BaseLayout.astro"
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import ContactSection from "@/components/ContactSection.astro";
 ---
+
 <BaseLayout>
   <section class="s-contact-form inet-parallax">
     <div class="row section-header" data-aos="fade-up">
       <div class="col-seven md-eight tab-nine mob-full">
         <h3 data-num="01" class="subhead">Say Hello</h3>
         <h1 class="display-1">Let us know how we can help.</h1>
-        <p class="lead">You can always connect with us at <br>
-          <span class="inet-red-text">+63 43 723 7489</span> or <span class="inet-red-text">sales@integritynet.biz</span>
+        <p class="lead">
+          You can always connect with us at <br />
+          <span class="inet-red-text">+63 43 723 7489</span> or <span
+            class="inet-red-text">sales@integritynet.biz</span
+          >
         </p>
-  
+
         <div class="col-full inet-contact-form">
           <div id="contact-form-loading" class="hidden">
             <div class="spinner-container">
               <h2 class="spinner-img"></h2>
             </div>
           </div>
-  
+
           <div class="hidden contact-alert" id="spinner-msg"></div>
-  
+
           <form id="contact-form" class="contactForm">
-            <input type="text" name="firstname" placeholder="First Name" required value="">
-            <input type="text" name="lastname" placeholder="Last Name" required value="">
-            <input type="tel" name="phone" placeholder="Phone number" required value="">
-            <input type="email" name="email" placeholder="Email address" required value="">
-            <textarea name="message" placeholder="Tell us about your project (Scope, timeline, budget, etc.)" required=""></textarea>
+            <input
+              type="text"
+              name="firstname"
+              placeholder="First Name"
+              required
+              value=""
+            />
+            <input
+              type="text"
+              name="lastname"
+              placeholder="Last Name"
+              required
+              value=""
+            />
+            <input
+              type="tel"
+              name="phone"
+              placeholder="Phone number"
+              required
+              value=""
+            />
+            <input
+              type="email"
+              name="email"
+              placeholder="Email address"
+              required
+              value=""
+            />
+            <textarea
+              name="message"
+              placeholder="Tell us about your project (Scope, timeline, budget, etc.)"
+              required=""></textarea>
             <!-- <button id="contact-form-trigger" type="submit" class="btn inet-btn-main-invert-red">Submit</button> -->
-            <p id="contact-form-trigger" class="no-radius btn-lg btn inet-btn-main-invert-red"><i class="fa fa-send"></i>&nbsp;Submit</p>
-  
-            <input id="form_session" type="hidden" name="session" class="form-control" placeholder="Phone Number">
-            <input id="form_domain" type="hidden" name="domain" class="form-control" placeholder="Phone Number">
+            <p
+              id="contact-form-trigger"
+              class="no-radius btn-lg btn inet-btn-main-invert-red">
+              <i class="fa fa-send"></i>&nbsp;Submit
+            </p>
+
+            <input
+              id="form_session"
+              type="hidden"
+              name="session"
+              class="form-control"
+              placeholder="Phone Number"
+            />
+            <input
+              id="form_domain"
+              type="hidden"
+              name="domain"
+              class="form-control"
+              placeholder="Phone Number"
+            />
           </form>
         </div>
-  
+
         <div class="col-full inet-contact-message">
-          <img src="assets/img/illustration/messages-sent.svg" alt="" class="image-size-256">
+          <img
+            src="assets/img/illustration/messages-sent.svg"
+            alt=""
+            class="image-size-256"
+          />
           <h3>Message Sent</h3>
-          <p class="lead">Thank you for inquiring us. We will contact you as soon as possible.</p>
-  
-          <a href="./" class="btn inet-btn-main-dark"><i class="fa fa-home"></i> Back to Home</a>
-          <a class="btn inet-btn-stroke-dark send-another">Close <i class="fa fa-send"></i></a>
+          <p class="lead">
+            Thank you for inquiring us. We will contact you as soon as possible.
+          </p>
+
+          <a href="./" class="btn inet-btn-main-dark"
+            ><i class="fa fa-home"></i> Back to Home</a
+          >
+          <a class="btn inet-btn-stroke-dark send-another"
+            >Close <i class="fa fa-send"></i></a
+          >
         </div>
       </div>
-  
+
       <div class="col-five md-four tab-three hide-on-mobile">
-        <img src="/static/images/contact-bg.jpg" alt="Contact" class="x-tilt">
+        <img src="/static/images/contact-bg.jpg" alt="Contact" class="x-tilt" />
       </div>
-  
-      <div hidden class="col-seven md-eight wow fadeInLeft animated" style="visibility: visible; animation-name: fadeInLeft;">
+
+      <div
+        hidden
+        class="col-seven md-eight wow fadeInLeft animated"
+        style="visibility: visible; animation-name: fadeInLeft;">
         <div class="contact-info-box address clearfix">
-          <h3><i class=" icon-map-marker"></i>Address:</h3>
-          <span>Joseling Road, Pallocan West, Batangas City, Batangas
-            <br>Near SM City Batangas
+          <h3><i class="icon-map-marker"></i>Address:</h3>
+          <span
+            >Joseling Road, Pallocan West, Batangas City, Batangas
+            <br />Near SM City Batangas
           </span>
         </div>
         <div class="contact-info-box phone clearfix">
           <h3><i class="fa-phone"></i>Phone:</h3>
-          <span>PHILIPPINES <a href="tel:+63437237489">+63 43 723 7489</a>
-            <br>Globe <a href="tel:+639175486519">+63 917 548 6519</a>
-            <br>Smart <a href="tel:+639328465554">+63 998 590 8178</a>
-            <br>USA <a href="tel:+18778769992">+1 877 876 9992</a> | <a href="tel:+17135835557">+1 713 583 5557</a>
+          <span
+            >PHILIPPINES <a href="tel:+63437237489">+63 43 723 7489</a>
+            <br />Globe <a href="tel:+639175486519">+63 917 548 6519</a>
+            <br />Smart <a href="tel:+639328465554">+63 998 590 8178</a>
+            <br />USA <a href="tel:+18778769992">+1 877 876 9992</a> | <a
+              href="tel:+17135835557">+1 713 583 5557</a
+            >
           </span>
         </div>
         <div class="contact-info-box email clearfix">
           <h3><i class="fa-pencil"></i>email:</h3>
-          <span><a href="mailto:sales@integritynet.biz">sales@integritynet.biz</a></span>
+          <span
+            ><a href="mailto:sales@integritynet.biz">sales@integritynet.biz</a
+            ></span
+          >
         </div>
-  
+
         <ul class="social-link">
-          <li class="twitter"><a href="https://twitter.com/integritynetbpo" target="_BLANK"><i class="fab fa-twitter"></i></a></li>
-          <li class="facebook"><a href="https://www.facebook.com/integritynet.biz" target="_BLANK"><i class="fab fa-facebook"></i></a></li>
+          <li class="twitter">
+            <a href="https://twitter.com/integritynetbpo" target="_BLANK"
+              ><i class="fab fa-twitter"></i></a
+            >
+          </li>
+          <li class="facebook">
+            <a href="https://www.facebook.com/integritynet.biz" target="_BLANK"
+              ><i class="fab fa-facebook"></i></a
+            >
+          </li>
         </ul>
       </div>
     </div>
   </section>
-  
+
   <section class="contact-add-info">
     <div class="row section-header" data-aos="fade-up">
-      <div class="col-three md-three tab-1-2 contact-add-address" tooltip="See Location via Google Maps">
+      <div
+        class="col-three md-three tab-1-2 contact-add-address"
+        tooltip="See Location via Google Maps">
         <h3>Our Office</h3>
-        <a href="https://www.google.com/maps/place/IntegrityNet+Solutions+And+Services/@13.754081,121.0665043,17z/data=!3m1!4b1!4m5!3m4!1s0x33bd05480c5c76d1:0x12cf85ba959acf9c!8m2!3d13.754081!4d121.068693" target="_blank"> 
-          <p>Joseling Road, Pallocan West, Batangas City, Batangas 4200 Philippines </p>
+        <a
+          href="https://www.google.com/maps/place/IntegrityNet+Solutions+And+Services/@13.754081,121.0665043,17z/data=!3m1!4b1!4m5!3m4!1s0x33bd05480c5c76d1:0x12cf85ba959acf9c!8m2!3d13.754081!4d121.068693"
+          target="_blank">
+          <p>
+            Joseling Road, Pallocan West, Batangas City, Batangas 4200
+            Philippines
+          </p>
         </a>
       </div>
-  
+
       <div class="col-three md-three tab-1-2 contact-add-social">
         <h3>Let's Talk</h3>
-  
+
         <p>Drop us a line or give us a call</p>
         <a href="mailto:sales@integritynet.biz">sales@integritynet.biz</a>
         <a href="tel:+63 43 723 7489">+63 43 723 7489</a>
       </div>
-  
+
       <div class="col-three md-three tab-1-2 contact-add-social">
         <h3>Social</h3>
-  
-        <a href="https://www.facebook.com/integritynet.biz" target="_blank">Facebook</a>
-        <a href="https://twitter.com/integritynetbpo" target="_blank">Twitter</a>
+
+        <a href="https://www.facebook.com/integritynet.biz" target="_blank"
+          >Facebook</a
+        >
+        <a href="https://twitter.com/integritynetbpo" target="_blank">Twitter</a
+        >
         <a href="#" target="_blank">Instagram</a>
       </div>
-  
+
       <div class="col-three md-three tab-1-2 contact-add-careers">
         <h3>Careers</h3>
-  
-        <p>We are constantly on the lookout for the best and brightest minds. Check out our <a href="careers.html">current vacancies</a>.</p>
+
+        <p>
+          We are constantly on the lookout for the best and brightest minds.
+          Check out our <a href="careers.html">current vacancies</a>.
+        </p>
       </div>
     </div>
   </section>
+
+  <ContactSection />
 </BaseLayout>
