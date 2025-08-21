@@ -1,14 +1,21 @@
 ---
-import BaseLayout from "@/layouts/BaseLayout.astro"
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import ContactSection from "@/components/ContactSection.astro";
 ---
+
 <BaseLayout>
   <section hidden id="construction" class="s-works page-hero target-section">
     <div class="row under-construction">
       <div class="col-full center">
-        <img src="assets/img/illustration/undraw-under-construction.svg" alt="under-construction">
+        <img
+          src="assets/img/illustration/undraw-under-construction.svg"
+          alt="under-construction"
+        />
         <h3>GALLERY PAGE UNDER CONSTRUCTION</h3>
         <p>Welcome to IntegrityNet, we are currently working on this site.</p>
-        <a href="javascript:history.go(-1)" class="btn inet-btn-main-red">Back</a>
+        <a href="javascript:history.go(-1)" class="btn inet-btn-main-red"
+          >Back</a
+        >
       </div>
     </div>
   </section>
@@ -16,116 +23,106 @@ import BaseLayout from "@/layouts/BaseLayout.astro"
   <section id="gallery-menu" class="s-works page-hero target-section">
     <div class="row section-header" data-aos="fade-up">
       <div class="col-full md-full tab-full mob-full">
-          <h3 data-num="01" class="subhead">Gallery</h3>
-          <h1 class="display-1">
-              Workplace Views and Our People
-          </h1>
+        <h3 data-num="01" class="subhead">Gallery</h3>
+        <h1 class="display-1">Workplace Views and Our People</h1>
 
-          <p class="lead">A collection of photos at our workplace where we work and play, our talented team of individuals, doing what we love for our field of expertise.</p>
+        <p class="lead">
+          A collection of photos at our workplace where we work and play, our
+          talented team of individuals, doing what we love for our field of
+          expertise.
+        </p>
       </div>
     </div>
 
-    <div class="row gallery-list block-1-4 block-m-1-3 block-tab-1-2 block-mob-full">
+    <div
+      class="row gallery-list block-1-4 block-m-1-3 block-tab-1-2 block-mob-full">
       <div class="col-block gallery-item" data-aos="fade-up">
         <a href="/web-gallery">
           <div class="gallery-image">
-            <img src="/static/images/lukslofts-01.jpg" alt="">
+            <img src="/static/images/lukslofts-01.jpg" alt="" />
           </div>
-          <div class="gallery-text">
-            Luks Lofts Hotel
-          </div>
+          <div class="gallery-text">Luks Lofts Hotel</div>
         </a>
       </div>
       <div class="col-block gallery-item" data-aos="fade-up">
         <a href="/web-gallery">
           <div class="gallery-image">
-            <img src="/static/images/digibutler-01.jpg" alt="">
+            <img src="/static/images/digibutler-01.jpg" alt="" />
           </div>
-          <div class="gallery-text">
-            DigiButler
-          </div>
+          <div class="gallery-text">DigiButler</div>
         </a>
       </div>
       <div class="col-block gallery-item" data-aos="fade-up">
         <a href="/web-gallery">
           <div class="gallery-image">
-            <img src="/static/images/egrub-01.jpg" alt="">
+            <img src="/static/images/egrub-01.jpg" alt="" />
           </div>
-          <div class="gallery-text">
-            eGrub
-          </div>
-        </a>
-      </div>
-      <div class="col-block gallery-item" data-aos="fade-up">
-          <a href="/web-gallery">
-            <div class="gallery-image">
-              <img src="/static/images/share-01.jpg" alt="">
-            </div>
-            <div class="gallery-text">
-              Share Cafe
-            </div>
-          </a>
-      </div>
-      <div class="col-block gallery-item" data-aos="fade-up">
-        <a href="/web-gallery">
-          <div class="gallery-image">
-            <img src="/static/images/integranet-01-portrait.jpg" alt="">
-          </div>
-          <div class="gallery-text">
-            IntegraNet
-          </div>
+          <div class="gallery-text">eGrub</div>
         </a>
       </div>
       <div class="col-block gallery-item" data-aos="fade-up">
         <a href="/web-gallery">
           <div class="gallery-image">
-            <img src="/static/images/bpo-portrait.jpg" alt="">
+            <img src="/static/images/share-01.jpg" alt="" />
           </div>
-          <div class="gallery-text">
-            IntegrityBPO
-          </div>
+          <div class="gallery-text">Share Cafe</div>
         </a>
       </div>
       <div class="col-block gallery-item" data-aos="fade-up">
         <a href="/web-gallery">
           <div class="gallery-image">
-            <img src="/static/images/pbx-01.jpg" alt="">
+            <img src="/static/images/integranet-01-portrait.jpg" alt="" />
           </div>
-          <div class="gallery-text">
-            IntegrityPBX
-          </div>
+          <div class="gallery-text">IntegraNet</div>
         </a>
       </div>
       <div class="col-block gallery-item" data-aos="fade-up">
         <a href="/web-gallery">
           <div class="gallery-image">
-            <img src="/static/images/pci-01.jpg" alt="">
+            <img src="/static/images/bpo-portrait.jpg" alt="" />
           </div>
-          <div class="gallery-text">
-            IntegrityPCI
-          </div>
+          <div class="gallery-text">IntegrityBPO</div>
         </a>
       </div>
       <div class="col-block gallery-item" data-aos="fade-up">
         <a href="/web-gallery">
           <div class="gallery-image">
-            <img src="/static/images/hrms-01.jpg" alt="">
+            <img src="/static/images/pbx-01.jpg" alt="" />
           </div>
-          <div class="gallery-text">
-            HRMS
-          </div>
+          <div class="gallery-text">IntegrityPBX</div>
         </a>
       </div>
       <div class="col-block gallery-item" data-aos="fade-up">
         <a href="/web-gallery">
           <div class="gallery-image">
-            <img src="/static/images/altin-01.jpg" alt="">
+            <img src="/static/images/pci-01.jpg" alt="" />
           </div>
-          <div class="gallery-text">
-            Altin Pawnshop
+          <div class="gallery-text">IntegrityPCI</div>
+        </a>
+      </div>
+      <div class="col-block gallery-item" data-aos="fade-up">
+        <a href="/web-gallery">
+          <div class="gallery-image">
+            <img src="/static/images/hrms-01.jpg" alt="" />
           </div>
+          <div class="gallery-text">HRMS</div>
+        </a>
+      </div>
+      <div class="col-block gallery-item" data-aos="fade-up">
+        <a href="/web-gallery">
+          <div class="gallery-image">
+            <img src="/static/images/altin-01.jpg" alt="" />
+          </div>
+          <div class="gallery-text">Altin Pawnshop</div>
         </a>
       </div>
     </div>
   </section>
+
+  <ContactSection
+    order="4"
+    subhead="Get in Touch"
+    header="Let's work together and make something great. Drop us a line at"
+    email="sales@integritynet.biz"
+  />
 </BaseLayout>
