@@ -173,7 +173,7 @@ const prev = solutions[currentIndex - 1];
       )
     }
     <button class="btn inet-btn-main-dark"
-      >{currentIndex + 1}/{solutions.length}</button
+      >{currentIndex + 1 < 10 ? String(currentIndex + 1).padStart(2, "0") : currentIndex + 1}/{solutions.length}</button
     >
     {
       next && (
