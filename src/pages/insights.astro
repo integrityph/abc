@@ -1,0 +1,34 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import ContactSection from "@/components/ContactSection.astro";
+---
+
+<BaseLayout>
+  <section id="insights" class="s-works page-hero target-section">
+    <div class="row section-header insights-list-soon" data-aos="fade-up">
+      <div class="col-seven md-eight tab-nine mob-full">
+        <h3 data-num="01" class="subhead">Insights</h3>
+        <h1 class="display-1">Our Insights are coming soon.</h1>
+        <p class="lead">
+          Sorry, our content writers are currently writing stories and ideas
+          about design, code, life and productivity that will be posted soon
+          enough. Stay tuned!
+        </p>
+        <p class="lead">
+          <a href="index.html" class="btn inet-btn-main-red">Back to Home</a>
+        </p>
+      </div>
+
+      <div class="col-five md-four tab-three mob-full">
+        <img src="/static/images/undraw-notebook.svg" alt="Insights Writing" />
+      </div>
+    </div>
+  </section>
+
+  <ContactSection
+    order="2"
+    subhead="Get in Touch"
+    header="Let's work together and start something great. Drop us a line at"
+    email="sales@integritynet.biz"
+  />
+</BaseLayout>
