@@ -111,5 +111,21 @@ switch (pathname) {
     <script is:inline src="/js/index.js"></script>
     <script is:inline src="/js/timeline.js"></script>
     <script is:inline src="/js/typewriter.js"></script>
+
+    <script is:inline>
+      // Extend Lity to support MP4
+      lity.handlers("video", function (target) {
+        if (/\.(mp4|webm|ogg)(\?.*)?$/i.test(target)) {
+          return (
+            '<video controls autoplay style="max-width:100%;height:auto;">' +
+            '<source src="' +
+            target +
+            '" type="video/mp4">' +
+            "Your browser does not support the video tag." +
+            "</video>"
+          );
+        }
+      });
+    </script>
   </body>
 </html>
