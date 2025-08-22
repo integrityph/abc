@@ -2,6 +2,9 @@
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import Gallery from "@/components/Gallery.astro";
 import ContactSection from "@/components/ContactSection.astro";
+import { getCollection } from "astro:content";
+
+const careers = await getCollection('careers')
 ---
 
 <BaseLayout>
@@ -25,62 +28,25 @@ import ContactSection from "@/components/ContactSection.astro";
     </div>
   </section>
 
-  <section class="career-showcase block-1-4 block-m-1-3 block-tab-1-2">
-    <div class="row section-header" data-aos="fade-up">
-      <div class="col-full">
-        <h1 class="display-1">Current vacancies</h1>
+  { careers.length > 0 && (
+    <section class="career-showcase block-1-4 block-m-1-3 block-tab-1-2">
+      <div class="row section-header" data-aos="fade-up">
+        <div class="col-full">
+          <h1 class="display-1">Current vacancies</h1>
+        </div>
       </div>
-    </div>
 
-    <div
-      id="career-card-01"
-      class="col-six md-six tab-full career-card"
-      data-aos="fade-up">
-      <a href="/application">
-        <img src="/static/images/career-img-01.jpg" alt="Career Image 01" />
-      </a>
-    </div>
-    <div
-      id="career-card-02"
-      class="col-six md-six tab-full career-card"
-      data-aos="fade-up">
-      <a href="/application">
-        <img src="/static/images/career-img-02.jpg" alt="Career Image 02" />
-      </a>
-    </div>
-    <div
-      id="career-card-03"
-      class="col-six md-six tab-full career-card"
-      data-aos="fade-up">
-      <a href="/application">
-        <img src="/static/images/career-img-03.jpg" alt="Career Image 03" />
-      </a>
-    </div>
-    <div
-      id="career-card-04"
-      class="col-six md-six tab-full career-card"
-      data-aos="fade-up">
-      <a href="/application">
-        <img src="/static/images/career-img-04.jpg" alt="Career Image 04" />
-      </a>
-    </div>
-    <div
-      id="career-card-05"
-      class="col-six md-six tab-full career-card"
-      data-aos="fade-up">
-      <a href="/application">
-        <img src="/static/images/career-img-05.jpg" alt="Career Image 05" />
-      </a>
-    </div>
-    <div
-      id="career-card-06"
-      class="col-six md-six tab-full career-card"
-      data-aos="fade-up">
-      <a href="/application">
-        <img src="/static/images/career-img-06.jpg" alt="Career Image 06" />
-      </a>
-    </div>
-  </section>
+      {careers.map(career => (
+        <div
+        class="col-six md-six tab-full career-card"
+        data-aos="fade-up">
+        <a href="/application">
+          <img src={career.data.image.src} alt={career.data.image.alt} />
+        </a>
+      </div>
+      ))}
+    </section>)
+  }
 
   <section id="team-players" class="career-statement page-hero target-section">
     <div class="row section-header" data-aos="fade-up">

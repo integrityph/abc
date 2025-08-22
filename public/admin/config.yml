@@ -95,19 +95,19 @@ collections:
           - { label: "Alt", name: "alt", widget: "string", required: false }
       - { label: "Body", name: "body", widget: "markdown", required: false }
 
-  # - name: "gallery"
-  #   label: "About Gallery"
-  #   folder: "src/content/gallery"
-  #   create: true
-  #   fields:
-  #     - { label: "File Name", name: "title", widget: "string", required: true }
-  #     - label: "Image"
-  #       name: "image"
-  #       widget: "list"
-  #       collapsed: true
-  #       fields: 
-  #         - { label: "Title", name: "title", widget: "string", required: true }
-  #         - { label: "Caption", name: "caption", widget: "string", required: false }
-  #         - { label: "Source", name: "src", widget: "image", required: true }
-  #         - { label: "Alt", name: "alt", widget: "string", required: false }
-  #     - { label: "Body", name: "body", widget: "markdown", required: false }
+  - name: "careers"
+    label: "Careers"
+    folder: "src/content/careers"
+    create: true
+    fields:
+      - { label: "Career", name: "title", widget: "string", required: true }
+      - label: "Image"
+        name: "image"
+        widget: "object"
+        collapsed: false
+        fields: 
+          - { label: "Title", name: "title", widget: "string", required: true }
+          - { label: "Caption", name: "caption", widget: "string", required: false }
+          - { label: "Source", name: "src", widget: "image", required: true }
+          - { label: "Alt", name: "alt", widget: "string", required: false }
+      - { label: "Body", name: "body", widget: "markdown", required: false }
