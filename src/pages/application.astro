@@ -1,0 +1,74 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import ContactSection from "@/components/ContactSection.astro";
+---
+
+<BaseLayout>
+  <section id="about" class="s-about page-hero target-section">
+    <div class="row section-header aos-init aos-animate" data-aos="fade-up">
+      <div class="col-seven md-eight tab-nine mob-full">
+        <h3 data-num="01" class="subhead">Application Form</h3>
+        <h1 class="display-1">Apply now and tell us about yourself.</h1>
+
+        <p class="lead">Contact information</p>
+        <div class="col-full inet-application-form">
+          <input
+            type="text"
+            name="name"
+            placeholder="Name"
+            required=""
+            value=""
+          />
+          <input
+            type="tel"
+            name="phone"
+            placeholder="Phone number"
+            required=""
+            value=""
+          />
+          <input
+            type="email"
+            name="email"
+            placeholder="Email address"
+            required=""
+            value=""
+          />
+        </div>
+
+        <p class="lead">About you</p>
+
+        <div class="col-full inet-application-form">
+          <textarea
+            name="about"
+            placeholder="Tell us a little bit about you"
+            required=""
+            style="height: 20px;"></textarea>
+          <button id="apply-submit" type="submit" class="btn btn--primary"
+            >Submit</button
+          >
+        </div>
+        <p class="lead mt-2">
+          Or you can visit our cozy office site and submit your resume. Here's
+          our address: <br />
+          <a
+            href="https://www.google.com/maps/place/IntegrityNet+Solutions+And+Services/@13.754081,121.0665043,17z/data=!3m1!4b1!4m5!3m4!1s0x33bd05480c5c76d1:0x12cf85ba959acf9c!8m2!3d13.754081!4d121.068693"
+            target="_blank"
+            title="Show Location via Google Maps"
+            >IntegrityNet Bldg. 2, Pallocan West, Batangas City, Batangas 4200
+            Philippines</a
+          >
+        </p>
+      </div>
+
+      <div class="col-five md-four tab-three hide-on-mobile">
+        <img
+          src="/static/images/careers-bg.jpg"
+          alt="Careers"
+          class="x-tilt"
+          style="will-change: transform; transform: perspective(2000px) rotateX(0deg) rotateY(0deg);"
+        />
+      </div>
+    </div>
+  </section>
+  <ContactSection />
+</BaseLayout>
