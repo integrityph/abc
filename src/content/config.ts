@@ -79,6 +79,7 @@ const careerCollection = defineCollection({
       src: z.string(),
       alt: z.string(),
     }),
+    order: z.number()
   }),
 });
 

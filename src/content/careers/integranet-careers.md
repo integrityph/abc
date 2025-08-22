@@ -1,5 +1,6 @@
 ---
 title: integranet-careers
+order: 1
 image:
   title: integranet-careers
   caption: Integranet Careers

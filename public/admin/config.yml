@@ -110,4 +110,5 @@ collections:
           - { label: "Caption", name: "caption", widget: "string", required: false }
           - { label: "Source", name: "src", widget: "image", required: true }
           - { label: "Alt", name: "alt", widget: "string", required: false }
+      - { label: "Order", name: "order", widget: "number", required: true }
       - { label: "Body", name: "body", widget: "markdown", required: false }

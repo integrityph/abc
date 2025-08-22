@@ -1,5 +1,6 @@
 ---
 title: lukslofts-careers
+order: 2
 image:
   title: lukslofts-careers
   caption: Lukslofts Career

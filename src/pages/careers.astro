@@ -36,8 +36,9 @@ const careers = await getCollection('careers')
         </div>
       </div>
 
-      {careers.map(career => (
+      {careers.sort((a,b) => a.data.order - b.data.order).map((career, index) => (
         <div
+        id={`career-card-${String(index).padStart(2, "0")}`}
         class="col-six md-six tab-full career-card"
         data-aos="fade-up">
         <a href="/application">

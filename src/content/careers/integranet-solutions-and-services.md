@@ -1,5 +1,6 @@
 ---
 title: integranet-solutions-and-services
+order: 6
 image:
   title: integranet-solutions-and-services
   caption: IntegraNet Solutions and Services Career
