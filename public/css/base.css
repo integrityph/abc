@@ -955,3 +955,7 @@ textarea {
   margin-right: auto;
   text-align: center;
 }
+
+.career-aspect-ratio {
+  aspect-ratio: 4/3;
+}

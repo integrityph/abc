@@ -42,7 +42,7 @@ const careers = await getCollection('careers')
         class="col-six md-six tab-full career-card"
         data-aos="fade-up">
         <a href="/application">
-          <img src={career.data.image.src} alt={career.data.image.alt} />
+          <img class="career-aspect-ratio" src={career.data.image.src} alt={career.data.image.alt} />
         </a>
       </div>
       ))}
