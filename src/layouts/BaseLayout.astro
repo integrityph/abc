@@ -25,6 +25,8 @@ switch (pathname) {
   default:
     path = "inet-works";
 }
+
+const BASE_URL = "";
 ---
 
 <html class="no-js" lang="en">
@@ -38,16 +40,16 @@ switch (pathname) {
     <meta name="author" content="IntegrityNet Group of Companies" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <link rel="stylesheet" href="/css/base.css" />
-    <link rel="stylesheet" href="/css/vendor.css" />
-    <link rel="stylesheet" href="/css/main.css?v=1.1" />
-    <link rel="stylesheet" href="/css/custom.css?v=1.1" />
+    <link rel="stylesheet" href=`${BASE_URL}/css/base.css` />
+    <link rel="stylesheet" href=`${BASE_URL}/css/vendor.css` />
+    <link rel="stylesheet" href=`${BASE_URL}/css/main.css?v=1.1` />
+    <link rel="stylesheet" href=`${BASE_URL}/css/custom.css?v=1.1` />
 
-    <script is:inline src="/js/modernizr.js"></script>
-    <script is:inline src="/js/pace.min.js"></script>
+    <script is:inline src=`${BASE_URL}/js/modernizr.js`></script>
+    <script is:inline src=`${BASE_URL}/js/pace.min.js`></script>
 
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href=`${BASE_URL}/favicon.ico` type="image/x-icon" />
   </head>
 
   <body id="top" class=`${path}`>
@@ -105,12 +107,12 @@ switch (pathname) {
       </div>
     </div>
 
-    <script is:inline src="/js/jquery-3.2.1.min.js"></script>
-    <script is:inline src="/js/plugins.js"></script>
-    <script is:inline src="/js/main.js"></script>
-    <script is:inline src="/js/index.js"></script>
-    <script is:inline src="/js/timeline.js"></script>
-    <script is:inline src="/js/typewriter.js"></script>
+    <script is:inline src=`${BASE_URL}/js/jquery-3.2.1.min.js`></script>
+    <script is:inline src=`${BASE_URL}/js/plugins.js`></script>
+    <script is:inline src=`${BASE_URL}/js/main.js`></script>
+    <script is:inline src=`${BASE_URL}/js/index.js`></script>
+    <script is:inline src=`${BASE_URL}/js/timeline.js`></script>
+    <script is:inline src=`${BASE_URL}/js/typewriter.js`></script>
 
     <script is:inline>
       // Extend Lity to support MP4
