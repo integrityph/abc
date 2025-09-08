@@ -2,6 +2,7 @@
 import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
 
+import { Debug } from "astro:components";
 const { pathname } = Astro.url;
 
 let path;
@@ -9,21 +10,26 @@ let path;
 switch (pathname) {
   case "/":
     path = "inet-home";
+    console.log(pathname);
     break;
-  case "solutions":
+  case "/solutions":
     path = "inet-works";
     break;
-  case "services":
+  case "/services":
     path = "inet-services";
+    console.log(pathname);
     break;
-  case "about":
+  case "/about":
     path = "inet-about";
+    console.log(pathname);
     break;
-  case "contact":
+  case "/contact":
     path = "inet-contact";
+    console.log(pathname);
     break;
   default:
     path = "inet-works";
+    console.log("default:", pathname);
 }
 
 const BASE_URL = "";
@@ -57,7 +63,7 @@ const BASE_URL = "";
     <div class="cursor-dot"></div>
 
     <Header />
-
+    <h1 style="color: white">{path}</h1>
     <slot />
 
     <Footer />
@@ -129,5 +135,6 @@ const BASE_URL = "";
         }
       });
     </script>
+    <Debug answer={path} />
   </body>
 </html>
