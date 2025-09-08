@@ -2,35 +2,24 @@
 import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
 
-import { Debug } from "astro:components";
 const { pathname } = Astro.url;
 
-let path;
-
-switch (pathname) {
-  case "/":
-    path = "inet-home";
-    console.log(pathname);
-    break;
-  case "/solutions":
-    path = "inet-works";
-    break;
-  case "/services":
-    path = "inet-services";
-    console.log(pathname);
-    break;
-  case "/about":
-    path = "inet-about";
-    console.log(pathname);
-    break;
-  case "/contact":
-    path = "inet-contact";
-    console.log(pathname);
-    break;
-  default:
-    path = "inet-works";
-    console.log("default:", pathname);
-}
+const path = () => {
+  switch (true) {
+    case pathname === "/":
+      return "inet-home";
+    case pathname.startsWith("/solutions"):
+      return "inet-works";
+    case pathname.startsWith("/services"):
+      return "inet-services";
+    case pathname.startsWith("/about"):
+      return "inet-about";
+    case pathname.startsWith("/contact"):
+      return "inet-contact";
+    default:
+      return "inet-works";
+  }
+};
 
 const BASE_URL = "";
 ---
@@ -58,13 +47,12 @@ const BASE_URL = "";
     <link rel="icon" href=`${BASE_URL}/favicon.ico` type="image/x-icon" />
   </head>
 
-  <body id="top" class=`${path}`>
+  <body id="top" class=`${path()}`>
     <div class="cursor-dot-outline"></div>
     <div class="cursor-dot"></div>
 
     <Header />
-    <h1 style="color: white">{path}</h1>
-    <h1 style="color: white">{pathname}</h1>
+
     <slot />
 
     <Footer />
@@ -136,6 +124,5 @@ const BASE_URL = "";
         }
       });
     </script>
-    <Debug answer={path} />
   </body>
 </html>
